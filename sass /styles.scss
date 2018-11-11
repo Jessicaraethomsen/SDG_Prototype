@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css?family=Rammetto+One');
+/*BRAND Color Variables*/
+$brand-lightblue: #b3e5fc;
+$brand-blue: #5cc4fc;
+$brand-darkblue: #478bca;
+$brand-white: #ffffff;
+$brand-black: #161D2D;
+
+/*Goal Variables*/
+
+$goal2-light: #fbc30a;
+$goal2-dark: #d3a029;
+
+$goal14-light: #017dbc;
+$goal14-dark: #0757a0; 
+
+/*Font Variables*/
+
+$font-headline: 'Rammetto One', sans-serif; /*will buy the font on monday*/
+$font-primary: 'Poppins', sans-serif;
+
+
+body {
+	margin: 0;
+	padding: 0;
+}
+
+/*Typography*/
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+color: $brand-white;
+font-family: $font-primary;
+}
+
+
+p {
+  font-family: $font-primary;
+  font-size: 18px;
+  line-height: 1.5;
+  margin-bottom: 20px;
+  color: $brand-white;
+}
+
+/*Links & Buttons*/
+
+a{
+
+}
+
+/*Page structure*/
+
+section{
+   margin: 0;
+  padding: 0;
+
+}
+.section-cover{
+  margin: 15px;
+  padding: 0;
+  height: 100%;
+  width: 100%; 
+}
+
+
+.page-content{
+    position: absolute;
+    height: 96%;
+    width: 98%; 
+    margin: 0 auto;
+    border-radius: 25px;
+    z-index: 3;
+    background: $brand-blue;
+}
+
+
+.no-gutters {
+  margin-right: 0;
+  margin-left: 0;
+  }
+
+/*illustrations*/
+
+/*web animations*/
+
+
+
+/*Media Queries*/
+

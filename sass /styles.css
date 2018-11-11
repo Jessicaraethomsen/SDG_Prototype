@@ -1,0 +1,33 @@
+@import url("https://fonts.googleapis.com/css?family=Rammetto+One");
+/*BRAND Color Variables*/
+/*Goal Variables*/
+/*Font Variables*/
+body {
+  margin: 0;
+  padding: 0;
+  background: #ffffff; }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: pink; }
+
+p {
+  font-size: 18px;
+  line-height: 1.5;
+  margin-bottom: 20px;
+  color: #ffffff; }
+
+.page-content {
+  height: 100vh;
+  border: 3px solid pink;
+  background-color: pink; }
+
+.no-gutters {
+  margin-right: 0;
+  margin-left: 0; }
+
+/*# sourceMappingURL=styles.css.map */
