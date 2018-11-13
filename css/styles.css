@@ -63,5 +63,44 @@ section {
 /*illustrations*/
 /*web animations*/
 /*Media Queries*/
+@media (min-width: 501px) and (max-width: 1024px) {
+  #home-bg {
+    background-image: url("../img/sdg_flip.png"); }
+
+  .page-content {
+    position: block;
+    /*responsive image*/
+    height: 100%;
+    margin: 0 auto;
+    /*Border gives the effect of game*/
+    border: none;
+    /*Rounded corner of sections*/
+    border-radius: 0;
+    z-index: 3;
+    /* Center and scale*/
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover; } }
+@media only screen and (max-width: 500px) {
+  body {
+    background-color: #478bca; }
+
+  #home-bg {
+    background-image: url("../img/sdg_sorry.png"); }
+
+  .page-content {
+    position: block;
+    /*responsive image*/
+    height: 100%;
+    margin: 0 auto;
+    /*Border gives the effect of game*/
+    border: none;
+    /*Rounded corner of sections*/
+    border-radius: 0;
+    z-index: 3;
+    /* Center and scale*/
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover; } }
 
 /*# sourceMappingURL=styles.css.map */
