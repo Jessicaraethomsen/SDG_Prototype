@@ -7,6 +7,21 @@ body {
   margin: 0;
   padding: 0; }
 
+.navbar-header {
+  position: absolute; }
+
+.navbar-brand {
+  /*nesting hover for logo*/ }
+  .navbar-brand:hover {
+    animation: top .7s ease-out;
+    -webkit-animation-fill-mode: forwards;
+    /* Chrome, Safari, Opera */
+    animation-fill-mode: alternate-reverse; }
+
+.navbar {
+  z-index: 10;
+  cursor: pointer; }
+
 /*Typography*/
 h1,
 h2,
@@ -47,10 +62,10 @@ section {
   height: 100%;
   margin: 0 auto;
   /*Border gives the effect of game*/
-  border: 30px solid #ffffff;
+  border: 20px solid #ffffff;
   /*Rounded corner of sections*/
-  border-radius: 50px;
-  z-index: 3;
+  border-radius: 60px;
+  z-index: -2;
   /* Center and scale*/
   background-position: center center;
   background-repeat: no-repeat;
@@ -60,9 +75,44 @@ section {
   margin-right: 0;
   margin-left: 0; }
 
-/*illustrations*/
-/*web animations*/
+/*Homepage Elements*/
+.cloud1 {
+  position: absolute;
+  top: 50%;
+  left: -10%;
+  z-index: 10;
+  animation: drift 80s linear infinite; }
+
+.cloud2 {
+  position: absolute;
+  top: 10%;
+  left: -10%;
+  z-index: 10;
+  animation: drift 80s 9s linear infinite; }
+
+.cloud3 {
+  position: absolute;
+  top: 80%;
+  left: -10%;
+  z-index: 10;
+  animation: drift 90s 10s linear infinite; }
+
+/*Web Animations*/
+@keyframes top {
+  from {
+    transform: translateY(0px); }
+  to {
+    transform: translateY(20px); } }
+@keyframes drift {
+  from {
+    transform: translateX(-55px); }
+  to {
+    transform: translateX(2000px); } }
+@keyframes spin {
+  100% {
+    transform: rotate(2turn); } }
 /*Media Queries*/
+/*https://gist.github.com/gokulkrishh/242e68d1ee94ad05f488*/
 @media (min-width: 501px) and (max-width: 1024px) {
   #home-bg {
     background-image: url("../img/sdg_flip.png"); }
@@ -80,7 +130,12 @@ section {
     /* Center and scale*/
     background-position: center center;
     background-repeat: no-repeat;
-    background-size: cover; } }
+    background-size: cover; }
+
+  /*Hide our logo*/
+  .navbar-brand {
+    display: none; } }
+/*if anything needs to change*/
 @media only screen and (max-width: 500px) {
   body {
     background-color: #478bca; }
@@ -101,6 +156,28 @@ section {
     /* Center and scale*/
     background-position: center center;
     background-repeat: no-repeat;
-    background-size: cover; } }
+    background-size: cover; }
+
+  /*Hide our logo*/
+  .navbar-brand {
+    display: none; } }
+/*Wind Mills
+
+.windmill img{
+    position: absolute;
+    z-index: 10; 
+    top: 50%;
+    left: 30%;
+    animation: spin 10s linear infinite;
+    animation-play-state: paused;
+
+    &:hover {
+
+    animation-play-state: running;
+    
+   } 
+ } 
+
+ */
 
 /*# sourceMappingURL=styles.css.map */
