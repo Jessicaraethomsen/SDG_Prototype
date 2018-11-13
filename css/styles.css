@@ -10,13 +10,11 @@ body {
 .navbar-header {
   position: absolute; }
 
-.navbar-brand {
-  /*nesting hover for logo*/ }
-  .navbar-brand:hover {
-    animation: top .7s ease-out;
-    -webkit-animation-fill-mode: forwards;
-    /* Chrome, Safari, Opera */
-    animation-fill-mode: alternate-reverse; }
+.navbar-brand:hover {
+  animation: top .7s ease-out;
+  -webkit-animation-fill-mode: forwards;
+  /* Chrome, Safari, Opera */
+  animation-fill-mode: alternate-reverse; }
 
 .navbar {
   z-index: 10;
@@ -46,8 +44,7 @@ section {
   padding: 0; }
 
 .section-cover {
-  max-width: 100vh;
-  overflow: hidden; }
+  max-width: 100%; }
 
 #intro-bg {
   background-image: url("../img/sdg_introworld1.png"); }
@@ -69,8 +66,7 @@ section {
   /* Center and scale*/
   background-position: center center;
   background-repeat: no-repeat;
-  background-size: cover;
-  overflow: hidden; }
+  background-size: cover; }
 
 .no-gutters {
   margin-right: 0;
@@ -107,7 +103,7 @@ section {
   left: 0%;
   width: 4%;
   z-index: 10;
-  animation: sail 90s  linear infinite alternate; }
+  animation: sail 50s  linear infinite alternate; }
 
 .boat2 {
   position: absolute;
@@ -115,16 +111,14 @@ section {
   left: 95%;
   width: 4%;
   z-index: 10;
-  animation: sailleft 90s  linear infinite alternate; }
+  animation: sailleft 50s  linear infinite alternate; }
 
 .goal1 {
   position: absolute;
-  top: 15%;
+  top: 17%;
   left: 16%;
   width: 4%;
   z-index: 10; }
-  .goal1:hover {
-    cursor: url("../img/tap.png"), auto; }
 
 .goal2 {
   position: absolute;
@@ -132,8 +126,34 @@ section {
   left: 23%;
   width: 4%;
   z-index: 10; }
-  .goal2:hover {
-    cursor: url("../img/tap.png"), auto; }
+
+.navbar-badge {
+  position: absolute;
+  top: -1%;
+  left: 77%;
+  max-width: 4%;
+  z-index: 10; }
+
+.navbar-help {
+  position: absolute;
+  top: 1%;
+  left: 85%;
+  max-width: 5%;
+  z-index: 10; }
+
+.navbar-langauge {
+  position: absolute;
+  top: 1%;
+  left: 90%;
+  max-width: 5%;
+  z-index: 10; }
+
+.navbar-audio {
+  position: absolute;
+  top: 1%;
+  left: 95%;
+  max-width: 5%;
+  z-index: 10; }
 
 /*Web Animations*/
 @keyframes top {

@@ -31,8 +31,6 @@ body {
 }
 
 .navbar-brand{
-
-   /*nesting hover for logo*/
    &:hover {
 
     animation: top .7s ease-out;
@@ -41,6 +39,7 @@ body {
     
     }
   }
+
 
 .navbar{
    z-index: 10;
@@ -87,8 +86,7 @@ section{
 }
 
 .section-cover{
-  max-width: 100vh; 
-  overflow: hidden;
+  max-width: 100%; 
 }
 
 #intro-bg{
@@ -116,7 +114,10 @@ section{
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
-    overflow: hidden;
+   
+
+
+    
 }
 
 
@@ -163,7 +164,7 @@ section{
   left: 0%;
   width: 4%;
   z-index: 10;
-  animation: sail 90s  linear infinite alternate;
+  animation: sail 50s  linear infinite alternate;
 }
 
 .boat2{
@@ -172,18 +173,15 @@ section{
   left: 95%;
   width: 4%;
   z-index: 10;
-  animation: sailleft 90s  linear infinite alternate;
+  animation: sailleft 50s  linear infinite alternate;
 }
 
 .goal1{
   position: absolute;
-  top: 15%;
+  top: 17%;
   left: 16%;
   width: 4%;
   z-index: 10;
-  &:hover {
-   cursor: url('../img/tap.png'), auto;  
-  }
   }
 
 
@@ -193,11 +191,41 @@ section{
   left: 23%;
   width: 4%;
   z-index: 10;
-
-  &:hover {
-   cursor: url('../img/tap.png'), auto;  
   }
-    }
+
+  .navbar-badge{
+  position: absolute;
+  top: -1%;
+  left: 77%;
+  max-width: 4%;
+  z-index: 10;
+  }
+
+    .navbar-help{
+  position: absolute;
+  top: 1%;
+  left: 85%;
+  max-width: 5%;
+  z-index: 10;
+  }
+
+  .navbar-langauge{
+  position: absolute;
+  top: 1%;
+  left: 90%;
+  max-width: 5%;
+  z-index: 10;
+  }
+
+   .navbar-audio{
+  position: absolute;
+  top: 1%;
+  left: 95%;
+  max-width: 5%;
+  z-index: 10;
+  }
+
+
 
 
 /*Web Animations*/
