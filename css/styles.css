@@ -34,6 +34,12 @@ section {
   height: 100%;
   width: 100%; }
 
+#intro-bg {
+  background-image: url("../img/sdg_introworld1.png"); }
+
+#home-bg {
+  background-image: url("../img/sdg_homemap.png"); }
+
 /* .page-content class for all our Intro-world sections*/
 .page-content {
   position: absolute;
@@ -45,7 +51,6 @@ section {
   /*Rounded corner of sections*/
   border-radius: 50px;
   z-index: 3;
-  background-image: url("../img/sdg_introworld1.png");
   /* Center and scale*/
   background-position: center center;
   background-repeat: no-repeat;
