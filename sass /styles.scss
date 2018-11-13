@@ -55,26 +55,32 @@ a{
 /*Page structure*/
 
 section{
-   margin: 0;
+  margin: 0;
   padding: 0;
-
 }
+
 .section-cover{
-  margin: 15px;
-  padding: 0;
   height: 100%;
   width: 100%; 
 }
 
 
+/* .page-content class for all our Intro-world sections*/
 .page-content{
     position: absolute;
-    height: 96%;
-    width: 98%; 
+    /*responsive image*/
+    height: 100%; 
     margin: 0 auto;
-    border-radius: 25px;
+    /*Border gives the effect of game*/
+    border: 30px solid $brand-white;
+    /*Rounded corner of sections*/
+    border-radius: 50px;
     z-index: 3;
-    background: $brand-blue;
+    background-image: url("../img/sdg_introworld1.png");
+    /* Center and scale*/
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 
@@ -86,7 +92,6 @@ section{
 /*illustrations*/
 
 /*web animations*/
-
 
 
 /*Media Queries*/
