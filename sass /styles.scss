@@ -1,4 +1,19 @@
-@import url('https://fonts.googleapis.com/css?family=Rammetto+One');
+@font-face {
+    font-family: Knicknack;
+    src: url(../Webfonts/Knicknack-Regular.woff);
+}
+
+@font-face {
+    font-family: Knicknack Medium;
+    src: url(../Webfonts/Knicknack-Medium.woff);
+}
+
+@font-face {
+    font-family: Knicknack Bold;
+    src: url(../Webfonts/Knicknack-Bold.woff);
+}
+
+
 /*BRAND Color Variables*/
 $brand-lightblue: #b3e5fc;
 $brand-blue: #5cc4fc;
@@ -16,10 +31,7 @@ $goal14-dark: #0757a0;
 
 /*Font Variables*/
 
-@font-face {
-    font-family: Knicknack;
-    src: url(../Webfonts/Knicknack-Regular.woff);
-}
+
 
 $font-headline: 'Knicknack', sans-serif; 
 $font-primary: 'Poppins', sans-serif;
@@ -64,9 +76,10 @@ h3,
 h4,
 h5,
 h6 {
-color: $brand-white;
-font-family: $font-primary;
+color: $brand-black;
+font-family: $font-headline;
 }
+
 
 
 p {
@@ -81,7 +94,7 @@ p {
 
 a{
 
-  cursor: src("")
+
 
 }
 
@@ -195,6 +208,7 @@ section{
   left: 16%;
   width: 4%;
   z-index: 10;
+  cursor: url(../img/tap.png), auto;
   }
 
 
@@ -204,6 +218,7 @@ section{
   left: 23%;
   width: 4%;
   z-index: 10;
+    cursor: url(../img/tap.png), auto;
   }
 
   .navbar-badge{
