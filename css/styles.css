@@ -2,7 +2,9 @@
 /*BRAND Color Variables*/
 /*Goal Variables*/
 /*Font Variables*/
-/*will buy the font on monday*/
+@font-face {
+  font-family: Knicknack;
+  src: url(../Webfonts/Knicknack-Regular.woff); }
 body {
   margin: 0;
   padding: 0; }
@@ -38,6 +40,9 @@ p {
   color: #ffffff; }
 
 /*Links & Buttons*/
+a {
+  cursor: src(""); }
+
 /*Page structure*/
 section {
   margin: 0;

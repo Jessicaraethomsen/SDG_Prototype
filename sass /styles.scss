@@ -16,7 +16,12 @@ $goal14-dark: #0757a0;
 
 /*Font Variables*/
 
-$font-headline: 'Rammetto One', sans-serif; /*will buy the font on monday*/
+@font-face {
+    font-family: Knicknack;
+    src: url(../Webfonts/Knicknack-Regular.woff);
+}
+
+$font-headline: 'Knicknack', sans-serif; 
 $font-primary: 'Poppins', sans-serif;
 
 
@@ -76,7 +81,15 @@ p {
 
 a{
 
+  cursor: src("")
+
 }
+
+
+
+
+
+
 
 /*Page structure*/
 
