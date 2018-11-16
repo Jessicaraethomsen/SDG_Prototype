@@ -1,0 +1,403 @@
+/*************************************************
+                FONT IMPORTS
+**************************************************/
+
+@font-face {
+  font-family: Knicknack;
+  src: url(../Webfonts/Knicknack-Regular.woff); }
+@font-face {
+  font-family: Knicknack Medium;
+  src: url(../Webfonts/Knicknack-Medium.woff); }
+@font-face {
+  font-family: Knicknack Bold;
+  src: url(../Webfonts/Knicknack-Bold.woff); }
+
+/*************************************************
+                 VARIABLES
+**************************************************/
+$brand-lightblue: #b3e5fc;
+$brand-blue: #5cc4fc;
+$brand-darkblue: #478bca;
+$brand-white: #ffffff;
+$brand-black: #161D2D;
+$brand-darkgrey: #333333;
+
+/*Goal Variables*/
+
+$goal2-light: #fbc30a;
+$goal2-dark: #d3a029;
+
+$goal14-light: #017dbc;
+$goal14-dark: #0757a0; 
+
+/*Font Variables*/
+
+$font-headline: 'Knicknack', sans-serif; 
+$font-primary: 'Poppins', sans-serif;
+
+/*************************************************
+SASS
+REMEMBER TO THINK  "CAN I USE"....
+VARIABLES
+MIXINS
+EXTEND
+
+**************************************************/
+body {
+  margin: 0;
+  padding: 0; 
+  background-color: $goal2-dark;
+  }
+
+.navbar-header {
+  position: absolute; }
+
+.navbar-brand:hover {
+  animation: top .7s ease-out;
+  -webkit-animation-fill-mode: forwards;
+  /* Chrome, Safari, Opera */
+  animation-fill-mode: alternate-reverse; }
+
+.navbar {
+  z-index: 10;
+  cursor: pointer; }
+
+/*************************************************
+                  Typography
+**************************************************/
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #ffffff;
+  font-family: $font-headline;
+  letter-spacing: 2px;
+  }
+
+
+
+h1{
+  font-size: 70px;
+}
+h2{
+
+  font-size: 30px;
+}
+
+
+p {
+  margin-bottom: 20px;
+  font-weight: 300;
+  color: $brand-white;
+  margin-top: 10px;
+  font-family: "Poppins";
+  font-size: 25px;
+  text-align: center;
+  font-weight: 100;
+  line-height: 46px;
+  letter-spacing: 2px;
+  }
+
+/*************************************************
+                  Links & Buttons
+**************************************************/
+
+
+a{
+  font-family: $font-headline;
+  font-size: 18px;
+  line-height: 1.5;
+  margin-bottom: 20px;
+  color: $brand-white;
+}
+
+
+.title{
+  z-index: 2;
+  margin-top: 7%;
+
+}
+
+.test-border{
+	border: 2px solid white;
+}
+
+.center-canvas{
+ margin: 0 auto;
+ width: 100%;
+            }
+
+.section1{
+ height: 100vh;
+ cursor: url('../assets/fried-potatoes.png'), auto; 
+
+}
+
+.section2{
+  margin-top: 20%;
+}
+
+.section-goal2-define{
+  @extend .center-canvas;
+  @extend .section1;
+
+    /*responsive image*/
+    background-image: url('../img/SDG-goal2-defination.png');
+    z-index: -2;
+    /* Center and scale*/
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+
+.section-goal2-title{
+  @extend .center-canvas;
+  @extend .section1;
+
+    /*responsive image*/
+    background-image: url('../img/SDG-goal2-bg.png');
+    z-index: -2;
+    /* Center and scale*/
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+
+.section-game{
+  @extend .center-canvas;
+  @extend .section1;
+
+}
+
+
+
+
+.goal-text{
+
+  max-width: 100%;
+  margin: 0 auto;
+  margin-top: 20%;
+}
+ 
+.section-cards{
+  position: static;
+  margin-top: 590px;
+}
+
+
+.card {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 300px;
+  height: 300px;
+  margin: -150px;
+  float: left;
+  perspective: 500px;
+  background: transparent;
+}
+
+.content {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+  transition: transform 1s;
+  transform-style: preserve-3d;
+}
+
+.card:hover .content {
+  transform: rotateY( 180deg ) ;
+  transition: transform 0.5s;
+  cursor: url('../assets/pizza.png'), auto; 
+}
+
+.front{
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: $goal2-light;
+  line-height: 300px;
+  color: $brand-white;
+  text-align: center;
+  font-size: 60px;
+  border-radius: 5px;
+  backface-visibility: hidden;
+}
+
+
+
+
+.back {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: yellow;
+  line-height: 300px;
+  color: $goal2-dark;
+  text-align: center;
+  font-size: 60px;
+  border-radius: 5px;
+  backface-visibility: hidden;
+}
+
+.back {
+  background: $brand-white;
+  color: black;
+  transform: rotateY( 180deg );
+}
+
+
+/*========================================================
+          Animation
+==========================================================*/
+
+@keyframes top{
+    from{transform:translateY(0px);}
+    to{transform:translateY(20px);}
+}
+
+
+/*========================================================
+          Sitewide Styles
+==========================================================*/
+
+.section-game{
+  position: absolute;
+ height: 100vh;
+ cursor: url('../assets/fried-potatoes.png'), auto; 
+z-index: 2;
+}
+
+
+.question{
+  font-size: 30px;
+  margin-bottom: 30px;
+  color: $brand-white;
+}
+.answers {
+  margin-bottom: 30px;
+  text-align: left;
+  display: inline-block;
+}
+.answers label{
+  display: block;
+  font-family: $font-headline;
+  font-size: 22px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  padding: 10px;
+  width: 600px;
+  height: 60px;
+ 
+  background-color: $brand-white;
+  cursor: pointer;
+
+   &:hover {
+    background-color: $goal2-light;
+
+    }
+}
+
+
+button{
+  font-family: $font-headline;
+  font-size: 22px;
+  letter-spacing: 2px;
+  background-color: transparent;
+  color: #fff;
+  border: 2px solid white;
+  border-radius: 5px;
+  padding: 30px;
+  width: 280px;
+  cursor: pointer;
+  margin-top: 60px;
+
+
+
+   &:hover {
+    background-color: $goal2-light;
+    
+    }
+}
+
+
+
+.quiz{
+    position:absolute;
+      z-index:0;
+      left:12px;
+      top:10px;
+}
+
+
+.slide{
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  z-index: 1;
+  opacity: 0;
+  transition: opacity 0.5s;
+ 
+}
+
+.active-slide{
+  opacity: 1;
+   z-index: 2;
+
+
+}
+
+.quiz-container{
+  position: relative;
+  height: 200px;
+  margin-top: 40px;
+  z-index: 2;
+
+}
+
+.button-wrapper{
+  font-family: $font-headline;
+  position: relative;
+  margin-top:150px; 
+  z-index: 2;
+}
+
+
+
+.canvas{
+  position:absolute;
+  left:0;
+  top:0;
+  z-index:1000;
+  border:0px solid #000;
+}
+
+#results{
+margin-top:3%; 
+font-family: $font-headline;
+font-size: 22px;
+color: $brand-white;
+
+
+
+
+}
+
+#feedback{ 
+font-family: $font-headline;
+font-size: 22px;
+color: $brand-white;
+}
+
+
+
+
+
