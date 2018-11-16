@@ -78,6 +78,13 @@ hr {
 	margin-left:-270px;
 }
 */
+
+button {
+	 margin:20px;
+    &:hover {
+        color:red;
+    }
+}
 /* Nav
 *****************************************************************/
 
@@ -219,11 +226,17 @@ nav.next-prev {
 	}
 
 	#icon-goal14 {
-margin: 10px auto 0 auto;
-
+		margin: 10px auto 0 auto;
 		width: 128px;
 		height: 130px;
 		background: transparent url('../img/icon-goal14.png') -1px 2px no-repeat;
+	}
+
+	#Bottle {
+		margin: 10px auto 0 auto;
+		width: 128px;
+		height: 128px;
+		background: transparent url('../img/bottle.png') -1px 2px no-repeat;
 	}
 
 /* foreground (ballons/landscape) */

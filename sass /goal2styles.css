@@ -112,6 +112,19 @@ p {
 /*************************************************
                   Links & Buttons
 **************************************************/
+button {
+  font-family: "Knicknack", sans-serif;
+  font-size: 2em;
+  letter-spacing: 2px;
+  background-color: transparent;
+  color: #fff;
+  border: 2px solid white;
+  border-radius: 5px;
+  padding: 30px;
+  width: 280px;
+  cursor: pointer;
+  margin-top: 60px; }
+
 /*************************************************
                   Page Struture
 **************************************************/

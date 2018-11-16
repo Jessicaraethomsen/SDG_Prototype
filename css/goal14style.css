@@ -112,6 +112,19 @@ p {
 /*************************************************
                   Links & Buttons
 **************************************************/
+button {
+  font-family: "Knicknack", sans-serif;
+  font-size: 2em;
+  letter-spacing: 2px;
+  background-color: transparent;
+  color: #fff;
+  border: 2px solid white;
+  border-radius: 5px;
+  padding: 30px;
+  width: 280px;
+  cursor: pointer;
+  margin-top: 60px; }
+
 /*************************************************
                   Page Struture
 **************************************************/
@@ -406,6 +419,11 @@ hr {
 	margin-left:-270px;
 }
 */
+button {
+  margin: 20px; }
+  button:hover {
+    color: red; }
+
 /* Nav
 *****************************************************************/
 nav#primary {
@@ -534,6 +552,12 @@ a.next:hover {
   width: 128px;
   height: 130px;
   background: transparent url("../img/icon-goal14.png") -1px 2px no-repeat; }
+
+#Bottle {
+  margin: 10px auto 0 auto;
+  width: 128px;
+  height: 128px;
+  background: transparent url("../img/bottle.png") -1px 2px no-repeat; }
 
 /* foreground (ballons/landscape) */
 #parallax-bg3 {
