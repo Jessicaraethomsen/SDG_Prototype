@@ -1,7 +1,6 @@
 /*************************************************
                 FONT IMPORTS
 **************************************************/
-
 @font-face {
   font-family: Knicknack;
   src: url(../Webfonts/Knicknack-Regular.woff); }
@@ -11,30 +10,11 @@
 @font-face {
   font-family: Knicknack Bold;
   src: url(../Webfonts/Knicknack-Bold.woff); }
-
 /*************************************************
                  VARIABLES
 **************************************************/
-$brand-lightblue: #b3e5fc;
-$brand-blue: #5cc4fc;
-$brand-darkblue: #478bca;
-$brand-white: #ffffff;
-$brand-black: #161D2D;
-$brand-darkgrey: #333333;
-
 /*Goal Variables*/
-
-$goal2-light: #fbc30a;
-$goal2-dark: #d3a029;
-
-$goal14-light: #017dbc;
-$goal14-dark: #0757a0; 
-
 /*Font Variables*/
-
-$font-headline: 'Knicknack', sans-serif; 
-$font-primary: 'Poppins', sans-serif;
-
 /*************************************************
 SASS
 REMEMBER TO THINK  "CAN I USE"....
@@ -45,9 +25,8 @@ EXTEND
 **************************************************/
 body {
   margin: 0;
-  padding: 0; 
-  background-color: $goal2-dark;
-  }
+  padding: 0;
+  background-color: #d3a029; }
 
 .navbar-header {
   position: absolute; }
@@ -72,145 +51,93 @@ h4,
 h5,
 h6 {
   color: #ffffff;
-  font-family: $font-headline;
-  letter-spacing: 2px;
-  }
+  font-family: "Knicknack", sans-serif;
+  letter-spacing: 2px; }
 
+h1 {
+  font-size: 70px; }
 
-
-h1{
-  font-size: 70px;
-}
-h2{
-
-  font-size: 30px;
-}
-
+h2 {
+  font-size: 30px; }
 
 p {
   margin-bottom: 20px;
   font-weight: 300;
-  color: $brand-white;
+  color: #ffffff;
   margin-top: 10px;
   font-family: "Poppins";
   font-size: 25px;
   text-align: center;
   font-weight: 100;
   line-height: 46px;
-  letter-spacing: 2px;
-  }
+  letter-spacing: 2px; }
 
 /*************************************************
                   Links & Buttons
 **************************************************/
-
-
-a{
-  font-family: $font-headline;
+a {
+  font-family: "Knicknack", sans-serif;
   font-size: 18px;
   line-height: 1.5;
   margin-bottom: 20px;
-  color: $brand-white;
-}
+  color: #ffffff; }
 
-
-.title{
+.title {
   z-index: 2;
-  margin-top: 7%;
+  margin-top: 7%; }
 
-}
+.test-border {
+  border: 2px solid white; }
 
-.test-border{
-	border: 2px solid white;
-}
+.center-canvas, .section-goal2-title, .section-goal2-define, .section-game {
+  margin: 0 auto;
+  width: 100%; }
 
-.center-canvas{
- margin: 0 auto;
- width: 100%;
-            }
+.section1, .section-goal2-title, .section-goal2-define, .section-game {
+  height: 100vh;
+  cursor: url("../assets/fried-potatoes.png"), auto; }
 
-.section1{
- height: 100vh;
- cursor: url('../assets/fried-potatoes.png'), auto; 
-
-}
-
-.section2{
-  margin-top: 20%;
-}
+.section2 {
+  margin-top: 20%; }
 
 /*========================================================
           SECTION: TITLE
 ==========================================================*/
-
-
-
-.section-goal2-title{
-  @extend .center-canvas;
-  @extend .section1;
-
-    /*responsive image*/
-    background-image: url('../img/SDG-goal2-bg.png');
-    z-index: -2;
-    /* Center and scale*/
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-
+.section-goal2-title {
+  /*responsive image*/
+  background-image: url("../img/SDG-goal2-bg.png");
+  z-index: -2;
+  /* Center and scale*/
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover; }
 
 /*========================================================
           SECTION: QUIZZ
 ==========================================================*/
-
-
-.goal-text{
-
+.goal-text {
   max-width: 100%;
   margin: 0 auto;
-  margin-top: 20%;
-}
+  margin-top: 20%; }
 
-
-
-.section-goal2-define{
-  @extend .center-canvas;
-  @extend .section1;
-
-    /*responsive image*/
-    background-image: url('../img/SDG-goal2-defination.png');
-    z-index: -2;
-    /* Center and scale*/
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-
+.section-goal2-define {
+  /*responsive image*/
+  background-image: url("../img/SDG-goal2-defination.png");
+  z-index: -2;
+  /* Center and scale*/
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover; }
 
 /*========================================================
           SECTION: GAME
 ==========================================================*/
-
-.section-game{
-  @extend .center-canvas;
-  @extend .section1;
-
-}
-
-
-
 /*========================================================
           SECTION: CARD
 ==========================================================*/
-
-
-.section-cards{
+.section-cards {
   position: static;
-  margin-top: 590px;
-}
-
+  margin-top: 590px; }
 
 .card {
   position: absolute;
@@ -221,39 +148,32 @@ a{
   margin: -150px;
   float: left;
   perspective: 500px;
-  background: transparent;
-}
+  background: transparent; }
 
 .content {
   position: absolute;
   width: 100%;
   height: 100%;
-  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
   transition: transform 1s;
-  transform-style: preserve-3d;
-}
+  transform-style: preserve-3d; }
 
 .card:hover .content {
-  transform: rotateY( 180deg ) ;
+  transform: rotateY(180deg);
   transition: transform 0.5s;
-  cursor: url('../assets/pizza.png'), auto; 
-}
+  cursor: url("../assets/pizza.png"), auto; }
 
-.front{
+.front {
   position: absolute;
   height: 100%;
   width: 100%;
-  background: $goal2-light;
+  background: #fbc30a;
   line-height: 300px;
-  color: $brand-white;
+  color: #ffffff;
   text-align: center;
   font-size: 3.3333333333333335em;
   border-radius: 5px;
-  backface-visibility: hidden;
-}
-
-
-
+  backface-visibility: hidden; }
 
 .back {
   position: absolute;
@@ -261,88 +181,68 @@ a{
   width: 100%;
   background: yellow;
   line-height: 300px;
-  color: $goal2-dark;
+  color: #d3a029;
   text-align: center;
   font-size: 3.3333333333333335em;
   border-radius: 5px;
-  backface-visibility: hidden;
-}
+  backface-visibility: hidden; }
 
 .back {
-  background: $brand-white;
+  background: #ffffff;
   color: black;
-  transform: rotateY( 180deg );
-}
+  transform: rotateY(180deg); }
+
 /*========================================================
           SECTION: MAKE A DIFFERENCE
 ==========================================================*/
-
-.box{
+.box {
   width: 80%;
   margin: 5px;
   background-color: white;
-  padding: 5px; 
-  border: 1px solid pink;
-}
+  padding: 5px;
+  border: 1px solid pink; }
 
-
-
-  ul {
-    font-size: 1em;
-    margin: 0;
-    padding-left: 0;
-    list-style: none;
-
-  }
-
-
-
-
+ul {
+  font-size: 1em;
+  margin: 0;
+  padding-left: 0;
+  list-style: none; }
 
 /*========================================================
           SECTION: QUIZ
 ==========================================================*/
-
-.section-game{
+.section-game {
   position: absolute;
- height: 100vh;
- cursor: url('../assets/fried-potatoes.png'), auto; 
-z-index: 2;
-}
+  height: 100vh;
+  cursor: url("../assets/fried-potatoes.png"), auto;
+  z-index: 2; }
 
-
-.question{
+.question {
   font-size: 30px;
   margin-bottom: 30px;
-  color: $brand-white;
-}
+  color: #ffffff; }
+
 .answers {
   margin-bottom: 30px;
   text-align: left;
-  display: inline-block;
-}
-.answers label{
+  display: inline-block; }
+
+.answers label {
   display: block;
-  font-family: $font-headline;
+  font-family: "Knicknack", sans-serif;
   font-size: 22px;
   border-radius: 10px;
   margin-bottom: 10px;
   padding: 10px;
   width: 600px;
   height: 60px;
- 
-  background-color: $brand-white;
-  cursor: pointer;
+  background-color: #ffffff;
+  cursor: pointer; }
+  .answers label:hover {
+    background-color: #fbc30a; }
 
-   &:hover {
-    background-color: $goal2-light;
-
-    }
-}
-
-
-button{
-  font-family: $font-headline;
+button {
+  font-family: "Knicknack", sans-serif;
   font-size: 22px;
   letter-spacing: 2px;
   background-color: transparent;
@@ -352,104 +252,66 @@ button{
   padding: 30px;
   width: 280px;
   cursor: pointer;
-  margin-top: 60px;
+  margin-top: 60px; }
+  button:hover {
+    background-color: #fbc30a; }
 
+.quiz {
+  position: absolute;
+  z-index: 0;
+  left: 12px;
+  top: 10px; }
 
-
-   &:hover {
-    background-color: $goal2-light;
-    
-    }
-}
-
-
-
-.quiz{
-    position:absolute;
-      z-index:0;
-      left:12px;
-      top:10px;
-}
-
-
-.slide{
+.slide {
   position: absolute;
   left: 0px;
   top: 0px;
   width: 100%;
   z-index: 1;
   opacity: 0;
-  transition: opacity 0.5s;
- 
-}
+  transition: opacity 0.5s; }
 
-.active-slide{
+.active-slide {
   opacity: 1;
-   z-index: 2;
+  z-index: 2; }
 
-
-}
-
-.quiz-container{
+.quiz-container {
   position: relative;
   height: 200px;
   margin-top: 40px;
-  z-index: 2;
+  z-index: 2; }
 
-}
-
-.button-wrapper{
-  font-family: $font-headline;
+.button-wrapper {
+  font-family: "Knicknack", sans-serif;
   position: relative;
-  margin-top:150px; 
-  z-index: 2;
-}
+  margin-top: 150px;
+  z-index: 2; }
 
+.canvas {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 1000;
+  border: 0px solid #000; }
 
+#results {
+  margin-top: 3%;
+  font-family: "Knicknack", sans-serif;
+  font-size: 22px;
+  color: #ffffff; }
 
-.canvas{
-  position:absolute;
-  left:0;
-  top:0;
-  z-index:1000;
-  border:0px solid #000;
-}
-
-#results{
-margin-top:3%; 
-font-family: $font-headline;
-font-size: 22px;
-color: $brand-white;
-
-
-
-
-}
-
-#feedback{ 
-font-family: $font-headline;
-font-size: 22px;
-color: $brand-white;
-}
- 
-
-
-
-
+#feedback {
+  font-family: "Knicknack", sans-serif;
+  font-size: 22px;
+  color: #ffffff; }
 
 /*========================================================
           Animation
 ==========================================================*/
+@keyframes top {
+  from {
+    transform: translateY(0px); }
+  to {
+    transform: translateY(20px); } }
 
-@keyframes top{
-    from{transform:translateY(0px);}
-    to{transform:translateY(20px);}
-}
-
-
-
-
-
-
-
-
+/*# sourceMappingURL=goal2style.css.map */
