@@ -46,7 +46,7 @@ EXTEND
 body {
   margin: 0;
   padding: 0; 
-  background-color: $goal2-dark;
+  background-color: $goal2-dark
   }
 
 .navbar-header {
@@ -278,22 +278,52 @@ a{
 ==========================================================*/
 
 .box{
-  width: 80%;
-  margin: 5px;
-  background-color: white;
+ 
+  margin-top: 10%;
+  height: 500px;
+  background-color: $goal2-light;
   padding: 5px; 
-  border: 1px solid pink;
+  border-radius: 5px;
+
+
+  img{
+      margin-top: 5%;
+
+  }
+
+
+  ul{
+
+    @extend p;
+    list-style-type: none;
+    margin: 0;
+    padding-top: 20px;
+    text-align: left;
+
+  }
+
+
+  li{
+  margin-top: 5px; 
+  padding-left: 10%;
+
+
+  }
 }
 
 
 
-  ul {
-    font-size: 1em;
-    margin: 0;
-    padding-left: 0;
-    list-style: none;
 
-  }
+
+  .col-gap-10.container{ 
+    padding-left: 5px !important;
+     padding-right: 5px !important; 
+   }
+
+  .col-gap-10.container > .row { 
+    margin-left: -20px !important; 
+    margin-right: -20px !important; }
+
 
 
 
