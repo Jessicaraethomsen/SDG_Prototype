@@ -385,10 +385,6 @@ margin-top:3%;
 font-family: $font-headline;
 font-size: 22px;
 color: $brand-white;
-
-
-
-
 }
 
 #feedback{ 
@@ -398,6 +394,9 @@ color: $brand-white;
 }
 
 
+.wrong {
+  border: 3px solid black;
+}
 
 
 

@@ -236,11 +236,6 @@ function confettiEffect (){
 }
 
 
-  function play(){
-       var audio = document.getElementById("audio");
-       audio.play();
-                 }
-
 
 
 function showResults() {
@@ -266,10 +261,13 @@ function showResults() {
         answerContainers[questionNumber].style.color = "#56c02a";
 
 
+
+
       } else {
         // if answer is wrong or blank
         // color the answers red
         answerContainers[questionNumber].style.color = "#eb1c2d";
+        answerContainers[questionNumber].style.border = "thick solid white";
       }
     });
 

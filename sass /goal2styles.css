@@ -285,4 +285,7 @@ button {
   font-size: 22px;
   color: #ffffff; }
 
+.wrong {
+  border: 3px solid black; }
+
 /*# sourceMappingURL=goal2styles.css.map */
