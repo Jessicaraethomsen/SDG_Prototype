@@ -102,10 +102,14 @@ font-family: $font-headline;
 
 p {
   font-family: $font-primary;
-  font-size: 18px;
-  line-height: 1.5;
+  font-size: 25px;
   margin-bottom: 20px;
+  color: $brand-white; 
+  font-weight: 300;
   color: $brand-white;
+  margin-top: 10px;
+  line-height: 46px;
+  letter-spacing: 2px;
 }
 
 /*************************************************
@@ -163,8 +167,6 @@ section{
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
-   
-
 
     
 }

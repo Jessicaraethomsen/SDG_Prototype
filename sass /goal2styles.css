@@ -100,10 +100,14 @@ h6 {
 
 p {
   font-family: "Poppins", sans-serif;
-  font-size: 18px;
-  line-height: 1.5;
+  font-size: 25px;
   margin-bottom: 20px;
-  color: #ffffff; }
+  color: #ffffff;
+  font-weight: 300;
+  color: #ffffff;
+  margin-top: 10px;
+  line-height: 46px;
+  letter-spacing: 2px; }
 
 /*************************************************
                   Links & Buttons
