@@ -17,8 +17,7 @@ body {
 	height: 6000px; /*here we declare height of the project*/
 	line-height: 1.5;
 	color: #000;
-	font-size: 14px;
-	font-family: Lato, Arial,sans-serif;
+	font-family: $font-primary, sans-serif;
 }
 h1 {
 	color: #478bca;
@@ -46,13 +45,13 @@ a:visited {
 img { 
 	display:block;
 	}
-p {
+/*p {
 	margin:1em 0;
 	font-size: 1.5em;
 	color: #fff;
-	}
+	}*/
 
-/* Common shared styles
+/* Break between arrows
 *****************************************************************/
 
 hr {
@@ -69,27 +68,16 @@ hr {
 #wrapper {
 	position: relative;
 }
-#branding {
-	width: 100%;
-	background: #fff;
-	}
-	#branding h1 {
-		width: 940px;
-		padding: 10px 15px;
-		margin: 0 auto;
-		text-transform: uppercase;
-		font-size: 18px;
-		font-weight: bold;
-		}
 
-#container
+/*#container
 {
 	position:absolute;
-	width:540px;	
+	width:600px;	
 	display:inline-block;
 	left:50%;
 	margin-left:-270px;
 }
+*/
 /* Nav
 *****************************************************************/
 
@@ -162,11 +150,23 @@ nav.next-prev {
 #content {
 	z-index: 4;
 	position: relative;
-	max-width: 940px;
+	max-width: 820px; /* width of the content*/
 	padding: 0 10px;
 	margin: 0 auto;
 	line-height: 1.7;
 	}
+
+
+	#content h1, h2 {
+				text-align: center;
+				margin: 0 0 25px 0;
+				font-size: 2.5em;
+				font-family: $font-headline, Lato, Georgia, serif;
+				font-weight: normal;
+				line-height: 65px;
+				}
+
+
 	#content article {
 		width: 100%;
 		}
@@ -189,14 +189,7 @@ nav.next-prev {
 			position: absolute;
 			top: 2180px;
 			}
-			#content h1, h2 {
-				text-align: center;
-				margin: 0 0 25px 0;
-				font-size: 3em;
-				font-family: $font-headline, Lato, Georgia, serif;
-				font-weight: normal;
-				line-height: 65px;
-				}
+			
 			 
 			
 		#fourth-point {
