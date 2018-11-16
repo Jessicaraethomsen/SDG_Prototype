@@ -20,7 +20,7 @@ body {
 	font-family: $font-primary, sans-serif;
 }
 h1 {
-	color: #478bca;
+	color: $goal14-dark;
 }
 
 h2 {
@@ -256,6 +256,18 @@ nav.next-prev {
 		width: 128px;
 		height: 128px;
 		background: transparent url('../img/bottle.png') -1px 2px no-repeat;
+	}
+
+
+	.big-text {
+		font-size: 4em;
+	}
+
+
+	.buttons-g14{
+		 margin: 10px auto;
+		 display: block;
+
 	}
 
 /* foreground (ballons/landscape) */
