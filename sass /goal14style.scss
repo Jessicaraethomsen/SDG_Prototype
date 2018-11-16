@@ -28,6 +28,11 @@ h2 {
 	color:#fff;
 }
 
+h3 {
+	color:#fff;
+
+}
+
 a, a:link,
 a:active,
 a:visited {
@@ -79,10 +84,24 @@ hr {
 }
 */
 
-button {
-	 margin:20px;
-    &:hover {
-        color:red;
+button{
+  font-family: $font-headline;
+  font-size: 22px;
+  letter-spacing: 2px;
+  background-color: transparent;
+  color: #fff;
+  border: 2px solid white;
+  border-radius: 5px;
+  padding: 30px;
+  width: 280px;
+  cursor: pointer;
+  margin-top: 60px;
+	top: 70%;
+
+
+   &:hover {
+    background-color: $goal14-dark;
+    
     }
 }
 /* Nav
@@ -195,9 +214,6 @@ nav.next-prev {
 			position: absolute;
 			top: 2180px;
 			}
-			
-			 
-			
 		#fourth-point {
 			position: absolute;
 			top: 3270px;
@@ -206,6 +222,10 @@ nav.next-prev {
 		#fifth-point {
 			position: absolute;
 			top: 4360px;
+		}
+
+		#button-next {
+			bottom: 5000px;
 		}
 
 	/*images*/		

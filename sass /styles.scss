@@ -98,11 +98,22 @@ color: $brand-white;
 font-family: $font-headline;
 }
 
+h1 {
+  font-size: 3.8em;
+}
 
+
+h2{
+  font-size: 2em;
+}
+
+h3 {
+  font-size: 1.5em;
+}
 
 p {
   font-family: $font-primary;
-  font-size: 25px;
+  font-size: 1.5em;
   margin-bottom: 20px;
   color: $brand-white; 
   font-weight: 300;
@@ -110,6 +121,11 @@ p {
   margin-top: 10px;
   line-height: 46px;
   letter-spacing: 2px;
+}
+
+.p-small {
+  @extend p;
+  font-size: 1.125em;
 }
 
 /*************************************************

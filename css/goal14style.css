@@ -2,7 +2,7 @@
    http://meyerweb.com/eric/tools/css/reset/ 
 *****************************************************************/
 html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+h1, h2, h3, h4, h5, h6, p, .p-small, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
 del, dfn, em, img, ins, kbd, q, s, samp,
 small, strike, strong, sub, sup, tt, var,
@@ -98,9 +98,18 @@ h6 {
   color: #ffffff;
   font-family: "Knicknack", sans-serif; }
 
-p {
+h1 {
+  font-size: 3.8em; }
+
+h2 {
+  font-size: 2em; }
+
+h3 {
+  font-size: 1.5em; }
+
+p, .p-small {
   font-family: "Poppins", sans-serif;
-  font-size: 25px;
+  font-size: 1.5em;
   margin-bottom: 20px;
   color: #ffffff;
   font-weight: 300;
@@ -108,6 +117,9 @@ p {
   margin-top: 10px;
   line-height: 46px;
   letter-spacing: 2px; }
+
+.p-small {
+  font-size: 1.125em; }
 
 /*************************************************
                   Links & Buttons
@@ -374,6 +386,9 @@ h1 {
 h2 {
   color: #fff; }
 
+h3 {
+  color: #fff; }
+
 a, a:link,
 a:active,
 a:visited {
@@ -420,9 +435,20 @@ hr {
 }
 */
 button {
-  margin: 20px; }
+  font-family: "Knicknack", sans-serif;
+  font-size: 22px;
+  letter-spacing: 2px;
+  background-color: transparent;
+  color: #fff;
+  border: 2px solid white;
+  border-radius: 5px;
+  padding: 30px;
+  width: 280px;
+  cursor: pointer;
+  margin-top: 60px;
+  top: 70%; }
   button:hover {
-    color: red; }
+    background-color: #0757a0; }
 
 /* Nav
 *****************************************************************/
@@ -532,6 +558,9 @@ a.next:hover {
 #fifth-point {
   position: absolute;
   top: 4360px; }
+
+#button-next {
+  bottom: 5000px; }
 
 /*images*/
 #intro-img {
