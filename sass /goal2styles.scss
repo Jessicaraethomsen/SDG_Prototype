@@ -1,39 +1,7 @@
-/*************************************************
-                FONT IMPORTS
-**************************************************/
 
-@font-face {
-  font-family: Knicknack;
-  src: url(../Webfonts/Knicknack-Regular.woff); }
-@font-face {
-  font-family: Knicknack Medium;
-  src: url(../Webfonts/Knicknack-Medium.woff); }
-@font-face {
-  font-family: Knicknack Bold;
-  src: url(../Webfonts/Knicknack-Bold.woff); }
+@import 'reset';
+@import 'styles';
 
-/*************************************************
-                 VARIABLES
-**************************************************/
-$brand-lightblue: #b3e5fc;
-$brand-blue: #5cc4fc;
-$brand-darkblue: #478bca;
-$brand-white: #ffffff;
-$brand-black: #161D2D;
-$brand-darkgrey: #333333;
-
-/*Goal Variables*/
-
-$goal2-light: #fbc30a;
-$goal2-dark: #d3a029;
-
-$goal14-light: #017dbc;
-$goal14-dark: #0757a0; 
-
-/*Font Variables*/
-
-$font-headline: 'Knicknack', sans-serif; 
-$font-primary: 'Poppins', sans-serif;
 
 /*************************************************
 SASS
@@ -43,25 +11,6 @@ MIXINS
 EXTEND
 
 **************************************************/
-body {
-  margin: 0;
-  padding: 0; 
-  background-color: $goal2-dark;
-  }
-
-.navbar-header {
-  position: absolute; }
-
-.navbar-brand:hover {
-  animation: top .7s ease-out;
-  -webkit-animation-fill-mode: forwards;
-  /* Chrome, Safari, Opera */
-  animation-fill-mode: alternate-reverse; }
-
-.navbar {
-  z-index: 10;
-  cursor: pointer; }
-
 /*************************************************
                   Typography
 **************************************************/
@@ -394,9 +343,7 @@ color: $brand-white;
 }
 
 
-.wrong {
-  border: 3px solid black;
-}
+
 
 
 
