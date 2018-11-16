@@ -1,9 +1,8 @@
 @import 'reset';
-/* PARALLAX SCROLLING EXPERIMENT
-   Master Styles
-   Author: Jonathan Nicol (f6design.com)
-*****************************************************************/
+@import 'styles';
 
+/* SUSTAINABLE DEVELOPMENT GOALS - LIFE BELOW WATER  - GOAL 14 
+*****************************************************************/
 
 
 /* Extended base styles (site specific)
@@ -194,7 +193,7 @@ nav.next-prev {
 				text-align: center;
 				margin: 0 0 25px 0;
 				font-size: 3em;
-				font-family: Lato, Georgia, serif;
+				font-family: $font-headline, Lato, Georgia, serif;
 				font-weight: normal;
 				line-height: 65px;
 				}
