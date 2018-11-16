@@ -1,0 +1,330 @@
+@import 'reset';
+/* PARALLAX SCROLLING EXPERIMENT
+   Master Styles
+   Author: Jonathan Nicol (f6design.com)
+*****************************************************************/
+
+
+
+/* Extended base styles (site specific)
+*****************************************************************/
+
+html { 
+	overflow-y: scroll; /* always force a scrollbar in non-IE */
+	}
+body {
+	background: #5cc4fc; /* color background of the whole page*/
+	overflow-x: hidden;
+	height: 6000px; /*here we declare height of the project*/
+	line-height: 1.5;
+	color: #000;
+	font-size: 14px;
+	font-family: Lato, Arial,sans-serif;
+}
+h1 {
+	color: #478bca;
+}
+
+h2 {
+
+	color:#fff;
+}
+
+a, a:link,
+a:active,
+a:visited {
+	-webkit-transition: color 0.25s ease-out;
+	-moz-transition: color 0.25s ease-out;
+	-o-transition: color 0.25s ease-out;
+	transition: color 0.25s ease-out;
+	color:#478bca;
+	outline: none;
+	text-decoration:none;
+	}
+	a:hover { 
+		color:#000;
+		}
+img { 
+	display:block;
+	}
+p {
+	margin:1em 0;
+	font-size: 1.5em;
+	color: #fff;
+	}
+
+/* Common shared styles
+*****************************************************************/
+
+hr {
+	margin: 0;
+	border: none;
+	border-top: 1px solid #478bca;
+	/*border-bottom: 1px solid #3b3b3b;*/
+	height: 3px;
+}
+
+/* Page structure
+*****************************************************************/
+
+#wrapper {
+	position: relative;
+}
+#branding {
+	width: 100%;
+	background: #fff;
+	}
+	#branding h1 {
+		width: 940px;
+		padding: 10px 15px;
+		margin: 0 auto;
+		text-transform: uppercase;
+		font-size: 18px;
+		font-weight: bold;
+		}
+
+#container
+{
+	position:absolute;
+	width:540px;	
+	display:inline-block;
+	left:50%;
+	margin-left:-270px;
+}
+/* Nav
+*****************************************************************/
+
+nav#primary {
+	z-index: 5;
+	position: fixed;
+	top: 50%;
+	right: 16px;
+	margin-top: -40px;
+}
+nav#primary li {
+	position: relative;
+	height: 20px;
+}
+nav#primary a {
+	display: block;
+	width: 20px;
+	height: 20px;
+	text-indent: -9999px;
+	background: transparent url('../img/nav-dot.png') 4px 4px no-repeat;
+}
+nav#primary a:hover, nav#primary a.active {
+	background: transparent url('../img/nav-dot.png') 4px -16px no-repeat;
+}
+nav#primary h1 {
+	position: absolute;
+	right: 22px;
+	top: -7px;
+	display: none;
+	padding: 4px 20px 4px 7px;;
+	color: #fff;
+	white-space: nowrap;
+	background: transparent url('../img/nav-arrow.png') 100% 50% no-repeat;
+	}
+nav.next-prev {
+	margin: 20px 0 0 0;
+	}
+	a.prev,
+	a.next {
+		display: block;
+		width: 30px;
+		height: 30px;
+		text-indent: -9999px;
+		}
+	a.prev {
+		/*margin around the arrow*/
+		margin: 0 auto 10px auto;
+		/*arrow png 0 0 - which dimentions of the spirte to read*/
+		background: transparent url('../img/scroll-arrow-up.png') 0 0 no-repeat;
+		}
+
+		/*hover on the arrows*/
+		a.prev:hover {
+			background: transparent url('../img/scroll-arrow-up.png') 0 -30px no-repeat;
+			}
+	a.next {
+		margin: 10px auto 0 auto;
+		background: transparent url('../img/scroll-arrow-down.png') -1px 2px no-repeat;
+		}
+		a.next:hover {
+			background: transparent url('../img/scroll-arrow-down.png') -1px -30px no-repeat;
+			}
+
+/* Parallax
+*****************************************************************/
+
+/* content */
+
+
+#content {
+	z-index: 4;
+	position: relative;
+	max-width: 940px;
+	padding: 0 10px;
+	margin: 0 auto;
+	line-height: 1.7;
+	}
+	#content article {
+		width: 100%;
+		}
+		#first-point ,
+		#second-point,
+		#third-point,
+		#fourth-point, 
+		#fifth-point {
+			padding-top: 105px;
+			}
+		#first-point {
+			position: absolute;
+			top: 0px;
+			}
+		#second-point {
+			position: absolute;
+			top: 1090px;
+			}
+		#third-point {
+			position: absolute;
+			top: 2180px;
+			}
+			#content h1, h2 {
+				text-align: center;
+				margin: 0 0 25px 0;
+				font-size: 3em;
+				font-family: Lato, Georgia, serif;
+				font-weight: normal;
+				line-height: 65px;
+				}
+			 
+			
+		#fourth-point {
+			position: absolute;
+			top: 3270px;
+			}
+
+		#fifth-point {
+			position: absolute;
+			top: 4360px;
+		}
+
+	/*images*/		
+	#intro-img {
+		margin: 10px auto 0 auto;
+		width:785px;
+		height: 400px;
+		background: transparent url('../img/goal-14-intro.png') -1px 2px no-repeat;
+		}
+	
+
+	#Earth {
+		margin: 10px auto 0 auto;
+		width:128px;
+		height: 128px;
+		background: transparent url('../img/earth.png') -1px 2px no-repeat;
+	}
+
+	#icon-goal14 {
+margin: 10px auto 0 auto;
+
+		width: 128px;
+		height: 130px;
+		background: transparent url('../img/icon-goal14.png') -1px 2px no-repeat;
+	}
+
+/* foreground (ballons/landscape) */
+#parallax-bg3 {
+	z-index: 3;
+	position: fixed;
+	left: 50%; /* align left edge with center of viewport */
+	top: 0;
+	width: 940px;
+	margin-left: -470px; /* move left by half element's width */
+	}
+	/* balloon */
+	#bg3-1 {
+		position: absolute;
+		top: -111px;
+		left: 355px;
+		}
+	#bg3-2 {
+		position: absolute;
+		top: 812px;
+		left: 321px;
+		}
+	#bg3-3 {
+		position: absolute;
+		top: 1628px;
+		left: 403px;
+		}
+	#bg3-4 {
+		position: absolute;
+		top: 2700px;
+		left: -85px;
+		}
+/* midground (clouds) */
+#parallax-bg2 {
+	z-index: 2;
+	position: fixed;
+	left: 50%; /* align left edge with center of viewport */
+	top: 0;
+	width: 1200px;
+	margin-left: -600px; /* move left by half element's width */
+	}
+	#bg2-1 {
+		position: absolute;
+		top: 162px;
+		left: 200px;
+		}
+	#bg2-2 {
+		position: absolute;
+		top: 300px;
+		left: 1150px;
+		}
+	#bg2-3 {
+		position: absolute;
+		top: 543px;
+		left: -35px;
+		}
+	#bg2-4 {
+		position: absolute;
+		top: 1180px;
+		left: 250px;
+		}
+	#bg2-5 {
+		position: absolute;
+		top: 900px;
+		left: 890px;
+		}
+/* background (clouds) */
+#parallax-bg1 {
+	z-index: 1;
+	position: fixed;
+	left: 50%; /* align left edge with center of viewport */
+	top: 0;
+	width: 1200px;
+	margin-left: -600px; /* move left by half element's width */
+	}
+	#bg1-1 {
+		position: absolute;
+		top: 85px;
+		left: -270px;
+		}
+	#bg1-2 {
+		position: absolute;
+		top: 440px;
+		left: 795px;
+		}
+	#bg1-3 {
+		position: absolute;
+		top: 900px;
+		left: -220px;
+		}
+	#bg1-4 {
+		position: absolute;
+		top: 1020px;
+		left: 450px;
+		}
+
