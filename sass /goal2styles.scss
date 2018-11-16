@@ -49,6 +49,11 @@ body {
   background-color: $goal2-dark
   }
 
+section{
+   display: block;
+
+}
+
 .navbar-header {
   position: absolute; }
 
@@ -98,7 +103,13 @@ p {
   font-weight: 100;
   line-height: 46px;
   letter-spacing: 2px;
-  }
+  } 
+
+  .p-small {
+  @extend p;
+  font-size: 1.125em;
+}
+
 
 /*************************************************
                   Links & Buttons
@@ -128,6 +139,7 @@ a{
  margin: 0 auto;
  width: 100%;
             }
+
 
 .section1{
  height: 100vh;
@@ -194,9 +206,17 @@ a{
 ==========================================================*/
 
 .section-game{
-  @extend .center-canvas;
   @extend .section1;
+  @extend .center-canvas;
+  background-color: $goal2-light;
+}
 
+
+.game-text{
+  width: 100%;
+  margin-top: 10%;
+  margin-left: 10%;
+  border: 1px solid green;
 }
 
 
@@ -206,95 +226,56 @@ a{
 ==========================================================*/
 
 
-.section-cards{
-  position: static;
-  margin-top: 590px;
-}
-
-
-.card {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 300px;
-  height: 300px;
-  margin: -150px;
-  float: left;
-  perspective: 500px;
-  background: transparent;
-}
-
-.content {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  box-shadow: 0 0 15px rgba(0,0,0,0.1);
-  transition: transform 1s;
-  transform-style: preserve-3d;
-}
-
-.card:hover .content {
-  transform: rotateY( 180deg ) ;
-  transition: transform 0.5s;
-  cursor: url('../assets/pizza.png'), auto; 
-}
-
-.front{
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  background: $goal2-light;
-  line-height: 300px;
-  color: $brand-white;
-  text-align: center;
-  font-size: 3.3333333333333335em;
-  border-radius: 5px;
-  backface-visibility: hidden;
-}
 
 
 
 
-.back {
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  background: yellow;
-  line-height: 300px;
-  color: $goal2-dark;
-  text-align: center;
-  font-size: 3.3333333333333335em;
-  border-radius: 5px;
-  backface-visibility: hidden;
-}
 
-.back {
-  background: $brand-white;
-  color: black;
-  transform: rotateY( 180deg );
-}
+
 /*========================================================
           SECTION: MAKE A DIFFERENCE
 ==========================================================*/
+.section-change{
+@extend .section1;
+
+}
+
+.wrapper-change{
+  @extend .center-canvas;
+  border: 1px solid white;
+  margin-top: 10%;
+  width: 80%;
+  height:100%;
+
+}
 
 .box{
  
   margin-top: 10%;
   height: 500px;
-  background-color: $goal2-light;
+  width: 400px;
+  background-color: white;
+  border: 2px solid transparent;
   padding: 5px; 
   border-radius: 5px;
 
 
+  h2{
+  margin-top: 20px;
+  color: $goal2-dark;
+
+  }
+
   img{
       margin-top: 5%;
 
-  }
+  }  
 
 
   ul{
 
-    @extend p;
+    @extend .p-small;
+    color: $goal2-dark;
     list-style-type: none;
     margin: 0;
     padding-top: 20px;
@@ -302,6 +283,7 @@ a{
 
   }
 
+  
 
   li{
   margin-top: 5px; 
@@ -332,16 +314,19 @@ a{
 /*========================================================
           SECTION: QUIZ
 ==========================================================*/
-
-.section-game{
-  position: absolute;
- height: 100vh;
- cursor: url('../assets/fried-potatoes.png'), auto; 
-z-index: 2;
+.section-quiz{
+@extend .section1;
 }
 
 
+.quiz-wrapper{
+margin-top: 10%;
+}
+
+
+
 .question{
+
   font-size: 30px;
   margin-bottom: 30px;
   color: $brand-white;
@@ -439,11 +424,13 @@ button{
 
 .canvas{
   position:absolute;
+  width:100%;
   left:0;
   top:0;
   z-index:1000;
   border:0px solid #000;
 }
+
 
 #results{
 margin-top:3%; 
@@ -475,11 +462,4 @@ color: $brand-white;
     from{transform:translateY(0px);}
     to{transform:translateY(20px);}
 }
-
-
-
-
-
-
-
 

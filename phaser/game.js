@@ -9,7 +9,7 @@ Main = function () {};
 Main.prototype = {
 
 	preload: function () {
-		this.game.stage.backgroundColor = '#5c97f0';
+		this.game.stage.backgroundColor = 'transparent';
 		this.load.image('preloading', 'assets/loader.png');
 	
 	},
