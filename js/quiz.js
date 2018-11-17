@@ -21,16 +21,6 @@
   },
 
   {
-    question: "What do they eat in Morroco?",
-    answers: {
-      a: "CousCous",
-      b: "Tacos",
-      c: "Pizza"
-    },
-    correctAnswer: "a"
-  },
-
-  {
     question: "What do they eat in USA?",
     answers: {
       a: "Tacos",
@@ -39,6 +29,17 @@
     },
     correctAnswer: "c"
   },
+
+  {
+    question: "Out of 10, how many don't eat dinner?",
+    answers: {
+      a: "1",
+      b: "6",
+      c: "4"
+    },
+    correctAnswer: "a"
+  },
+
   {
     question: "How can we make a difference with Hunger?",
     answers: {
@@ -361,28 +362,6 @@ const submitButton = document.getElementById("submit");
 
 
 
-})();
-
-
-(function() {
-  'use strict';
-
-  var btnScrollDown = document.querySelector('#scroll_down');
-
-  function scrollDown() {
-    var windowCoords = document.documentElement.clientHeight;
-    (function scroll() {
-      if (window.pageYOffset < windowCoords) {
-        window.scrollBy(0, 10);
-        setTimeout(scroll, 0);
-      }
-      if (window.pageYOffset > windowCoords) {
-        window.scrollTo(0, windowCoords);
-      }
-    })();
-  }
-
-  btnScrollDown.addEventListener('click', scrollDown);
 })();
 
 
