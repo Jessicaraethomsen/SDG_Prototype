@@ -118,7 +118,7 @@ var boot = {
 		this.boat.body.bounce.set(1, 1);
 		this.boat.scale.x = -1;
 
-		var title = game.add.text(game.world.centerX - 700 , 120, 'Goal 2: Zero Hunger', {
+		var title = game.add.text(game.world.centerX - 700 , 60, 'Goal 2: Zero Hunger', {
 			font: "60px poppins",
 			fill: "#fff"
 		});
@@ -126,7 +126,7 @@ var boot = {
 		title.anchor.set(0.1);
 
 
-		var title2 = game.add.text(game.world.centerX - 500 , 200, 'EXPLORE AND LEARN', {
+		var title2 = game.add.text(game.world.centerX - 500 , 130, 'EXPLORE AND LEARN', {
 			font: "20px Poppins",
 			fill: "#fff"
 		});

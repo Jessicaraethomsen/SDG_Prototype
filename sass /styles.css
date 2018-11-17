@@ -105,11 +105,13 @@ section {
   background-image: url("../img/sdg_introworld1.png"); }
 
 #home-bg {
-  background-image: url("../img/sdg_homemap.png"); }
+  background-image: url("../img/sdg_homemap.png");
+  overflow: hidden; }
 
 /* .page-content class for all our Intro-world sections*/
 .page-content {
-  position: absolute;
+  position: relative;
+  
   /*responsive image*/
   height: 100%;
   margin: 0 auto;
