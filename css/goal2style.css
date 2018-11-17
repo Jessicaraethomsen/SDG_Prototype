@@ -25,11 +25,7 @@ EXTEND
 **************************************************/
 body {
   margin: 0;
-  padding: 0;
-  background-color: #d3a029; }
-
-section {
-  display: block; }
+  padding: 0; }
 
 .navbar-header {
   position: absolute; }
@@ -54,6 +50,290 @@ h4,
 h5,
 h6 {
   color: #ffffff;
+  font-family: "Knicknack", sans-serif; }
+
+h1 {
+  font-size: 3.8em; }
+
+h2 {
+  font-size: 2em; }
+
+h3 {
+  font-size: 1.5em; }
+
+p, .p-small {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.5em;
+  margin-bottom: 20px;
+  color: #ffffff;
+  font-weight: 500;
+  color: #ffffff;
+  margin-top: 10px;
+  line-height: 46px;
+  letter-spacing: 2px; }
+
+.p-small {
+  font-size: 1.125em; }
+
+/*************************************************
+                  Links & Buttons
+**************************************************/
+button {
+  font-family: "Knicknack", sans-serif;
+  font-size: 2em;
+  letter-spacing: 2px;
+  background-color: transparent;
+  color: #fff;
+  border: 2px solid white;
+  border-radius: 5px;
+  padding: 30px;
+  width: 280px;
+  cursor: pointer;
+  margin-top: 60px; }
+
+/*************************************************
+                  Page Struture
+**************************************************/
+section {
+  margin: 0;
+  padding: 0; }
+
+.section-cover {
+  max-width: 100%; }
+
+#intro-bg {
+  background-image: url("../img/sdg_introworld1.png"); }
+
+#home-bg {
+  background-image: url("../img/sdg_homemap.png"); }
+
+/* .page-content class for all our Intro-world sections*/
+.page-content {
+  position: absolute;
+  /*responsive image*/
+  height: 100%;
+  margin: 0 auto;
+  /*Border gives the effect of game*/
+  border: 20px solid #ffffff;
+  /*Rounded corner of sections*/
+  border-radius: 60px;
+  z-index: -2;
+  /* Center and scale*/
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover; }
+
+.no-gutters {
+  margin-right: 0;
+  margin-left: 0; }
+
+/*************************************************
+              HOME PAGE ELEMENTS
+**************************************************/
+.cloud1 {
+  position: absolute;
+  top: 50%;
+  left: -10%;
+  z-index: 10;
+  width: 4%;
+  animation: drift 80s linear infinite; }
+
+.cloud2 {
+  position: absolute;
+  top: 10%;
+  left: -10%;
+  z-index: 10;
+  width: 4%;
+  animation: drift 80s 40s linear infinite; }
+
+.cloud3 {
+  position: absolute;
+  top: 80%;
+  left: -10%;
+  z-index: 10;
+  width: 4%;
+  animation: drift 90s 20s linear infinite; }
+
+.boat1 {
+  position: absolute;
+  top: 80%;
+  left: 0%;
+  width: 4%;
+  z-index: 10;
+  animation: sail 50s  linear infinite alternate; }
+
+.boat2 {
+  position: absolute;
+  top: 20%;
+  left: 95%;
+  width: 4%;
+  z-index: 10;
+  animation: sailleft 50s  linear infinite alternate; }
+
+.goal1 {
+  position: absolute;
+  top: 17%;
+  left: 16%;
+  width: 4%;
+  z-index: 10;
+  cursor: url(../img/tap.png), auto; }
+
+.goal2 {
+  position: absolute;
+  top: 23%;
+  left: 23%;
+  width: 4%;
+  z-index: 10;
+  cursor: url(../img/tap.png), auto; }
+
+.navbar-badge {
+  position: absolute;
+  top: -1%;
+  left: 77%;
+  max-width: 4%;
+  z-index: 10; }
+
+.navbar-help {
+  position: absolute;
+  top: 1%;
+  left: 85%;
+  max-width: 5%;
+  z-index: 10; }
+
+.navbar-langauge {
+  position: absolute;
+  top: 1%;
+  left: 90%;
+  max-width: 5%;
+  z-index: 10; }
+
+.navbar-audio {
+  position: absolute;
+  top: 1%;
+  left: 95%;
+  max-width: 5%;
+  z-index: 10; }
+
+/*************************************************
+              WEB ANIMATIONS
+**************************************************/
+@keyframes top {
+  from {
+    transform: translateY(0px); }
+  to {
+    transform: translateY(20px); } }
+@keyframes drift {
+  from {
+    transform: translateX(-55px); }
+  to {
+    transform: translateX(2000px); } }
+@keyframes sail {
+  from {
+    transform: translateX(5px); }
+  to {
+    transform: translateX(100px); } }
+@keyframes sailleft {
+  from {
+    transform: translateX(0px); }
+  to {
+    transform: translateX(-100px); } }
+@keyframes spin {
+  100% {
+    transform: rotate(2turn); } }
+/*************************************************************
+              MEDIA QUERIES
+
+ HELP:https://gist.github.com/gokulkrishh/242e68d1ee94ad05f488           
+***************************************************************/
+@media (min-width: 501px) and (max-width: 1024px) {
+  #home-bg,
+  #intro-bg {
+    background-image: url("../img/sdg_flip.png"); }
+
+  .page-content {
+    position: block;
+    /*responsive image*/
+    height: 100%;
+    margin: 0 auto;
+    /*Border gives the effect of game*/
+    border: none;
+    /*Rounded corner of sections*/
+    border-radius: 0;
+    z-index: 3;
+    /* Center and scale*/
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover; }
+
+  /*Hide our logo*/
+  .navbar-brand {
+    display: none; } }
+/*if anything needs to change*/
+@media only screen and (max-width: 500px) {
+  body {
+    background-color: #478bca; }
+
+  #home-bg,
+  #intro-bg {
+    background-image: url("../img/sdg_sorry.png");
+    width: 100%;
+    height: 100%;
+    margin: 0 auto; }
+
+  .page-content {
+    position: block;
+    /*responsive image*/
+    height: 100%;
+    margin: 0 auto;
+    /*Border gives the effect of game*/
+    border: none;
+    /*Rounded corner of sections*/
+    border-radius: 0;
+    z-index: 3;
+    /* Center and scale*/
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover; }
+
+  /*Hide our logo*/
+  .navbar-brand {
+    display: none; } }
+/*Wind Mills
+
+.windmill img{
+    position: absolute;
+    z-index: 10; 
+    top: 50%;
+    left: 30%;
+    animation: spin 10s linear infinite;
+    animation-play-state: paused;
+
+    &:hover {
+
+    animation-play-state: running;
+    
+   } 
+ } 
+
+ */
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #d3a029; }
+
+section {
+  display: block; }
+
+/*************************************************
+                  Typography
+**************************************************/
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #ffffff;
   font-family: "Knicknack", sans-serif;
   letter-spacing: 2px; }
 
@@ -63,7 +343,7 @@ h1 {
 h2 {
   font-size: 30px; }
 
-p, .p-small, .box ul {
+p, .p-small {
   margin-bottom: 20px;
   font-weight: 300;
   color: #ffffff;
@@ -71,12 +351,13 @@ p, .p-small, .box ul {
   font-family: "Poppins";
   font-size: 25px;
   text-align: center;
-  font-weight: 100;
+  font-weight: 500;
   line-height: 46px;
   letter-spacing: 2px; }
 
-.p-small, .box ul {
-  font-size: 1.125em; }
+.p-small {
+  font-size: 1.125em;
+  color: #d3a029; }
 
 /*************************************************
                   Links & Buttons
@@ -95,16 +376,28 @@ a {
 .test-border {
   border: 2px solid white; }
 
-.center-canvas, .section-goal2-title, .section-goal2-define, .section-game, .wrapper-change {
+.center-canvas, .section-goal2-title, .section-goal2-define, .section-help, .section-game, .wrapper-change {
   margin: 0 auto;
   width: 100%; }
 
-.section1, .section-goal2-title, .section-goal2-define, .section-game, .section-change, .section-quiz {
+/*========================================================
+          STRUCTURE
+==========================================================*/
+.section1, .section-goal2-title, .section-goal2-define, .section-help, .section-game, .section-change, .section-quiz {
   height: 100vh;
   cursor: url("../assets/fried-potatoes.png"), auto; }
 
 .section2 {
   margin-top: 20%; }
+
+.navbar-header {
+  border: 2px solid white; }
+
+.navbar {
+  margin-top: -10%;
+  position: absolute;
+  z-index: 10;
+  cursor: pointer; }
 
 /*========================================================
           SECTION: TITLE
@@ -136,25 +429,104 @@ a {
   background-size: cover; }
 
 /*========================================================
+          SECTION: WHY HELP
+==========================================================*/
+.section-help p, .section-help .p-small {
+  margin-top: 5%;
+  text-align: left; }
+
+.margin-top10 {
+  margin-top: 10%; }
+
+/*========================================================
           SECTION: GAME
 ==========================================================*/
-.section-game {
-  background-color: #fbc30a; }
-
 .game-text {
   width: 100%;
   margin-top: 10%;
-  margin-left: 10%;
-  border: 1px solid green; }
+  margin-left: 10%; }
 
 /*========================================================
-          SECTION: CARD
+          SECTION CARD
 ==========================================================*/
+.section-cards {
+  height: 150vh; }
+
+.wrap-text {
+  margin: 10%; }
+
+ul {
+  perspective: 600;
+  margin-left: 10%; }
+
+li {
+  width: 200px;
+  height: 200px;
+  float: left;
+  list-style: none;
+  margin-right: 20px;
+  margin-bottom: 50px;
+  position: relative;
+  cursor: pointer;
+  counter-increment: item; }
+  li div {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    border-radius: 5px;
+    transition: all .5s;
+    backface-visibility: hidden;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1); }
+  li img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    border-radius: 5px; }
+  li:hover .front {
+    z-index: 0;
+    transform: rotateY(180deg); }
+  li:hover .back {
+    transform: rotateY(0); }
+
+.front {
+  z-index: 3;
+  color: #ffffff;
+  text-align: center;
+  line-height: 200px;
+  font-size: 4em;
+  font-family: "Knicknack", sans-serif;
+  background: #fbc30a; }
+  .front:after {
+    content: counter(item); }
+
+.back {
+  transform: rotateY(180deg); }
+
 /*========================================================
           SECTION: MAKE A DIFFERENCE
 ==========================================================*/
+.section-change {
+  /*ul{
+
+    @extend .p-small;
+    color: $goal2-dark;
+    list-style-type: none;
+    margin: 0;
+    padding-top: 20px;
+    text-align: left;
+
+  }
+
+  
+
+  li{
+  margin-top: 5px; 
+  padding-left: 10%;
+
+
+  }*/ }
+
 .wrapper-change {
-  border: 1px solid white;
   margin-top: 10%;
   width: 80%;
   height: 100%; }
@@ -172,15 +544,6 @@ a {
     color: #d3a029; }
   .box img {
     margin-top: 5%; }
-  .box ul {
-    color: #d3a029;
-    list-style-type: none;
-    margin: 0;
-    padding-top: 20px;
-    text-align: left; }
-  .box li {
-    margin-top: 5px;
-    padding-left: 10%; }
 
 .col-gap-10.container {
   padding-left: 5px !important;

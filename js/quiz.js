@@ -2,7 +2,7 @@
 
   const myQuestions = [
   {
-    question: "What do they eat in japan?",
+    question: "What do they eat in Japan?",
     answers: {
       a: "Sushi",
       b: "Burgers",
@@ -11,7 +11,7 @@
     correctAnswer: "a"
   },
   {
-    question: "What do they eat in italy",
+    question: "What do they eat in Italy?",
     answers: {
       a: "Tacos",
       b: "Pasta",
@@ -21,21 +21,21 @@
   },
 
   {
-    question: "What do they eat in Morroco",
+    question: "What do they eat in Morroco?",
     answers: {
       a: "CousCous",
-      b: "Apple Pie",
+      b: "Tacos",
       c: "Pizza"
     },
     correctAnswer: "a"
   },
 
   {
-    question: "What do they eat in USA",
+    question: "What do they eat in USA?",
     answers: {
       a: "Tacos",
-      b: "Orange Juice",
-      c: "Hotdogs"
+      b: "Fish & Chips",
+      c: "Burger & Fries"
     },
     correctAnswer: "c"
   },
@@ -274,7 +274,6 @@ function showResults() {
 
     if (numCorrect >= 4) {
      confettiEffect();
-     play();
      resultsContainer.innerHTML = `${numCorrect} out of ${myQuestions.length}`;
          feedbackContainer.innerHTML = 'GOOD JOB EXPLORER!';
 
