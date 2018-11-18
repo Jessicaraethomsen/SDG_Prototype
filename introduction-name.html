@@ -18,26 +18,45 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 <script src="js/storename.js"></script>
 
+
 <!-- Bootstrap & Styles  -->
 <link rel="stylesheet" href="css/bootstrap.css">
 <link rel="stylesheet" href="css/styles.css">
 
 
 </head>
-<body>
-	 <body onload="setName();">
-
- <h2>HEllO WORLD</h2>
- <h2 id="player"> Welcome:</h2>
-
-	<a class="navbar-badge" href="home.html">
-				
-		
-
-<button onclick="myFunction()">Click me</button> 
+<body onload="resetName();">
 
 
-		</a>
+
+	<section class="section-help">
+		<div class="container">
+			<div class="row align-items-center margin-top10">
+
+
+				<div class="col-lg-6">
+					<h2>Girl Player</h2>
+					<h2 id="playergirl"> Player: </h2>
+					<a class="" href="home.html">
+					<button onclick="myGirl()"> Play with Sally</button>
+					<a> 
+
+				</div>
+				<div class="col-lg-6 order-lg-1">
+					<div class="p-5">
+
+						<h2>Boy Player</h2>
+						<h2 id="playerboy"> Player: </h2>
+						<a class="" href="home.html">
+						<button onclick="myBoy()">Play with Walter</button> 
+						<a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</section>
+
 
 
 	<!-- JAVASCRIPT FILES-->

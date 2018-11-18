@@ -41,6 +41,10 @@ body {
     /* Chrome, Safari, Opera */
     animation-fill-mode: alternate-reverse; }
 
+.welcome {
+  width: 200px;
+  margin-left: 50%; }
+
 .navbar {
   z-index: 10;
   cursor: pointer; }
