@@ -124,11 +124,7 @@ var boot = {
 		});
 
 		title.anchor.set(0.1);
-
-
-		
 	},
-
 
 
 	update: function () {
@@ -145,7 +141,7 @@ var boot = {
 
 	actionOnClick: function () {
 		// launching level 1 splash screen
-		game.state.start('splash1');
+		game.state.start('level1');
 		game.sound.stopAll(); 
 	},
 
