@@ -118,7 +118,7 @@ var level1 = {
 
 		//POPUP
 		 this.popup = game.add.sprite(game.world.centerX, game.world.centerY, 'helpPop');
-		 this.popup.alpha = 0.8;
+		 this.popup.alpha = 0.9;
 		 this.popup.anchor.set(0.5);
 		 this.popup.inputEnabled = true;
 		 this.popup.visible = false;
