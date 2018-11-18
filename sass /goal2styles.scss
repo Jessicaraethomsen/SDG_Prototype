@@ -137,6 +137,23 @@ border: 2px solid white;
 }
 
 
+.cloud1 {
+  position: absolute;
+  top: 30%;
+  left: -20%;
+  z-index: 10;
+  width: 4%;
+  animation: drift 80s linear infinite; }
+
+.cloud2 {
+  position: absolute;
+  top: 5%;
+  left: -20%;
+  z-index: 10;
+  width: 4%;
+  animation: drift 80s 30s linear infinite; }
+
+
 
 /*========================================================
           SECTION: QUIZZ
@@ -511,6 +528,15 @@ color: $brand-white;
 /*========================================================
           Animation
 ==========================================================*/
+
+
+
+
+  @keyframes drift {
+  from {
+    transform: translateX(-55px); }
+  to {
+    transform: translateX(2000px); } }
 
 @keyframes top{
     from{transform:translateY(0px);}

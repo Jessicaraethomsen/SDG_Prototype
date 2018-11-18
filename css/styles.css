@@ -1,3 +1,6 @@
+/*************************************************
+                FONT IMPORTS
+**************************************************/
 @font-face {
   font-family: Knicknack;
   src: url(../Webfonts/Knicknack-Regular.woff); }
@@ -7,47 +10,127 @@
 @font-face {
   font-family: Knicknack Bold;
   src: url(../Webfonts/Knicknack-Bold.woff); }
-/*BRAND Color Variables*/
+/*************************************************
+                 VARIABLES
+**************************************************/
 /*Goal Variables*/
 /*Font Variables*/
+/*************************************************
+SASS
+REMEMBER TO THINK  "CAN I USE"....
+VARIABLES
+MIXINS
+EXTEND
+**************************************************/
 body {
   margin: 0;
-  padding: 0; }
+  padding: 0;
+  background-color: pink; }
+
+#container {
+  margin-left: 400px; }
 
 .navbar-header {
   position: absolute; }
 
-.navbar-brand:hover {
-  animation: top .7s ease-out;
-  -webkit-animation-fill-mode: forwards;
-  /* Chrome, Safari, Opera */
-  animation-fill-mode: alternate-reverse; }
+.navbar-brand {
+  cursor: url(../img/tap.png), auto; }
+  .navbar-brand:hover {
+    animation: top .7s ease-out;
+    -webkit-animation-fill-mode: forwards;
+    /* Chrome, Safari, Opera */
+    animation-fill-mode: alternate-reverse; }
 
 .navbar {
   z-index: 10;
   cursor: pointer; }
 
-/*Typography*/
-h1 {
-  color: pink;
-  },
+/*************************************************
+                  Typography
+**************************************************/
+h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-  color: #161D2D;
+  color: #ffffff;
   font-family: "Knicknack", sans-serif; }
 
-p {
-  font-family: "Poppins", sans-serif;
-  font-size: 18px;
-  line-height: 1.5;
-  margin-bottom: 20px;
-  color: #ffffff; }
+h1 {
+  font-size: 3.8em; }
 
-/*Links & Buttons*/
-/*Page structure*/
+h2 {
+  font-size: 2em; }
+
+h3 {
+  font-size: 1.5em; }
+
+p, .p-small {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.5em;
+  margin-bottom: 20px;
+  color: #ffffff;
+  font-weight: 500;
+  color: #ffffff;
+  margin-top: 10px;
+  line-height: 46px;
+  letter-spacing: 2px; }
+
+.p-small {
+  font-size: 1.125em; }
+
+/*************************************************
+                  Links & Buttons & Tip Box
+**************************************************/
+button {
+  font-family: "Knicknack", sans-serif;
+  font-size: 2em;
+  letter-spacing: 2px;
+  background-color: transparent;
+  color: #fff;
+  border: 2px solid white;
+  border-radius: 5px;
+  padding: 30px;
+  width: 280px;
+  cursor: pointer;
+  margin-top: 60px; }
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black; }
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 150%;
+  left: 50%;
+  margin-left: -60px; }
+
+.tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: black transparent transparent transparent; }
+
+.tooltip:hover .tooltiptext {
+  visibility: visible; }
+
+/*************************************************
+                  Page Struture
+**************************************************/
 section {
   margin: 0;
   padding: 0; }
@@ -81,7 +164,9 @@ section {
   margin-right: 0;
   margin-left: 0; }
 
-/*Homepage Elements*/
+/*************************************************
+              HOME PAGE ELEMENTS
+**************************************************/
 .cloud1 {
   position: absolute;
   top: 50%;
@@ -122,14 +207,6 @@ section {
   z-index: 10;
   animation: sailleft 50s  linear infinite alternate; }
 
-.goal1 {
-  position: absolute;
-  top: 17%;
-  left: 16%;
-  width: 4%;
-  z-index: 10;
-  cursor: url(../img/tap.png), auto; }
-
 .goal2 {
   position: absolute;
   top: 23%;
@@ -138,35 +215,54 @@ section {
   z-index: 10;
   cursor: url(../img/tap.png), auto; }
 
+.goal14 {
+  position: absolute;
+  top: 30%;
+  left: 79%;
+  width: 4%;
+  z-index: 10;
+  cursor: url(../img/tap.png), auto; }
+
 .navbar-badge {
   position: absolute;
-  top: -1%;
+  top: -8%;
   left: 77%;
   max-width: 4%;
-  z-index: 10; }
+  z-index: 10;
+  cursor: url(../img/tap.png), auto; }
+  .navbar-badge:hover {
+    animation: top .7s ease-out;
+    -webkit-animation-fill-mode: forwards;
+    /* Chrome, Safari, Opera */
+    animation-fill-mode: alternate-reverse; }
 
 .navbar-help {
   position: absolute;
   top: 1%;
   left: 85%;
   max-width: 5%;
-  z-index: 10; }
+  z-index: 10;
+  cursor: url(../img/tap.png), auto; }
 
 .navbar-langauge {
   position: absolute;
   top: 1%;
   left: 90%;
   max-width: 5%;
-  z-index: 10; }
+  z-index: 10;
+  cursor: url(../img/tap.png), auto; }
 
 .navbar-audio {
   position: absolute;
   top: 1%;
   left: 95%;
   max-width: 5%;
-  z-index: 10; }
+  z-index: 10;
+  cursor: url(../img/tap.png), auto; }
 
-/*Web Animations*/
+/*************************************************
+              WEB ANIMATIONS
+**************************************************/
 @keyframes top {
   from {
     transform: translateY(0px); }
@@ -190,8 +286,10 @@ section {
 @keyframes spin {
   100% {
     transform: rotate(2turn); } }
-/*Media Queries*/
-/*https://gist.github.com/gokulkrishh/242e68d1ee94ad05f488*/
+/*************************************************************
+              MEDIA QUERIES
+ HELP:https://gist.github.com/gokulkrishh/242e68d1ee94ad05f488           
+***************************************************************/
 @media (min-width: 501px) and (max-width: 1024px) {
   #home-bg,
   #intro-bg {
@@ -246,7 +344,6 @@ section {
   .navbar-brand {
     display: none; } }
 /*Wind Mills
-
 .windmill img{
     position: absolute;
     z-index: 10; 
@@ -254,14 +351,11 @@ section {
     left: 30%;
     animation: spin 10s linear infinite;
     animation-play-state: paused;
-
     &:hover {
-
     animation-play-state: running;
     
    } 
  } 
-
  */
 
 /*# sourceMappingURL=styles.css.map */

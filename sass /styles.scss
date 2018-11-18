@@ -1,4 +1,3 @@
-
 /*************************************************
                 FONT IMPORTS
 **************************************************/
@@ -50,13 +49,17 @@ REMEMBER TO THINK  "CAN I USE"....
 VARIABLES
 MIXINS
 EXTEND
-
 **************************************************/
 
 body {
-	margin: 0;
-	padding: 0;
+  margin: 0;
+  padding: 0;
+  background-color: pink;
   
+}
+
+#container{
+margin-left: 400px;
 }
 
 .navbar-header{
@@ -66,6 +69,7 @@ body {
 }
 
 .navbar-brand{
+     cursor: url(../img/tap.png), auto;
 
    &:hover {
     animation: top .7s ease-out;
@@ -133,8 +137,9 @@ p {
   font-size: 1.125em;
 }
 
+
 /*************************************************
-                  Links & Buttons
+                  Links & Buttons & Tip Box
 **************************************************/
 
 button {
@@ -150,6 +155,43 @@ button {
   cursor: pointer;
   margin-top: 60px; }
  
+
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 150%;
+    left: 50%;
+    margin-left: -60px;
+}
+
+.tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: black transparent transparent transparent;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+}
 
 /*************************************************
                   Page Struture
@@ -251,15 +293,6 @@ section{
   animation: sailleft 50s  linear infinite alternate;
 }
 
-.goal1{
-  position: absolute;
-  top: 17%;
-  left: 16%;
-  width: 4%;
-  z-index: 10;
-  cursor: url(../img/tap.png), auto;
-  }
-
 
 .goal2{
   position: absolute;
@@ -270,12 +303,30 @@ section{
     cursor: url(../img/tap.png), auto;
   }
 
+  .goal14{
+  position: absolute;
+  top: 30%;
+  left: 79%;
+  width: 4%;
+  z-index: 10;
+    cursor: url(../img/tap.png), auto;
+  }
+
+
   .navbar-badge{
   position: absolute;
-  top: -1%;
+  top: -8%;
   left: 77%;
   max-width: 4%;
   z-index: 10;
+     cursor: url(../img/tap.png), auto;
+
+     &:hover {
+    animation: top .7s ease-out;
+    -webkit-animation-fill-mode: forwards; /* Chrome, Safari, Opera */
+    animation-fill-mode: alternate-reverse;
+    
+    }
   }
 
     .navbar-help{
@@ -284,6 +335,7 @@ section{
   left: 85%;
   max-width: 5%;
   z-index: 10;
+     cursor: url(../img/tap.png), auto;
   }
 
   .navbar-langauge{
@@ -292,6 +344,7 @@ section{
   left: 90%;
   max-width: 5%;
   z-index: 10;
+     cursor: url(../img/tap.png), auto;
   }
 
    .navbar-audio{
@@ -300,6 +353,7 @@ section{
   left: 95%;
   max-width: 5%;
   z-index: 10;
+     cursor: url(../img/tap.png), auto;
   }
 
 
@@ -338,7 +392,6 @@ section{
 
 /*************************************************************
               MEDIA QUERIES
-
  HELP:https://gist.github.com/gokulkrishh/242e68d1ee94ad05f488           
 ***************************************************************/
 
@@ -425,7 +478,6 @@ section{
 
 
 /*Wind Mills
-
 .windmill img{
     position: absolute;
     z-index: 10; 
@@ -433,14 +485,9 @@ section{
     left: 30%;
     animation: spin 10s linear infinite;
     animation-play-state: paused;
-
     &:hover {
-
     animation-play-state: running;
     
    } 
  } 
-
  */
-
-

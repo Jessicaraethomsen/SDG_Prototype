@@ -25,7 +25,8 @@ EXTEND
 **************************************************/
 body {
   margin: 0;
-  padding: 0; }
+  padding: 0;
+  background-color: #ffffff; }
 
 .navbar-header {
   position: absolute; }
@@ -105,13 +106,11 @@ section {
   background-image: url("../img/sdg_introworld1.png"); }
 
 #home-bg {
-  background-image: url("../img/sdg_homemap.png");
-  overflow: hidden; }
+  background-image: url("../img/sdg_homemap.png"); }
 
 /* .page-content class for all our Intro-world sections*/
 .page-content {
-  position: relative;
-  
+  position: absolute;
   /*responsive image*/
   height: 100%;
   margin: 0 auto;
@@ -181,6 +180,14 @@ section {
   cursor: url(../img/tap.png), auto; }
 
 .goal2 {
+  position: absolute;
+  top: 23%;
+  left: 23%;
+  width: 4%;
+  z-index: 10;
+  cursor: url(../img/tap.png), auto; }
+
+.goal14 {
   position: absolute;
   top: 23%;
   left: 23%;

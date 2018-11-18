@@ -126,13 +126,6 @@ var boot = {
 		title.anchor.set(0.1);
 
 
-		var title2 = game.add.text(game.world.centerX - 500 , 130, 'EXPLORE AND LEARN', {
-			font: "20px Poppins",
-			fill: "#fff"
-		});
-				title2.anchor.set(0.1);
-
-
 		
 	},
 
@@ -152,7 +145,7 @@ var boot = {
 
 	actionOnClick: function () {
 		// launching level 1 splash screen
-		game.state.start('level1');
+		game.state.start('splash1');
 		game.sound.stopAll(); 
 	},
 

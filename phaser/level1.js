@@ -140,9 +140,6 @@ var level1 = {
 	    this.popup.scale.set(0.1);
 
 
-
-
-
 	    //FEEDBACK/ARE YOU FINISHED EXPLPORING
 
 	    this.exploreTxt = this.add.text(10, 10, {
