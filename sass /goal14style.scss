@@ -1,6 +1,7 @@
 @import 'reset';
 @import 'styles';
-
+/*@import 'goal2styles';
+*/
 /* SUSTAINABLE DEVELOPMENT GOALS - LIFE BELOW WATER  - GOAL 14 
 *****************************************************************/
 
@@ -14,7 +15,7 @@ html {
 body {
 	background: #5cc4fc; /* color background of the whole page*/
 	overflow-x: hidden;
-	height: 6000px; /*here we declare height of the project*/
+/*	height: 6000px;*/ 
 	line-height: 1.5;
 	color: #000;
 	font-family: $font-primary, sans-serif;
@@ -72,6 +73,7 @@ hr {
 
 #wrapper {
 	position: relative;
+	height: 6000px; /*here we declare height of the project*/
 }
 
 /*#container
@@ -104,6 +106,7 @@ button{
     
     }
 }
+
 /* Nav
 *****************************************************************/
 
@@ -364,3 +367,136 @@ nav.next-prev {
 		left: 450px;
 		}
 
+
+/*========================================================
+          SECTION: QUIZ
+==========================================================*/
+
+.quiz-wrapper{
+margin-top: 10%;
+}
+
+/*question styles from js*/
+
+.question{
+
+  font-size: 30px;
+  margin-bottom: 30px;
+  color: $brand-white;
+}
+
+.answers {
+  margin-bottom: 30px;
+  text-align: left;
+  display: inline-block;
+}
+.answers label{
+  display: block;
+  font-family: $font-headline;
+  font-size: 22px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  padding: 10px;
+  width: 600px;
+  height: 60px;
+ 
+  background-color: $brand-white;
+  cursor: pointer;
+
+   &:hover {
+    background-color: $goal14-light;
+
+    }
+}
+
+
+button{
+  font-family: $font-headline;
+  font-size: 22px;
+  letter-spacing: 2px;
+  background-color: transparent;
+  color: #fff;
+  border: 2px solid white;
+  border-radius: 5px;
+  padding: 30px;
+  width: 280px;
+  cursor: pointer;
+  margin-top: 60px;
+
+
+
+   &:hover {
+    background-color: $goal14-dark;
+    
+    }
+}
+
+
+
+.quiz{
+    position:absolute;
+      z-index:0;
+      left:12px;
+      top:10px;
+}
+
+
+.slide{
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  z-index: 1;
+  opacity: 0;
+  transition: opacity 0.5s;
+ 
+}
+
+.active-slide{
+  opacity: 1;
+   z-index: 2;
+
+
+}
+
+.quiz-container{
+  position: relative;
+  height: 200px;
+  margin-top: 40px;
+  z-index: 2;
+
+}
+
+.button-wrapper{
+  font-family: $font-headline;
+  position: relative;
+  margin-top:150px; 
+  z-index: 2;
+}
+
+
+
+.canvas{
+  position:absolute;
+  width:100%;
+  left:0;
+  top:0;
+  z-index:1000;
+  border:0px solid #000;
+}
+
+
+#results{
+margin-top:3%; 
+font-family: $font-headline;
+font-size: 22px;
+color: $brand-white;
+
+}
+
+#feedback{ 
+font-family: $font-headline;
+font-size: 22px;
+color: $brand-white;
+}
+ 

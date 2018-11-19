@@ -24,8 +24,7 @@ EXTEND
 **************************************************/
 body {
   margin: 0;
-  padding: 0;
-  background-color: pink; }
+  padding: 0; }
 
 #container {
   margin-left: 400px; }

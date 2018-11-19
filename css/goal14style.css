@@ -67,20 +67,28 @@ REMEMBER TO THINK  "CAN I USE"....
 VARIABLES
 MIXINS
 EXTEND
-
 **************************************************/
 body {
   margin: 0;
   padding: 0; }
 
+#container {
+  margin-left: 400px; }
+
 .navbar-header {
   position: absolute; }
 
-.navbar-brand:hover {
-  animation: top .7s ease-out;
-  -webkit-animation-fill-mode: forwards;
-  /* Chrome, Safari, Opera */
-  animation-fill-mode: alternate-reverse; }
+.navbar-brand {
+  cursor: url(../img/tap.png), auto; }
+  .navbar-brand:hover {
+    animation: top .7s ease-out;
+    -webkit-animation-fill-mode: forwards;
+    /* Chrome, Safari, Opera */
+    animation-fill-mode: alternate-reverse; }
+
+.welcome {
+  width: 200px;
+  margin-left: 50%; }
 
 .navbar {
   z-index: 10;
@@ -112,7 +120,7 @@ p, .p-small {
   font-size: 1.5em;
   margin-bottom: 20px;
   color: #ffffff;
-  font-weight: 300;
+  font-weight: 500;
   color: #ffffff;
   margin-top: 10px;
   line-height: 46px;
@@ -122,7 +130,7 @@ p, .p-small {
   font-size: 1.125em; }
 
 /*************************************************
-                  Links & Buttons
+                  Links & Buttons & Tip Box
 **************************************************/
 button {
   font-family: "Knicknack", sans-serif;
@@ -136,6 +144,38 @@ button {
   width: 280px;
   cursor: pointer;
   margin-top: 60px; }
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black; }
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 150%;
+  left: 50%;
+  margin-left: -60px; }
+
+.tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: black transparent transparent transparent; }
+
+.tooltip:hover .tooltiptext {
+  visibility: visible; }
 
 /*************************************************
                   Page Struture
@@ -216,14 +256,6 @@ section {
   z-index: 10;
   animation: sailleft 50s  linear infinite alternate; }
 
-.goal1 {
-  position: absolute;
-  top: 17%;
-  left: 16%;
-  width: 4%;
-  z-index: 10;
-  cursor: url(../img/tap.png), auto; }
-
 .goal2 {
   position: absolute;
   top: 23%;
@@ -232,33 +264,50 @@ section {
   z-index: 10;
   cursor: url(../img/tap.png), auto; }
 
+.goal14 {
+  position: absolute;
+  top: 30%;
+  left: 79%;
+  width: 4%;
+  z-index: 10;
+  cursor: url(../img/tap.png), auto; }
+
 .navbar-badge {
   position: absolute;
-  top: -1%;
+  top: -8%;
   left: 77%;
   max-width: 4%;
-  z-index: 10; }
+  z-index: 10;
+  cursor: url(../img/tap.png), auto; }
+  .navbar-badge:hover {
+    animation: top .7s ease-out;
+    -webkit-animation-fill-mode: forwards;
+    /* Chrome, Safari, Opera */
+    animation-fill-mode: alternate-reverse; }
 
 .navbar-help {
   position: absolute;
   top: 1%;
   left: 85%;
   max-width: 5%;
-  z-index: 10; }
+  z-index: 10;
+  cursor: url(../img/tap.png), auto; }
 
 .navbar-langauge {
   position: absolute;
   top: 1%;
   left: 90%;
   max-width: 5%;
-  z-index: 10; }
+  z-index: 10;
+  cursor: url(../img/tap.png), auto; }
 
 .navbar-audio {
   position: absolute;
   top: 1%;
   left: 95%;
   max-width: 5%;
-  z-index: 10; }
+  z-index: 10;
+  cursor: url(../img/tap.png), auto; }
 
 /*************************************************
               WEB ANIMATIONS
@@ -288,7 +337,6 @@ section {
     transform: rotate(2turn); } }
 /*************************************************************
               MEDIA QUERIES
-
  HELP:https://gist.github.com/gokulkrishh/242e68d1ee94ad05f488           
 ***************************************************************/
 @media (min-width: 501px) and (max-width: 1024px) {
@@ -345,7 +393,6 @@ section {
   .navbar-brand {
     display: none; } }
 /*Wind Mills
-
 .windmill img{
     position: absolute;
     z-index: 10; 
@@ -353,15 +400,14 @@ section {
     left: 30%;
     animation: spin 10s linear infinite;
     animation-play-state: paused;
-
     &:hover {
-
     animation-play-state: running;
     
    } 
  } 
-
  */
+/*@import 'goal2styles';
+*/
 /* SUSTAINABLE DEVELOPMENT GOALS - LIFE BELOW WATER  - GOAL 14 
 *****************************************************************/
 /* Extended base styles (site specific)
@@ -374,8 +420,7 @@ body {
   background: #5cc4fc;
   /* color background of the whole page*/
   overflow-x: hidden;
-  height: 6000px;
-  /*here we declare height of the project*/
+  /*	height: 6000px;*/
   line-height: 1.5;
   color: #000;
   font-family: "Poppins", sans-serif, sans-serif; }
@@ -423,7 +468,9 @@ hr {
 /* Page structure
 *****************************************************************/
 #wrapper {
-  position: relative; }
+  position: relative;
+  height: 6000px;
+  /*here we declare height of the project*/ }
 
 /*#container
 {
@@ -692,5 +739,101 @@ a.next:hover {
   position: absolute;
   top: 1020px;
   left: 450px; }
+
+/*========================================================
+          SECTION: QUIZ
+==========================================================*/
+.quiz-wrapper {
+  margin-top: 10%; }
+
+/*question styles from js*/
+.question {
+  font-size: 30px;
+  margin-bottom: 30px;
+  color: #ffffff; }
+
+.answers {
+  margin-bottom: 30px;
+  text-align: left;
+  display: inline-block; }
+
+.answers label {
+  display: block;
+  font-family: "Knicknack", sans-serif;
+  font-size: 22px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  padding: 10px;
+  width: 600px;
+  height: 60px;
+  background-color: #ffffff;
+  cursor: pointer; }
+  .answers label:hover {
+    background-color: #017dbc; }
+
+button {
+  font-family: "Knicknack", sans-serif;
+  font-size: 22px;
+  letter-spacing: 2px;
+  background-color: transparent;
+  color: #fff;
+  border: 2px solid white;
+  border-radius: 5px;
+  padding: 30px;
+  width: 280px;
+  cursor: pointer;
+  margin-top: 60px; }
+  button:hover {
+    background-color: #0757a0; }
+
+.quiz {
+  position: absolute;
+  z-index: 0;
+  left: 12px;
+  top: 10px; }
+
+.slide {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  z-index: 1;
+  opacity: 0;
+  transition: opacity 0.5s; }
+
+.active-slide {
+  opacity: 1;
+  z-index: 2; }
+
+.quiz-container {
+  position: relative;
+  height: 200px;
+  margin-top: 40px;
+  z-index: 2; }
+
+.button-wrapper {
+  font-family: "Knicknack", sans-serif;
+  position: relative;
+  margin-top: 150px;
+  z-index: 2; }
+
+.canvas {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: 0;
+  z-index: 1000;
+  border: 0px solid #000; }
+
+#results {
+  margin-top: 3%;
+  font-family: "Knicknack", sans-serif;
+  font-size: 22px;
+  color: #ffffff; }
+
+#feedback {
+  font-family: "Knicknack", sans-serif;
+  font-size: 22px;
+  color: #ffffff; }
 
 /*# sourceMappingURL=goal14style.css.map */
