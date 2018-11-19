@@ -273,6 +273,12 @@ nav.next-prev {
 
 	}
 
+
+	.center {
+		margin: 10% auto;
+		display: block;
+	}
+
 /* foreground (ballons/landscape) */
 #parallax-bg3 {
 	z-index: 3;
@@ -461,7 +467,7 @@ button{
 
 .quiz-container{
   position: relative;
-  height: 200px;
+  height: 100px;
   margin-top: 40px;
   z-index: 2;
 
@@ -500,3 +506,12 @@ font-size: 22px;
 color: $brand-white;
 }
  
+
+.next-page{
+	float: right;
+	margin: 2% 5% 5% 0;
+	}
+.previous-page {
+	float: left;
+	margin: 2% 5% 0 5%;
+}

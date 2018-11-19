@@ -5,7 +5,12 @@
 
 		<meta charset="utf-8" />
 		<meta name="description" content="A parallax scrolling experiment using jQuery" />
+
+
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+
 		<link rel="stylesheet" media="all" href="css/goal14style.css" />
+
 
 		<script src="js/modernizr.custom.37797.js"></script> 
 		<!-- Grab Google CDN's jQuery. fall back to local if necessary --> 
@@ -16,16 +21,10 @@
 	</head>
 <body>
 	<div id="intro-img"></div>
-	<section>
-		<div id="container">
-			<div class="wrapper">
-				<div class="row">
-					<div class="col-lg-12 text-center">
-						<div class="quiz-wrapper">
-						
-							<h1>Goal 14: What did you learn?</h1>
+	<div class="col-lg-12 text-center">
+	<h1>Goal 14: What did you learn?</h1>
 							<p>Get 4 of 5 awnsers and see a suprise</p>
-								<div class="quiz-container">
+								<div class="quiz-container center">
 								
 								<canvas id="canvas"></canvas>
 								<div id="quiz" class="wrong"></div>
@@ -39,15 +38,10 @@
 								</div>
 								<div id="results"></div>
 								<div id="feedback"></div>
-					</div>
-				</div>
-			</div>
-			<a href="goal14-yourimpact.html"><button>NEXT PAGE</button></a>
 		</div>
-	</div>
-</section>
-
-
+		<a href="goal14.html"><button class="previous-page">PREVIOUS PAGE</button></a>
+		<a href="goal14-yourimpact.html"><button class="next-page">NEXT PAGE</button></a>
+	
 </body>
 <script src="js/quiz-goal14.js"></script>
 </html>

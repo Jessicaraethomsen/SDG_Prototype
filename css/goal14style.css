@@ -641,6 +641,10 @@ a.next:hover {
   margin: 10px auto;
   display: block; }
 
+.center {
+  margin: 10% auto;
+  display: block; }
+
 /* foreground (ballons/landscape) */
 #parallax-bg3 {
   z-index: 3;
@@ -807,7 +811,7 @@ button {
 
 .quiz-container {
   position: relative;
-  height: 200px;
+  height: 100px;
   margin-top: 40px;
   z-index: 2; }
 
@@ -835,5 +839,13 @@ button {
   font-family: "Knicknack", sans-serif;
   font-size: 22px;
   color: #ffffff; }
+
+.next-page {
+  float: right;
+  margin: 2% 5% 5% 0; }
+
+.previous-page {
+  float: left;
+  margin: 2% 5% 0 5%; }
 
 /*# sourceMappingURL=goal14style.css.map */
