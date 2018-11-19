@@ -54,7 +54,6 @@ EXTEND
 body {
   margin: 0;
   padding: 0;
-  background-color: pink;
   
 }
 
@@ -79,10 +78,7 @@ margin-left: 400px;
     }
   }
 
-.welcome{
-  width: 200px;
-  margin-left: 50%;
-}
+
 
 .navbar{
 
@@ -90,6 +86,8 @@ margin-left: 400px;
    cursor: pointer;
 
 }
+
+
 
 
 .logo{
@@ -122,6 +120,10 @@ h2{
 
 h3 {
   font-size: 1.5em;
+}
+
+h4 {
+  font-size: 1.2em;
 }
 
 p {
@@ -206,6 +208,11 @@ section{
   padding: 0;
 }
 
+.margin-top-10{
+
+  margin-top: 10%;
+}
+
 .section-cover{
   max-width: 100%; 
 }
@@ -219,6 +226,10 @@ section{
 
 }
 
+#characters-bg{
+  background-image: url("../img/sdg_characters.png");
+
+}
 
 /* .page-content class for all our Intro-world sections*/
 .page-content{
@@ -235,9 +246,9 @@ section{
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
-
     
 }
+
 
 
 .no-gutters {
@@ -361,6 +372,14 @@ section{
   }
 
 
+   .navbar-name{
+  position: absolute;
+  top: 12%;
+  left: 90%;
+  max-width: 5%;
+  z-index: 10;
+     cursor: url(../img/tap.png), auto;
+  }
 
 
 /*************************************************

@@ -14,6 +14,9 @@ function setName() {
 		document.getElementById("playerboy").innerHTML = this.nameboy;
 }
 
+
+
+
  function myGirl() {
 
 		// prepare client storage for user + score if doesn't exist
@@ -31,14 +34,12 @@ function setName() {
 		// get player name from local storage
 		var playername = localStorage.getItem('user');
 		this.name = playername;
-		alert('Hi ' + this.name + ' Are you Ready to Play');
 		document.getElementById("playergirl").innerHTML = this.name;
 		localStorage.setItem('userboy', '');
+		document.getElementById("playerboy").innerHTML = '';
+		
 		}
 		
-
-
-
 
  function myBoy() {
 
@@ -55,9 +56,9 @@ function setName() {
 		// get player name from local storage
 		var playernameboy = localStorage.getItem('userboy');
 		this.nameboy = playernameboy;
-		alert('Hi ' + this.nameboy + ' Are you Ready to Play');
-		document.getElementById("playerboy").innerHTML = this.nameboy;
+		document.getElementById("playerboy").innerHTML =  this.nameboy;
 		localStorage.setItem('user', '');
+		document.getElementById("playergirl").innerHTML = '';
 
 		
 }

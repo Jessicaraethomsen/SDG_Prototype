@@ -24,8 +24,7 @@ EXTEND
 **************************************************/
 body {
   margin: 0;
-  padding: 0;
-  background-color: pink; }
+  padding: 0; }
 
 #container {
   margin-left: 400px; }
@@ -40,10 +39,6 @@ body {
     -webkit-animation-fill-mode: forwards;
     /* Chrome, Safari, Opera */
     animation-fill-mode: alternate-reverse; }
-
-.welcome {
-  width: 200px;
-  margin-left: 50%; }
 
 .navbar {
   z-index: 10;
@@ -69,6 +64,9 @@ h2 {
 
 h3 {
   font-size: 1.5em; }
+
+h4 {
+  font-size: 1.2em; }
 
 p, .p-small {
   font-family: "Poppins", sans-serif;
@@ -139,6 +137,9 @@ section {
   margin: 0;
   padding: 0; }
 
+.margin-top-10 {
+  margin-top: 10%; }
+
 .section-cover {
   max-width: 100%; }
 
@@ -147,6 +148,9 @@ section {
 
 #home-bg {
   background-image: url("../img/sdg_homemap.png"); }
+
+#characters-bg {
+  background-image: url("../img/sdg_characters.png"); }
 
 /* .page-content class for all our Intro-world sections*/
 .page-content {
@@ -260,6 +264,14 @@ section {
   position: absolute;
   top: 1%;
   left: 95%;
+  max-width: 5%;
+  z-index: 10;
+  cursor: url(../img/tap.png), auto; }
+
+.navbar-name {
+  position: absolute;
+  top: 12%;
+  left: 90%;
   max-width: 5%;
   z-index: 10;
   cursor: url(../img/tap.png), auto; }
