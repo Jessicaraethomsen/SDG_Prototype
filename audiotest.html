@@ -1,0 +1,54 @@
+
+<!DOCTYPE html>
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>SDG &mdash;  Prototype Youth</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="SDG:Youth" />
+	<meta name="keywords" content="Susstainale Development Goals: Youth" />
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<link rel="stylesheet" href="css/styles.css">
+
+
+</head>
+<body>
+
+				<div class="music-box">
+				<audio id="audio" controls="controls" autostart="1" autoplay="false" >
+    			<source src="audio/Lovable_Clown_Sit_Com.mp3" type="audio/mp3" />
+  				</audio>
+
+  				<button  class="btn btn-play-music play"><i class="fa fa-play" style="margin-top: : 500px;"></i></button>
+		
+  				</div>
+
+	<script>
+		var audio = document.getElementById('audio');
+		var isPlaying = false;
+
+	$('.btn-play-music').click(function(){
+    $(this).toggleClass('pause');
+    $(this).parent('.music-box').toggleClass('playing');
+    $(this).find('.fa').toggleClass('fa-pause');
+    if (isPlaying) {
+      audio.pause()
+    } else {
+      audio.play();
+    }
+});
+audio.onplaying = function() {
+  isPlaying = true;
+};
+audio.onpause = function() {
+  isPlaying = false;
+};
+
+
+
+	</script>
+
+
+	</body>
+</html>

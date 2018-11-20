@@ -18,23 +18,27 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 <script src="js/storename.js"></script>
 <script>
-var myAudio = document.getElementById("myAudio");
+
+
+var audio = document.getElementById('audio');
 var isPlaying = false;
 
-function togglePlay() {
-  if (isPlaying) {
-    myAudio.pause()
-  } else {
-    myAudio.play();
-  }
-};
-myAudio.onplaying = function() {
+$('.btn-play-music').click(function(){
+    $(this).toggleClass('pause');
+    $(this).parent('.music-box').toggleClass('playing');
+    $(this).find('.fa').toggleClass('fa-pause');
+    if (isPlaying) {
+      audio.pause()
+    } else {
+      audio.play();
+    }
+});
+audio.onplaying = function() {
   isPlaying = true;
 };
-myAudio.onpause = function() {
+audio.onpause = function() {
   isPlaying = false;
 };
-
 
 </script>
 
@@ -72,13 +76,15 @@ myAudio.onpause = function() {
 				<img class="logo" src="img/sdg_badge.png" >
 				</a>
 
-				<audio autoplay="true" loop="true" src="audio/Lovable_Clown_Sit_Com.mp3"></audio>
-			
 				
-				<a class="navbar-audio">
-				<img class="logo" src="img/sdg_audio.png"  onClick="togglePlay()" style="max-width: 60px;">
-				</a>
+				<div class="music-box">
+				<audio id="audio" controls="controls" autostart="1" autoplay="false" >
+    			<source src="audio/Lovable_Clown_Sit_Com.mp3" type="audio/mp3" />
+  				</audio>
 
+  				<button  class="btn btn-play-music play"><i class="fa fa-play" style="margin-top: : 500px;"></i></button>
+		
+  				</div>
 
 				<a class="navbar-help" href="index.html">
 				<img class="logo" src="img/sdg_help.png" style="max-width: 60px;">
@@ -93,6 +99,9 @@ myAudio.onpause = function() {
 				</a> 
 				</div>
 			    
+
+
+
 
 			    <a href="goal14.html">
 				<div class="goal14"><img src="img/sdg_goal14.png" class="resize"> </div>
