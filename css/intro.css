@@ -509,8 +509,12 @@ body {
   background-color: #478bca; }
 
 .center {
-  margin: auto;
+  margin: 0 auto;
   width: 50%;
+  display: block; }
+
+.center-content {
+  margin: 0 auto;
   display: block; }
 
 .center-text {
@@ -532,6 +536,25 @@ body {
   z-index: 999;
   margin: 0 auto;
   display: block; }
+
+.how-to-play {
+  margin-top: 5%;
+  margin-bottom: 5%; }
+
+.icon-how {
+  padding: 10%; }
+
+/*************************************************
+               NAV BAR
+**************************************************/
+.navbar-header {
+  border: 2px solid white; }
+
+.navbar {
+  margin-top: -10%;
+  position: absolute;
+  z-index: 10;
+  cursor: pointer; }
 
 /*************************************************
                 CSS ANIMATION NAMES 
