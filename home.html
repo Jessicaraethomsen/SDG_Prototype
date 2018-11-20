@@ -17,6 +17,26 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 <script src="js/storename.js"></script>
+<script>
+var myAudio = document.getElementById("myAudio");
+var isPlaying = false;
+
+function togglePlay() {
+  if (isPlaying) {
+    myAudio.pause()
+  } else {
+    myAudio.play();
+  }
+};
+myAudio.onplaying = function() {
+  isPlaying = true;
+};
+myAudio.onpause = function() {
+  isPlaying = false;
+};
+
+
+</script>
 
 <!-- Bootstrap & Styles  -->
 <link rel="stylesheet" href="css/bootstrap.css">
@@ -25,6 +45,7 @@
 
 </head>
 <body onload="setName();">
+
 
 	<header>
 		<nav class="navbar navbar-default">
@@ -51,13 +72,16 @@
 				<img class="logo" src="img/sdg_badge.png" >
 				</a>
 
-
-				<a class="navbar-audio" href="index.html">
-				<img class="logo" src="img/sdg_help.png" style="max-width: 60px;">
+				<audio autoplay="true" loop="true" src="audio/Lovable_Clown_Sit_Com.mp3"></audio>
+			
+				
+				<a class="navbar-audio">
+				<img class="logo" src="img/sdg_audio.png"  onClick="togglePlay()" style="max-width: 60px;">
 				</a>
 
+
 				<a class="navbar-help" href="index.html">
-				<img class="logo" src="img/sdg_audio.png" style="max-width: 60px;">
+				<img class="logo" src="img/sdg_help.png" style="max-width: 60px;">
 				</a>
 
 				<a class="navbar-langauge" href="index.html">
