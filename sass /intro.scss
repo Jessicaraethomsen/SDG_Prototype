@@ -1,0 +1,71 @@
+@import 'styles';
+
+
+/*************************************************
+                 OVERALL STYLE
+**************************************************/
+
+
+body {
+	background-color: #478bca;
+}
+
+.center {
+	margin: auto;
+    width: 50%;
+	display: block;
+}
+
+.center-text {
+	text-align: center;
+}
+
+.margin-top {
+	margin-top: 10%;
+}
+/*************************************************
+                 SITE SPECIFIC STYLE 
+**************************************************/
+
+#intro-img-sdg {
+	z-index: -2;
+	background: transparent url('../img/intro-img.png') no-repeat;
+	height: 100vh;
+	background-size: cover;
+}
+
+.button {
+	z-index: 999;
+	margin: 0 auto;
+	display: block;
+}
+
+/*************************************************
+                CSS ANIMATION NAMES 
+**************************************************/
+
+#girl-name {
+	float: left;
+	margin-left: 150px;
+	position: relative;
+	animation: down 3s ease-out;
+}
+
+#boy-name {
+	float: right;
+	position: relative;
+	animation: down 3s ease-out;
+	margin-right: 150px;
+}
+
+@keyframes down {
+	from {
+		top: -400px;
+		left: 0px;
+
+	}
+	to {
+		top: 0px;
+		left: 0px;
+	}
+}
