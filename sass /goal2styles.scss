@@ -161,10 +161,10 @@ border: 2px solid white;
 
 
 .goal-text{
-
+  margin-top: 20%;
   max-width: 100%;
   margin: 0 auto;
-  margin-top: 20%;
+  
 }
 
 
@@ -173,6 +173,7 @@ border: 2px solid white;
   @extend .center-canvas;
   @extend .section1;
 
+  
     /*responsive image*/
     background-image: url('../img/SDG-goal2-defination.png');
     z-index: -2;

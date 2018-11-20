@@ -2,20 +2,20 @@
                 FONT IMPORTS
 **************************************************/
 
-@font-face {
-    font-family: Knicknack;
-    src: url(../Webfonts/Knicknack-Regular.woff);
-}
+                @font-face {
+                  font-family: Knicknack;
+                  src: url(../Webfonts/Knicknack-Regular.woff);
+                }
 
-@font-face {
-    font-family: Knicknack Medium;
-    src: url(../Webfonts/Knicknack-Medium.woff);
-}
+                @font-face {
+                  font-family: Knicknack Medium;
+                  src: url(../Webfonts/Knicknack-Medium.woff);
+                }
 
-@font-face {
-    font-family: Knicknack Bold;
-    src: url(../Webfonts/Knicknack-Bold.woff);
-}
+                @font-face {
+                  font-family: Knicknack Bold;
+                  src: url(../Webfonts/Knicknack-Bold.woff);
+                }
 
 
 
@@ -23,24 +23,24 @@
 /*************************************************
                  VARIABLES
 **************************************************/
-$brand-lightblue: #b3e5fc;
-$brand-blue: #5cc4fc;
-$brand-darkblue: #478bca;
-$brand-white: #ffffff;
-$brand-black: #161D2D;
+                 $brand-lightblue: #b3e5fc;
+                 $brand-blue: #5cc4fc;
+                 $brand-darkblue: #478bca;
+                 $brand-white: #ffffff;
+                 $brand-black: #161D2D;
 
-/*Goal Variables*/
+                 /*Goal Variables*/
 
-$goal2-light: #fbc30a;
-$goal2-dark: #d3a029;
+                 $goal2-light: #fbc30a;
+                 $goal2-dark: #d3a029;
 
-$goal14-light: #017dbc;
-$goal14-dark: #0757a0; 
+                 $goal14-light: #017dbc;
+                 $goal14-dark: #0757a0; 
 
-/*Font Variables*/
+                 /*Font Variables*/
 
-$font-headline: 'Knicknack', sans-serif; 
-$font-primary: 'Poppins', sans-serif;
+                 $font-headline: 'Knicknack', sans-serif; 
+                 $font-primary: 'Poppins', sans-serif;
 
 
 /*************************************************
@@ -58,7 +58,7 @@ body {
 }
 
 #container{
-margin-left: 400px;
+  margin-left: 400px;
 }
 
 .navbar-header{
@@ -68,27 +68,21 @@ margin-left: 400px;
 }
 
 .navbar-brand{
-     cursor: url(../img/tap.png), auto;
+ cursor: url(../img/tap.png), auto;
 
-   &:hover {
-    animation: top .7s ease-out;
-    -webkit-animation-fill-mode: forwards; /* Chrome, Safari, Opera */
-    animation-fill-mode: alternate-reverse;
-    
-    }
-  }
-
-
-
-.navbar{
-
-   z-index: 10;
-   cursor: pointer;
+ &:hover {
+  animation: top .7s ease-out;
+  -webkit-animation-fill-mode: forwards; /* Chrome, Safari, Opera */
+  animation-fill-mode: alternate-reverse;
 
 }
+}
+.navbar{
 
+ z-index: 10;
+ cursor: pointer;
 
-
+}
 
 .logo{
 
@@ -99,140 +93,147 @@ margin-left: 400px;
                   Typography
 **************************************************/
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-color: $brand-white;
-font-family: $font-headline;
-}
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: $brand-white;
+    font-family: $font-headline;
+  }
 
-h1 {
-  font-size: 3.8em;
-}
+  h1 {
+    font-size: 3.8em;
+  }
 
 
-h2{
-  font-size: 2em;
-}
+  h2{
+    font-size: 2em;
+  }
 
-h3 {
-  font-size: 1.5em;
-}
+  h3 {
+    font-size: 1.5em;
+  }
 
-h4 {
-  font-size: 1.2em;
-}
+  h4 {
+    font-size: 1.2em;
+  }
 
-p {
-  font-family: $font-primary;
-  font-size: 1.5em;
-  margin-bottom: 20px;
-  color: $brand-white; 
-  font-weight: 500;
-  color: $brand-white;
-  margin-top: 10px;
-  line-height: 46px;
-  letter-spacing: 2px;
-}
+  p {
+    font-family: $font-primary;
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    color: $brand-white; 
+    font-weight: 500;
+    color: $brand-white;
+    margin-top: 10px;
+    line-height: 46px;
+    letter-spacing: 2px;
+  }
 
-.p-small {
-  @extend p;
-  font-size: 1.125em;
-}
+  .p-small {
+    @extend p;
+    font-size: 1.125em;
+  }
 
 
 /*************************************************
                   Links & Buttons & Tip Box
 **************************************************/
 
-button {
-  font-family: "Knicknack", sans-serif;
-  font-size: 2em;
-  letter-spacing: 2px;
-  background-color: transparent;
-  color: #fff;
-  border: 2px solid white;
-  border-radius: 5px;
-  padding: 30px;
-  width: 280px;
-  cursor: pointer;
-  margin-top: 60px; }
- 
-
-
-.tooltip {
-    position: relative;
-    display: inline-block;
-    border-bottom: 1px dotted black;
-}
-
-.tooltip .tooltiptext {
-    visibility: hidden;
-    width: 120px;
-    background-color: black;
+  button {
+    font-family: "Knicknack", sans-serif;
+    font-size: 2em;
+    letter-spacing: 2px;
+    background-color: transparent;
     color: #fff;
-    text-align: center;
-    border-radius: 6px;
-    padding: 5px 0;
-    position: absolute;
-    z-index: 1;
-    bottom: 150%;
-    left: 50%;
-    margin-left: -60px;
-}
+    border: 2px solid white;
+    border-radius: 5px;
+    padding: 30px;
+    width: 280px;
+    cursor: pointer;
+    margin-top: 60px; }
 
-.tooltip .tooltiptext::after {
-    content: "";
-    position: absolute;
-    top: 100%;
-    left: 50%;
-    margin-left: -5px;
-    border-width: 5px;
-    border-style: solid;
-    border-color: black transparent transparent transparent;
-}
 
-.tooltip:hover .tooltiptext {
-    visibility: visible;
-}
+
+    .tooltip {
+      position: relative;
+      display: inline-block;
+      border-bottom: 1px dotted black;
+    }
+
+    .tooltip .tooltiptext {
+      visibility: hidden;
+      width: 120px;
+      background-color: black;
+      color: #fff;
+      text-align: center;
+      border-radius: 6px;
+      padding: 5px 0;
+      position: absolute;
+      z-index: 1;
+      bottom: 150%;
+      left: 50%;
+      margin-left: -60px;
+    }
+
+    .tooltip .tooltiptext::after {
+      content: "";
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      margin-left: -5px;
+      border-width: 5px;
+      border-style: solid;
+      border-color: black transparent transparent transparent;
+    }
+
+    .tooltip:hover .tooltiptext {
+      visibility: visible;
+    }
 
 /*************************************************
                   Page Struture
 **************************************************/
 
-section{
-  margin: 0;
-  padding: 0;
-}
+  section{
+    margin: 0;
+    padding: 0;
+  }
 
-.margin-top-10{
+  .center-div{
+    width: 100%;
+    margin: 0 auto;
+  }
 
-  margin-top: 10%;
-}
+  .margin-top-10{
 
-.section-cover{
-  max-width: 100%; 
-}
+    margin-top: 10%;
+  }
 
-#intro-bg{
-  background-image: url("../img/sdg_introworld1.png");
-}
+  .section-cover{
+    max-width: 100%; 
+  }
 
-#home-bg{
-  background-image: url("../img/sdg_homemap.png");
+  #intro-bg{
+    background-image: url("../img/sdg_introworld1.png");
+  }
 
-}
+  #home-bg{
+    background-image: url("../img/sdg_homemap.png");
+     overflow-y: hidden;
+     
 
-#characters-bg{
-  background-image: url("../img/sdg_characters.png");
+  }
 
-}
+  #characters-bg{
+    background-image: url("../img/sdg_characters.png");
 
-/* .page-content class for all our Intro-world sections*/
-.page-content{
+  }
+
+  /* .page-content class for all our Intro-world sections*/
+  .page-content{
     position: absolute;
     /*responsive image*/
     height: 100%; 
@@ -246,29 +247,110 @@ section{
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
-    
-}
 
-
-
-.no-gutters {
-  margin-right: 0;
-  margin-left: 0;
   }
 
 
 
+  .no-gutters {
+    margin-right: 0;
+    margin-left: 0;
+  }
+
+
+/*************************************************
+             Badges ELEMENTS
+**************************************************/
+
+
+ body{
+  margin-top:20px;
+  background:#eee;
+}
+
+
+
+body{margin-top:20px;}
+
+
+/* Component: Well */
+.well {
+
+  max-height: 100%;
+  overflow: hidden;
+  border-radius: 0;
+  margin-bottom: 10px;
+}
+.well .well-heading .controls {
+  position: absolute;
+  top: 10px;
+  right: 30px;
+}
+.well .well-body {
+  padding: 10px;
+  margin-top: 20px;
+  position: relative;
+  z-index: 3;
+}
+.well .well-image {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  z-index: 1;
+  color: rgba(0, 0, 0, 0.15);
+  -webkit-transition: all 0.2s ease-in;
+  -moz-transition: all 0.2s ease-in;
+  -ms-transition: all 0.2s ease-in;
+  -o-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+}
+.well.well-solid {
+  color: white;
+}
+.well:hover .well-image {
+  font-size: 60px;
+}
+.well-transparent {
+  background-color: transparent;
+  color: #454545;
+}
+
+
+
+.mini-profile-widget .image-container .avatar {
+  width: 180px;
+  height: 180px;
+  display: block;
+  margin: 0 auto;
+  padding: 4px;
+  border: 1px solid #dddddd;
+}
+
+
+.mini-profile-widget .details {
+  text-align: center;
+}
+
+.badges {
+
+  opacity: 0.6;
+}                       
 
 /*************************************************
               HOME PAGE ELEMENTS
 **************************************************/
+
+.resize{
+ max-width:100%;
+ height:auto;
+}
 
 .cloud1{
   position: absolute;
   top: 50%;
   left: -10%;
   z-index: 10;
-  width: 4%;
+  
   animation: drift 80s linear infinite;
 }
 
@@ -277,7 +359,7 @@ section{
   top: 10%;
   left: -10%;
   z-index: 10;
-  width: 4%;
+  
   animation: drift 80s 40s linear infinite;
 }
 
@@ -286,7 +368,7 @@ section{
   top: 80%;
   left: -10%;
   z-index: 10;
-  width: 4%;
+  
   animation: drift 90s 20s linear infinite;
 }
 
@@ -294,7 +376,7 @@ section{
   position: absolute;
   top: 80%;
   left: 0%;
-  width: 4%;
+  
   z-index: 10;
   animation: sail 50s  linear infinite alternate;
 }
@@ -303,8 +385,9 @@ section{
   position: absolute;
   top: 20%;
   left: 95%;
-  width: 4%;
-  z-index: 10;
+
+
+   z-index: 10;
   animation: sailleft 50s  linear infinite alternate;
 }
 
@@ -313,73 +396,72 @@ section{
   position: absolute;
   top: 23%;
   left: 23%;
-  width: 4%;
+  
   z-index: 10;
-    cursor: url(../img/tap.png), auto;
-  }
+  cursor: url(../img/tap.png), auto;
+}
 
-  .goal14{
+.goal14{
   position: absolute;
   top: 30%;
   left: 79%;
-  width: 4%;
+  
   z-index: 10;
-    cursor: url(../img/tap.png), auto;
-  }
+  cursor: url(../img/tap.png), auto;
+}
 
 
-  .navbar-badge{
+.navbar-badge{
   position: absolute;
   top: -8%;
   left: 77%;
-  max-width: 4%;
+  
   z-index: 10;
-     cursor: url(../img/tap.png), auto;
+  cursor: url(../img/tap.png), auto;
 
-     &:hover {
+  &:hover {
     animation: top .7s ease-out;
     -webkit-animation-fill-mode: forwards; /* Chrome, Safari, Opera */
     animation-fill-mode: alternate-reverse;
-    
-    }
-  }
 
-    .navbar-help{
+  }
+}
+
+.navbar-help{
   position: absolute;
   top: 1%;
   left: 85%;
-  max-width: 5%;
+ 
   z-index: 10;
-     cursor: url(../img/tap.png), auto;
-  }
+  cursor: url(../img/tap.png), auto;
+}
 
-  .navbar-langauge{
+.navbar-langauge{
   position: absolute;
   top: 1%;
   left: 90%;
-  max-width: 5%;
+  
   z-index: 10;
-     cursor: url(../img/tap.png), auto;
-  }
+  cursor: url(../img/tap.png), auto;
+}
 
-   .navbar-audio{
+.navbar-audio{
   position: absolute;
   top: 1%;
   left: 95%;
-  max-width: 5%;
   z-index: 10;
-     cursor: url(../img/tap.png), auto;
-  }
+  cursor: url(../img/tap.png), auto;
+}
 
 
-   .navbar-name{
+.navbar-name{
   position: absolute;
   top: 12%;
   left: 90%;
-  max-width: 5%;
+ 
   z-index: 10;
-     cursor: url(../img/tap.png), auto;
-  }
+  cursor: url(../img/tap.png), auto;
+}
 
 
 /*************************************************
@@ -387,8 +469,8 @@ section{
 **************************************************/
 
 @keyframes top{
-    from{transform:translateY(0px);}
-    to{transform:translateY(20px);}
+  from{transform:translateY(0px);}
+  to{transform:translateY(20px);}
 }
 
 @keyframes drift{
@@ -416,15 +498,15 @@ section{
 /*************************************************************
               MEDIA QUERIES
  HELP:https://gist.github.com/gokulkrishh/242e68d1ee94ad05f488           
-***************************************************************/
+ ***************************************************************/
 
 
-@media (min-width: 501px) and (max-width: 1024px) {
-  
- #home-bg,
- #intro-bg{
-      background-image: url("../img/sdg_flip.png");
-   }
+ @media (min-width: 501px) and (max-width: 1024px) {
+
+   #home-bg,
+   #intro-bg{
+    background-image: url("../img/sdg_flip.png");
+  }
 
   .page-content{
     position: block;
@@ -440,19 +522,32 @@ section{
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
-}
+  }
 
-/*Hide our logo*/
- .navbar-brand{ 
-  display: none; 
-}
-  
+  /*Hide our logo*/
+  .navbar-brand{ 
+    display: none; 
+  }
+
+
+  .navbar-brand{display: none;}
+  .cloud1{display: none;}
+  .cloud2{display: none;}
+  .cloud3{display: none;}
+  .boat1{display: none;}
+  .boat2{display: none;}
+  .goal2{display: none;}
+  .goal14{display: none;}
+  .navbar-badge{display: none;}
+  .navbar-help{display: none;}
+  .navbar-langauge{display: none;}
+  .navbar-audio{display: none;}
+  .navbar-name{display: none;} 
 }
 
 
 /*if anything needs to change*/
 @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {  
-  
 }
 
 
@@ -487,14 +582,23 @@ section{
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
-}
+  }
 
-/*Hide our logo*/
- .navbar-brand{ 
-  display: none; 
-}
+  /*Hide our logo*/
+  .navbar-brand{display: none;}
+  .cloud1{display: none;}
+  .cloud2{display: none;}
+  .cloud3{display: none;}
+  .boat1{display: none;}
+  .boat2{display: none;}
+  .goal2{display: none;}
+  .goal14{display: none;}
+  .navbar-badge{display: none;}
+  .navbar-help{display: none;}
+  .navbar-langauge{display: none;}
+  .navbar-audio{display: none;}
+  .navbar-name{display: none;}
 
-   
 }
 
 
