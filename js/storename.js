@@ -1,19 +1,19 @@
 
-function resetname() {
-		localStorage.clear();	
-	}
-
 function setName() {
- 		var playername = localStorage.getItem('user');
-		this.name = playername;
-		document.getElementById("playergirl").innerHTML = this.name;
 
-		var playernameboy = localStorage.getItem('userboy');
-		this.nameboy = playernameboy;
+
+
+		if (localStorage.getItem('user')) {
+         document.getElementById("playergirl").innerHTML = localStorage.getItem('user');
+   		 }
+
+		else if (localStorage.getItem('userboy')) {		
+
+		document.getElementById("playerboy").innerHTML = localStorage.getItem('userboy');
+			
+		}
 		
-		document.getElementById("playerboy").innerHTML = this.nameboy;
 }
-
 
 
 
@@ -35,6 +35,8 @@ function setName() {
 		var playername = localStorage.getItem('user');
 		this.name = playername;
 		document.getElementById("playergirl").innerHTML = this.name;
+		
+
 		localStorage.setItem('userboy', '');
 		document.getElementById("playerboy").innerHTML = '';
 		
@@ -57,6 +59,8 @@ function setName() {
 		var playernameboy = localStorage.getItem('userboy');
 		this.nameboy = playernameboy;
 		document.getElementById("playerboy").innerHTML =  this.nameboy;
+
+
 		localStorage.setItem('user', '');
 		document.getElementById("playergirl").innerHTML = '';
 
