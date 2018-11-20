@@ -26,35 +26,13 @@ body {
 }
 
 .margin-top {
-	margin-top: 10%;
-}
-/*************************************************
-                 SITE SPECIFIC STYLE 
-**************************************************/
-
-#intro-img-sdg {
-	z-index: -2;
-	background: transparent url('../img/intro-img.png') no-repeat;
-	height: 100vh;
-	background-size: cover;
-}
-
-.button {
-	z-index: 999;
-	margin: 0 auto;
-	display: block;
-}
-
-.how-to-play {
 	margin-top: 5%;
-	margin-bottom: 5%;
+
 }
 
-
-.icon-how {
-	padding: 10%;
+.border-red {
+	border: 5px solid red;
 }
-
 /*************************************************
                NAV BAR
 **************************************************/
@@ -73,6 +51,46 @@ border: 2px solid white;
    cursor: pointer;
 
 }
+
+/*************************************************
+                 SITE SPECIFIC STYLE 
+**************************************************/
+
+#intro-img-sdg {
+	z-index: -2;
+	background: transparent url('../img/intro-img.png') no-repeat;
+	height: 100vh;
+	background-size: cover;
+}
+
+#intro-img-index {
+	z-index: -2;
+	background: transparent url('../img/sdg_introworld1.png') no-repeat;
+	height: 100vh;
+	background-size: cover;
+}
+
+.button {
+	z-index: 999;
+	margin: 0 auto;
+	display: block;
+}
+
+.button-top {
+	margin-top: 35%;
+}
+
+.how-to-play {
+	margin-top: 5%;
+	margin-bottom: 5%;
+}
+
+
+.icon-how {
+	padding: 10%;
+}
+
+
 
 
 /*************************************************
@@ -94,13 +112,13 @@ border: 2px solid white;
 }
 
 @keyframes down {
-	from {
+	0% {
 		top: -400px;
 		left: 0px;
 
 	}
-	to {
-		top: 0px;
+	100% {
+		top: 100px;
 		left: 0px;
 	}
 }
