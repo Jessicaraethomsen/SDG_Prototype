@@ -86,10 +86,6 @@ body {
     /* Chrome, Safari, Opera */
     animation-fill-mode: alternate-reverse; }
 
-.welcome {
-  width: 200px;
-  margin-left: 50%; }
-
 .navbar {
   z-index: 10;
   cursor: pointer; }
@@ -114,6 +110,9 @@ h2 {
 
 h3 {
   font-size: 1.5em; }
+
+h4 {
+  font-size: 1.2em; }
 
 p, .p-small {
   font-family: "Poppins", sans-serif;
@@ -184,6 +183,9 @@ section {
   margin: 0;
   padding: 0; }
 
+.margin-top-10 {
+  margin-top: 10%; }
+
 .section-cover {
   max-width: 100%; }
 
@@ -192,6 +194,9 @@ section {
 
 #home-bg {
   background-image: url("../img/sdg_homemap.png"); }
+
+#characters-bg {
+  background-image: url("../img/sdg_characters.png"); }
 
 /* .page-content class for all our Intro-world sections*/
 .page-content {
@@ -305,6 +310,14 @@ section {
   position: absolute;
   top: 1%;
   left: 95%;
+  max-width: 5%;
+  z-index: 10;
+  cursor: url(../img/tap.png), auto; }
+
+.navbar-name {
+  position: absolute;
+  top: 12%;
+  left: 90%;
   max-width: 5%;
   z-index: 10;
   cursor: url(../img/tap.png), auto; }
@@ -645,7 +658,7 @@ a.next:hover {
   margin: 10% auto;
   display: block; }
 
-/* foreground (ballons/landscape) */
+/* foreground (bubbles/jellyfish) */
 #parallax-bg3 {
   z-index: 3;
   position: fixed;
@@ -656,7 +669,7 @@ a.next:hover {
   margin-left: -470px;
   /* move left by half element's width */ }
 
-/* balloon */
+/* bubbles */
 #bg3-1 {
   position: absolute;
   top: -111px;
@@ -678,43 +691,53 @@ a.next:hover {
   left: -85px; }
 
 /* midground (clouds) */
-#parallax-bg2 {
+#bubbles-2 {
   z-index: 2;
   position: fixed;
   left: 50%;
   /* align left edge with center of viewport */
   top: 0;
   width: 1200px;
-  margin-left: -600px;
+  margin-left: -550px;
   /* move left by half element's width */ }
 
-#bg2-1 {
+#bubble-1 {
   position: absolute;
   top: 162px;
   left: 200px; }
 
-#bg2-2 {
+#bubble-2 {
   position: absolute;
   top: 300px;
   left: 1150px; }
 
-#bg2-3 {
+#bubble-3 {
   position: absolute;
   top: 543px;
   left: -35px; }
 
-#bg2-4 {
+#bubble-4 {
   position: absolute;
   top: 1180px;
   left: 250px; }
 
-#bg2-5 {
+#bubble-5 {
   position: absolute;
-  top: 900px;
+  top: 930px;
   left: 890px; }
 
+#bubble-6 {
+  position: absolute;
+  top: 2500px;
+  left: 890px; }
+
+#bubble-7 {
+  position: absolute;
+  top: 3000px;
+  left: 250px; }
+
 /* background (clouds) */
-#parallax-bg1 {
+#jellyfish {
   z-index: 1;
   position: fixed;
   left: 50%;
@@ -724,25 +747,25 @@ a.next:hover {
   margin-left: -600px;
   /* move left by half element's width */ }
 
-#bg1-1 {
+#jellyfish-1 {
   position: absolute;
   top: 85px;
   left: -270px; }
 
-#bg1-2 {
+#jellyfish-2 {
   position: absolute;
   top: 440px;
-  left: 795px; }
+  left: 805px; }
 
-#bg1-3 {
+#jellyfish-3 {
   position: absolute;
   top: 900px;
-  left: -220px; }
-
-#bg1-4 {
-  position: absolute;
-  top: 1020px;
   left: 450px; }
+
+#jellyfish-4 {
+  position: absolute;
+  top: 2000px;
+  left: 150px; }
 
 /*========================================================
           SECTION: QUIZ
