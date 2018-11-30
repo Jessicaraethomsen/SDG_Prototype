@@ -88,8 +88,6 @@ body {
 
 }
 
-
-
 /*************************************************
                   Typography
 **************************************************/
@@ -203,10 +201,19 @@ body {
                     Audio
 **************************************************/
 
-audio {
-    background-color: pink;
+.audiobox{
+  position: absolute;
+  background-image: url("../img/pause.png");
+  border:none;
+  top: -2.8%;
+  left: 93%;
+  z-index: 10;
+  height: 90px;
+  width: 90px;
+   background-position: center center;
+    background-repeat: no-repeat;
+  
 }
-
 
 /*************************************************
                   Page Struture
