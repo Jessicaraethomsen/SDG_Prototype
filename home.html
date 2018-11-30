@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 
 <head>
@@ -17,30 +16,7 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 <script src="js/storename.js"></script>
-<script>
 
-
-var audio = document.getElementById('audio');
-var isPlaying = false;
-
-$('.btn-play-music').click(function(){
-    $(this).toggleClass('pause');
-    $(this).parent('.music-box').toggleClass('playing');
-    $(this).find('.fa').toggleClass('fa-pause');
-    if (isPlaying) {
-      audio.pause()
-    } else {
-      audio.play();
-    }
-});
-audio.onplaying = function() {
-  isPlaying = true;
-};
-audio.onpause = function() {
-  isPlaying = false;
-};
-
-</script>
 
 <!-- Bootstrap & Styles  -->
 <link rel="stylesheet" href="css/bootstrap.css">
@@ -57,6 +33,7 @@ audio.onpause = function() {
 				<div class="navbar-header">
 					<a class="navbar-brand" href="index.html">
 						<img class="logo" src="img/sdg-logo.png">
+
 					</a>
 				</div>
 			</div>
@@ -66,25 +43,16 @@ audio.onpause = function() {
 		<section class= section-cover>
 		<div class="container-fluid">
 		<div class="row">
+						<button id="playpausebtn" class="audiobox"></button>
 
 		<h2 class="navbar-name" id="playergirl"></h2>
 		<h2 class="navbar-name" id="playerboy"></h2>
-			
 			<div id="home-bg" class="col-12 page-content">
+
 
 				<a class="navbar-badge" href="badges.html">
 				<img class="logo" src="img/sdg_badge.png" >
 				</a>
-
-				
-				<div class="music-box">
-				<audio id="audio" controls="controls" autostart="1" autoplay="false" >
-    			<source src="audio/Lovable_Clown_Sit_Com.mp3" type="audio/mp3" />
-  				</audio>
-
-  				<button  class="btn btn-play-music play"><i class="fa fa-play" style="margin-top: : 500px;"></i></button>
-		
-  				</div>
 
 				<a class="navbar-help" href="index.html">
 				<img class="logo" src="img/sdg_help.png" style="max-width: 60px;">
@@ -98,9 +66,6 @@ audio.onpause = function() {
 				<div class="goal2"><img src="img/sdg_goal2.png"></div>
 				</a> 
 				</div>
-			    
-
-
 
 
 			    <a href="goal14.html">
@@ -110,6 +75,7 @@ audio.onpause = function() {
 
 				<div  class="boat1"><img src="img/sdg_boat.png"></div>
 				<div  class="boat2"><img src="img/sdg_boat.png"></div>
+				
 				<div  class="cloud1"><img src="img/cloud.png"></div>
 				<div  class="cloud2"><img src="img/cloud.png"></div>
 				<div  class="cloud3"><img src="img/cloud.png"></div>
@@ -123,7 +89,48 @@ audio.onpause = function() {
 
 
 	<!-- JAVASCRIPT FILES-->
-	<script src=""></script>
+	<script>
+
+var audio, playbtn, mutebtn, seek_bar;
+function initAudioPlayer(){
+	audio = new Audio();
+	audio.src = "audio/Lovable_Clown_Sit_Com.mp3";
+	audio.loop = true;
+	audio.play();
+	// Set object references
+	playbtn = document.getElementById("playpausebtn");
+	mutebtn = document.getElementById("mutebtn");
+	// Add Event Handling
+	playbtn.addEventListener("click",playPause);
+	mutebtn.addEventListener("click", mute);
+	// Functions
+	function playPause(){
+		if(audio.paused){
+		    audio.play();
+		    playbtn.style.background = "url(https://image.flaticon.com/icons/svg/189/189889.svg) no-repeat";
+	    } else {
+		    audio.pause();
+		    playbtn.style.background = "url(https://image.flaticon.com/icons/svg/148/148744.svg) no-repeat";
+	    }
+	}
+	function mute(){
+		if(audio.muted){
+		    audio.muted = false;
+		    mutebtn.style.background = "url(https://image.flaticon.com/icons/svg/204/204287.svg) no-repeat";
+	    } else {
+		    audio.muted = true;
+		    mutebtn.style.background = "url(https://image.flaticon.com/icons/svg/148/148757.svg) no-repeat";
+	    }
+	}
+}
+window.addEventListener("load", initAudioPlayer);
+
+
+
+
+
+
+</script>
 
 	<script language="text/javascript">
     var playpause = true;
@@ -131,4 +138,3 @@ audio.onpause = function() {
 
 	</body>
 </html>
-
