@@ -133,8 +133,17 @@ button {
 /*************************************************
                     Audio
 **************************************************/
-audio {
-  background-color: pink; }
+.audiobox {
+  position: absolute;
+  background-image: url("../img/pause.png");
+  border: none;
+  top: -2.8%;
+  left: 93%;
+  z-index: 10;
+  height: 90px;
+  width: 90px;
+  background-position: center center;
+  background-repeat: no-repeat; }
 
 /*************************************************
                   Page Struture
@@ -527,10 +536,25 @@ body {
   text-align: center; }
 
 .margin-top {
-  margin-top: 5%; }
+  margin-top: 10%; }
 
 .border-red {
   border: 5px solid red; }
+
+button {
+  font-family: "Knicknack", sans-serif;
+  font-size: 22px;
+  letter-spacing: 2px;
+  background-color: transparent;
+  color: #fff;
+  border: 2px solid white;
+  border-radius: 5px;
+  padding: 30px;
+  width: 280px;
+  cursor: pointer;
+  margin-top: 60px; }
+  button:hover {
+    background-color: #0757a0; }
 
 /*************************************************
                NAV BAR
@@ -539,10 +563,10 @@ body {
   border: 2px solid white; }
 
 .navbar {
-  margin-top: -10%;
   position: absolute;
   z-index: 10;
-  cursor: pointer; }
+  cursor: pointer;
+  top: -150px; }
 
 /*************************************************
                  SITE SPECIFIC STYLE 
@@ -581,20 +605,22 @@ body {
   float: left;
   margin-left: 150px;
   position: relative;
-  animation: down 3s ease-out; }
+  animation: down 3s ease-out;
+  animation-fill-mode: forwards; }
 
 #boy-name {
   float: right;
   position: relative;
   animation: down 3s ease-out;
-  margin-right: 150px; }
+  margin-right: 150px;
+  animation-fill-mode: forwards; }
 
 @keyframes down {
   0% {
     top: -400px;
     left: 0px; }
   100% {
-    top: 100px;
+    top: 200px;
     left: 0px; } }
 
 /*# sourceMappingURL=intro.css.map */

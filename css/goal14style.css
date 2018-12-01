@@ -179,8 +179,17 @@ button {
 /*************************************************
                     Audio
 **************************************************/
-audio {
-  background-color: pink; }
+.audiobox {
+  position: absolute;
+  background-image: url("../img/pause.png");
+  border: none;
+  top: -2.8%;
+  left: 93%;
+  z-index: 10;
+  height: 90px;
+  width: 90px;
+  background-position: center center;
+  background-repeat: no-repeat; }
 
 /*************************************************
                   Page Struture
@@ -558,6 +567,18 @@ section {
 */
 /* SUSTAINABLE DEVELOPMENT GOALS - LIFE BELOW WATER  - GOAL 14 
 *****************************************************************/
+/*************************************************
+               NAV BAR
+**************************************************/
+.navbar-header {
+  border: 2px solid white; }
+
+.navbar {
+  position: absolute;
+  z-index: 99999;
+  cursor: pointer;
+  top: -150px; }
+
 /* Extended base styles (site specific)
 *****************************************************************/
 html {
