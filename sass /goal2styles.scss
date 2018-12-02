@@ -156,22 +156,22 @@ border: 2px solid white;
 
 
 /*========================================================
-          SECTION: QUIZZ
+          SECTION: define
 ==========================================================*/
 
 
-.goal-text{
-  margin-top: 20%;
+.define-text{
+  padding-top: 30%;
   max-width: 100%;
   margin: 0 auto;
   
 }
 
 
-
 .section-goal2-define{
   @extend .center-canvas;
   @extend .section1;
+   
 
   
     /*responsive image*/
@@ -194,6 +194,7 @@ border: 2px solid white;
 .section-help{
   @extend .center-canvas;
   @extend .section1;
+
 
   p{
     margin-top: 5%;
@@ -521,7 +522,17 @@ font-family: $font-headline;
 font-size: 22px;
 color: $brand-white;
 }
- 
+
+
+
+/*========================================================
+          mobileimg
+==========================================================*/
+
+ .img-mobile{
+  background-image: url("../img/sdg_flip-mobile.png");
+  display: none;
+ }
 
 
 
@@ -543,4 +554,55 @@ color: $brand-white;
     from{transform:translateY(0px);}
     to{transform:translateY(20px);}
 }
+
+
+
+
+/*************************************************************
+              MEDIA QUERIES
+ HELP:https://gist.github.com/gokulkrishh/242e68d1ee94ad05f488           
+ ***************************************************************/
+
+@media (min-width: 501px) and (max-width: 1024px) {
+ body{
+
+    background-color: $brand-blue;
+   
+  }
+
+
+
+  section {
+    display: none;
+  }
+}
+
+
+/*if anything needs to change MOBILE*/
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+
+
+section {
+    display: none;
+  }
+
+}
+
+
+
+@media only screen and (max-width: 500px){ //some value
+  body{
+
+    background-color: $brand-darkblue;
+   
+  }
+
+
+  /*Hide our logo*/
+  section {
+    display: none;
+  }  
+
+}
+
 

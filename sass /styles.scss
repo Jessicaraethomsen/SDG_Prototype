@@ -51,6 +51,10 @@ MIXINS
 EXTEND
 **************************************************/
 
+.border-red {
+  border: 2px solid red;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -194,9 +198,6 @@ body {
 
 
 
-
-
-
 /*************************************************
                     Audio
 **************************************************/
@@ -205,13 +206,14 @@ body {
   position: absolute;
   background-image: url("../img/pause.png");
   border:none;
-  top: -2.8%;
+  top: -2.5%;
   left: 93%;
   z-index: 10;
-  height: 90px;
-  width: 90px;
+  height: 60px;
+  width: 60px;
   background-position: center center;
   background-repeat: no-repeat;
+  cursor: url(../img/tap.png), auto;
   
 }
 
@@ -234,6 +236,10 @@ body {
     margin-top: 10%;
   }
 
+  .margin-bottom-10{
+    margin-bottom: 10%;
+  }
+
   .section-cover{
     max-width: 100%; 
   }
@@ -250,9 +256,10 @@ body {
   }
 
   #characters-bg{
-    background-image: url("../img/sdg_characters.png");
+    background-image: url("../img/choose-character.png");
 
   }
+
 
   /* .page-content class for all our Intro-world sections*/
   .page-content{
@@ -261,10 +268,26 @@ body {
     height: 100%; 
     margin: 0 auto;
     /*Border gives the effect of game*/
-    border: 20px solid $brand-white;
-    /*Rounded corner of sections*/
-    border-radius: 60px;
+/*    border: 20px solid $brand-white;
+*/    /*Rounded corner of sections*/
+/*    border-radius: 60px;
+*/    z-index: -2;
+<<<<<<< HEAD
+    /* Center and scale*/
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+  }
+
+  .page-intro{
+    position: absolute;
+    /*responsive image*/
+    height: 100%; 
+    margin: 0 auto;
     z-index: -2;
+=======
+>>>>>>> 5762a1b263f5cafe24dadac638a99a3a973d131c
     /* Center and scale*/
     background-position: center center;
     background-repeat: no-repeat;
@@ -279,7 +302,9 @@ body {
     margin-left: 0;
   }
 
-
+.other {
+float: right;
+left: 40%;}
 /*************************************************
              Badges ELEMENTS
 **************************************************/
@@ -416,7 +441,7 @@ body {
 .goal14{
   position: absolute;
   top: 30%;
-  left: 82%;
+  left: 79%;
   
   z-index: 10;
   cursor: url(../img/tap.png), auto;
@@ -470,11 +495,23 @@ body {
 
 .navbar-name{
   position: absolute;
-  top: 10%;
-  left: 15%;
+<<<<<<< HEAD
+<<<<<<< HEAD
+  bottom: 10%;
+  left: 10%;
+=======
+  top: 80%;
+  left: 8%;
+  font-size: 5em;
+>>>>>>> 5762a1b263f5cafe24dadac638a99a3a973d131c
+=======
+  top: 80%;
+  left: 8%;
+  font-size: 5em;
+>>>>>>> 5762a1b263f5cafe24dadac638a99a3a973d131c
  
   z-index: 10;
-  cursor: url(../img/tap.png), auto;
+  /*cursor: url(../img/tap.png), auto;*/
 }
 
 
@@ -508,22 +545,21 @@ body {
 
 
 
-
 /*************************************************************
               MEDIA QUERIES
  HELP:https://gist.github.com/gokulkrishh/242e68d1ee94ad05f488           
  ***************************************************************/
 
-
  @media (min-width: 501px) and (max-width: 1024px) {
-
+   
    #home-bg,
    #intro-bg{
     background-image: url("../img/sdg_flip.png");
   }
 
   .page-content{
-    position: block;
+    margin-top: -10%; 
+    position: absolute;
     /*responsive image*/
     height: 100%; 
     margin: 0 auto;
@@ -531,18 +567,28 @@ body {
     border: none;
     /*Rounded corner of sections*/
     border-radius: 0;
-    z-index: 3;
+    z-index: -1;
     /* Center and scale*/
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
   }
 
+    .audiobox{
+  position: absolute;
+  background-image: url("../img/pause.png");
+  top: -2.5%;
+  left: 2%;
+  z-index: 10;
+  height: 60px;
+  width: 60px;
+  
+}
+
   /*Hide our logo*/
   .navbar-brand{ 
     display: none; 
   }
-
 
   .navbar-brand{display: none;}
   .cloud1{display: none;}
@@ -560,10 +606,9 @@ body {
 }
 
 
-/*if anything needs to change*/
+/*if anything needs to change MOBILE*/
 @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {  
 }
-
 
 
 
@@ -575,11 +620,24 @@ body {
 
   #home-bg,
   #intro-bg{
+    margin-top:20px; 
+    position: block;
     background-image: url("../img/sdg_sorry.png");
     width: 100%; 
     height: 100%; 
     margin: 0 auto;
   }
+
+  .audiobox{
+  position: absolute;
+  background-image: url("../img/pause.png");
+  top: -2.5%;
+  left: 40%;
+  z-index: 10;
+  height: 60px;
+  width: 60px;
+  
+}
 
 
   .page-content{
@@ -614,7 +672,6 @@ body {
   .navbar-name{display: none;}
 
 }
-
 
 
 
