@@ -347,9 +347,11 @@ section {
 .goal14 {
   position: absolute;
   top: 30%;
-  left: 79%;
+  left: 82%;
   z-index: 10;
-  cursor: url(../img/tap.png), auto; }
+  cursor: url(../img/tap.png), auto;
+  width: 80px;
+  height: 80px; }
 
 .navbar-badge {
   position: absolute;
@@ -386,8 +388,8 @@ section {
 
 .navbar-name {
   position: absolute;
-  top: 12%;
-  left: 90%;
+  top: 10%;
+  left: 15%;
   z-index: 10;
   cursor: url(../img/tap.png), auto; }
 
