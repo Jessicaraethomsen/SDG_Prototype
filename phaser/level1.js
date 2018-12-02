@@ -114,7 +114,7 @@ var level1 = {
 		game.physics.arcade.enable(this.explorer);
 
 
-		cursors = game.input.keyboard.createCursorKeys();
+		
 
 		//POPUP
 		 this.popup = game.add.sprite(game.world.centerX, game.world.centerY, 'helpPop');
@@ -147,7 +147,9 @@ var level1 = {
 	    	fill: "#fff"});
 	    this.exploreTxt.fixedToCamera = true;
 	    this.exploreTxt.text = '';
-	    this.exploreTxt.addColor("#fff", 0);  	  
+	    this.exploreTxt.addColor("#fff", 0); 
+
+	    cursors = game.input.keyboard.createCursorKeys(); 	  
 
 	},
 	
@@ -170,7 +172,7 @@ var level1 = {
 		game.physics.arcade.overlap(this.explorer, this.brazilMarker, brazilPop, null, this);
 
 
-	
+		
 
 
     	//  ONLY MOVE WHEN MOUSE ISDOWN
@@ -181,13 +183,33 @@ var level1 = {
 
     }
 
-    else
-    {
+    else{
     	this.explorer.body.velocity.setTo(0, 0);
 
     }
 
-}
+
+    if(cursors.left.isDown && this.explorer.x>-10){
+		this.explorer.x -= 5;
+		//scaling 100% pointing in the orginal directiosn
+		this.explorer.scale.x = -1;
+	}
+
+	if(cursors.right.isDown && this.explorer.x<2000){
+		this.explorer.x += 5;
+		this.explorer.scale.x = 1;	
+	}
+	if(cursors.up.isDown && this.explorer.y>10){
+		this.explorer.y -= 5;	
+	}
+
+	if(cursors.down.isDown && this.explorer.y<1900){
+		this.explorer.y += 5;
+	}
+
+    }
+
+
 };
 
 
