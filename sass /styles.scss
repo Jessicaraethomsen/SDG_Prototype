@@ -267,12 +267,8 @@ body {
     /*responsive image*/
     height: 100%; 
     margin: 0 auto;
-    /*Border gives the effect of game*/
-/*    border: 20px solid $brand-white;
-*/    /*Rounded corner of sections*/
-/*    border-radius: 60px;
-*/    z-index: -2;
-<<<<<<< HEAD
+    z-index: -2;
+
     /* Center and scale*/
     background-position: center center;
     background-repeat: no-repeat;
@@ -286,8 +282,6 @@ body {
     height: 100%; 
     margin: 0 auto;
     z-index: -2;
-=======
->>>>>>> 5762a1b263f5cafe24dadac638a99a3a973d131c
     /* Center and scale*/
     background-position: center center;
     background-repeat: no-repeat;
@@ -495,21 +489,8 @@ left: 40%;}
 
 .navbar-name{
   position: absolute;
-<<<<<<< HEAD
-<<<<<<< HEAD
   bottom: 10%;
   left: 10%;
-=======
-  top: 80%;
-  left: 8%;
-  font-size: 5em;
->>>>>>> 5762a1b263f5cafe24dadac638a99a3a973d131c
-=======
-  top: 80%;
-  left: 8%;
-  font-size: 5em;
->>>>>>> 5762a1b263f5cafe24dadac638a99a3a973d131c
- 
   z-index: 10;
   /*cursor: url(../img/tap.png), auto;*/
 }
