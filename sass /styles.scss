@@ -51,9 +51,7 @@ MIXINS
 EXTEND
 **************************************************/
 
-.border-red {
-  border: 2px solid red;
-}
+
 
 body {
   margin: 0;
@@ -67,8 +65,7 @@ body {
 
 .navbar-header{
   position: absolute;
-
-  
+ 
 }
 
 .navbar-brand{
@@ -85,12 +82,11 @@ body {
 
  z-index: 10;
  cursor: pointer;
+ margin-top: -1%;
 
 }
 
-.logo{
 
-}
 
 /*************************************************
                   Typography
@@ -206,8 +202,8 @@ body {
   position: absolute;
   background-image: url("../img/pause.png");
   border:none;
-  top: -2.5%;
-  left: 93%;
+  top: -5.5%;
+  left: 95%;
   z-index: 10;
   height: 60px;
   width: 60px;
@@ -240,17 +236,18 @@ body {
     margin-bottom: 10%;
   }
 
-  .section-cover{
-    max-width: 100%; 
-  }
+ 
 
   #intro-bg{
     background-image: url("../img/sdg_introworld1.png");
+
   }
 
   #home-bg{
     background-image: url("../img/sdg_homemap.png");
-     overflow-y: hidden;
+
+     background-size: cover;
+  overflow: hidden;
      
 
   }
@@ -302,8 +299,6 @@ left: 40%;}
 /*************************************************
              Badges ELEMENTS
 **************************************************/
-
-
 /* Component: Well */
 .well {
 
@@ -346,8 +341,6 @@ left: 40%;}
   color: #454545;
 }
 
-
-
 .mini-profile-widget .image-container .avatar {
   width: 180px;
   height: 180px;
@@ -357,13 +350,11 @@ left: 40%;}
   border: 1px solid #dddddd;
 }
 
-
 .mini-profile-widget .details {
   text-align: center;
 }
 
 .badges {
-
   opacity: 0.6;
 }                       
 
@@ -371,18 +362,18 @@ left: 40%;}
               HOME PAGE ELEMENTS
 **************************************************/
 
-.resize{
- max-width:100%;
- height:auto;
-}
+
 
 .cloud1{
   position: absolute;
   top: 50%;
   left: -10%;
   z-index: 10;
-  
   animation: drift 80s linear infinite;
+  
+  
+ 
+
 }
 
 .cloud2{
@@ -390,8 +381,10 @@ left: 40%;}
   top: 10%;
   left: -10%;
   z-index: 10;
-  
   animation: drift 80s 40s linear infinite;
+
+
+
 }
 
 .cloud3{
@@ -399,27 +392,31 @@ left: 40%;}
   top: 80%;
   left: -10%;
   z-index: 10;
-  
   animation: drift 90s 20s linear infinite;
-}
 
-.boat1{
-  position: absolute;
-  top: 80%;
-  left: 0%;
-  
-  z-index: 10;
-  animation: sail 50s  linear infinite alternate;
+
 }
 
 .boat2{
   position: absolute;
   top: 20%;
   left: 95%;
-
-
-   z-index: 10;
+  z-index: 10;
+  border: 1px solid pink;
   animation: sailleft 50s  linear infinite alternate;
+
+}
+
+
+
+.boat1{
+  position: absolute;
+  top: 40%;
+  left: 0%;
+  z-index: 10;
+  border: 1px solid yellow;
+  animation: sail 50s  linear infinite alternate;
+
 }
 
 
@@ -427,20 +424,18 @@ left: 40%;}
   position: absolute;
   top: 23%;
   left: 23%;
-  
   z-index: 10;
   cursor: url(../img/tap.png), auto;
+  
 }
 
 .goal14{
   position: absolute;
   top: 30%;
   left: 79%;
-  
   z-index: 10;
   cursor: url(../img/tap.png), auto;
-  width: 80px;
-  height: 80px;
+
 }
 
 
@@ -448,9 +443,10 @@ left: 40%;}
   position: absolute;
   top: -8%;
   left: 77%;
-  
   z-index: 10;
   cursor: url(../img/tap.png), auto;
+
+
 
   &:hover {
     animation: top .7s ease-out;
@@ -464,18 +460,19 @@ left: 40%;}
   position: absolute;
   top: 1%;
   left: 85%;
- 
   z-index: 10;
   cursor: url(../img/tap.png), auto;
+   
 }
 
 .navbar-langauge{
   position: absolute;
   top: 1%;
   left: 90%;
-  
   z-index: 10;
   cursor: url(../img/tap.png), auto;
+
+
 }
 
 .navbar-audio{
@@ -484,14 +481,27 @@ left: 40%;}
   left: 95%;
   z-index: 10;
   cursor: url(../img/tap.png), auto;
+
+ 
 }
 
+.navbar-title{
+  position: absolute;
+  text-align: center;
+  bottom: 5%;
+  left: 2%;
+  z-index: 10;
+  
+  /*cursor: url(../img/tap.png), auto;*/
+}
 
 .navbar-name{
   position: absolute;
-  bottom: 10%;
-  left: 10%;
+  bottom: 1%;
+  left: 2%;
   z-index: 10;
+  width:100%;
+  height:auto;
   /*cursor: url(../img/tap.png), auto;*/
 }
 
@@ -532,6 +542,7 @@ left: 40%;}
  ***************************************************************/
 
  @media (min-width: 501px) and (max-width: 1024px) {
+
    
    #home-bg,
    #intro-bg{
@@ -539,20 +550,7 @@ left: 40%;}
   }
 
   .page-content{
-    margin-top: -10%; 
-    position: absolute;
-    /*responsive image*/
-    height: 100%; 
-    margin: 0 auto;
-    /*Border gives the effect of game*/
-    border: none;
-    /*Rounded corner of sections*/
-    border-radius: 0;
-    z-index: -1;
-    /* Center and scale*/
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
+   
   }
 
     .audiobox{
@@ -589,6 +587,10 @@ left: 40%;}
 
 /*if anything needs to change MOBILE*/
 @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {  
+
+   body{
+    background-color: brand-blue;
+  }
 }
 
 

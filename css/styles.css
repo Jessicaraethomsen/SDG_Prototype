@@ -22,9 +22,6 @@ VARIABLES
 MIXINS
 EXTEND
 **************************************************/
-.border-red {
-  border: 2px solid red; }
-
 body {
   margin: 0;
   padding: 0; }
@@ -45,7 +42,8 @@ body {
 
 .navbar {
   z-index: 10;
-  cursor: pointer; }
+  cursor: pointer;
+  margin-top: -1%; }
 
 /*************************************************
                   Typography
@@ -140,8 +138,8 @@ button {
   position: absolute;
   background-image: url("../img/pause.png");
   border: none;
-  top: -2.5%;
-  left: 93%;
+  top: -5.5%;
+  left: 95%;
   z-index: 10;
   height: 60px;
   width: 60px;
@@ -166,15 +164,13 @@ section {
 .margin-bottom-10 {
   margin-bottom: 10%; }
 
-.section-cover {
-  max-width: 100%; }
-
 #intro-bg {
   background-image: url("../img/sdg_introworld1.png"); }
 
 #home-bg {
   background-image: url("../img/sdg_homemap.png");
-  overflow-y: hidden; }
+  background-size: cover;
+  overflow: hidden; }
 
 #characters-bg {
   background-image: url("../img/choose-character.png"); }
@@ -270,10 +266,6 @@ section {
 /*************************************************
               HOME PAGE ELEMENTS
 **************************************************/
-.resize {
-  max-width: 100%;
-  height: auto; }
-
 .cloud1 {
   position: absolute;
   top: 50%;
@@ -295,19 +287,21 @@ section {
   z-index: 10;
   animation: drift 90s 20s linear infinite; }
 
-.boat1 {
-  position: absolute;
-  top: 80%;
-  left: 0%;
-  z-index: 10;
-  animation: sail 50s  linear infinite alternate; }
-
 .boat2 {
   position: absolute;
   top: 20%;
   left: 95%;
   z-index: 10;
+  border: 1px solid pink;
   animation: sailleft 50s  linear infinite alternate; }
+
+.boat1 {
+  position: absolute;
+  top: 40%;
+  left: 0%;
+  z-index: 10;
+  border: 1px solid yellow;
+  animation: sail 50s  linear infinite alternate; }
 
 .goal2 {
   position: absolute;
@@ -321,9 +315,7 @@ section {
   top: 30%;
   left: 79%;
   z-index: 10;
-  cursor: url(../img/tap.png), auto;
-  width: 80px;
-  height: 80px; }
+  cursor: url(../img/tap.png), auto; }
 
 .navbar-badge {
   position: absolute;
@@ -358,11 +350,21 @@ section {
   z-index: 10;
   cursor: url(../img/tap.png), auto; }
 
+.navbar-title {
+  position: absolute;
+  text-align: center;
+  bottom: 5%;
+  left: 2%;
+  z-index: 10;
+  /*cursor: url(../img/tap.png), auto;*/ }
+
 .navbar-name {
   position: absolute;
-  bottom: 10%;
-  left: 10%;
+  bottom: 1%;
+  left: 2%;
   z-index: 10;
+  width: 100%;
+  height: auto;
   /*cursor: url(../img/tap.png), auto;*/ }
 
 /*************************************************
@@ -399,22 +401,6 @@ section {
   #home-bg,
   #intro-bg {
     background-image: url("../img/sdg_flip.png"); }
-
-  .page-content {
-    margin-top: -10%;
-    position: absolute;
-    /*responsive image*/
-    height: 100%;
-    margin: 0 auto;
-    /*Border gives the effect of game*/
-    border: none;
-    /*Rounded corner of sections*/
-    border-radius: 0;
-    z-index: -1;
-    /* Center and scale*/
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover; }
 
   .audiobox {
     position: absolute;
@@ -468,6 +454,9 @@ section {
   .navbar-name {
     display: none; } }
 /*if anything needs to change MOBILE*/
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+  body {
+    background-color: brand-blue; } }
 @media only screen and (max-width: 500px) {
   body {
     background-color: #478bca; }
