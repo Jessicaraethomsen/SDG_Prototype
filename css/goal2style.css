@@ -22,6 +22,9 @@ VARIABLES
 MIXINS
 EXTEND
 **************************************************/
+.border-red {
+  border: 2px solid red; }
+
 body {
   margin: 0;
   padding: 0; }
@@ -170,7 +173,7 @@ section {
   overflow-y: hidden; }
 
 #characters-bg {
-  background-image: url("../img/sdg_characters.png"); }
+  background-image: url("../img/choose-character.png"); }
 
 /* .page-content class for all our Intro-world sections*/
 .page-content {
@@ -179,9 +182,11 @@ section {
   height: 100%;
   margin: 0 auto;
   /*Border gives the effect of game*/
-  border: 20px solid #ffffff;
+  /*    border: 20px solid $brand-white;
+  */
   /*Rounded corner of sections*/
-  border-radius: 60px;
+  /*    border-radius: 60px;
+  */
   z-index: -2;
   /* Center and scale*/
   background-position: center center;
@@ -191,6 +196,10 @@ section {
 .no-gutters {
   margin-right: 0;
   margin-left: 0; }
+
+.other {
+  float: right;
+  left: 40%; }
 
 /*************************************************
              Badges ELEMENTS
@@ -301,9 +310,11 @@ section {
 .goal14 {
   position: absolute;
   top: 30%;
-  left: 79%;
+  left: 82%;
   z-index: 10;
-  cursor: url(../img/tap.png), auto; }
+  cursor: url(../img/tap.png), auto;
+  width: 80px;
+  height: 80px; }
 
 .navbar-badge {
   position: absolute;
@@ -340,8 +351,8 @@ section {
 
 .navbar-name {
   position: absolute;
-  top: 12%;
-  left: 90%;
+  top: 10%;
+  left: 15%;
   z-index: 10;
   cursor: url(../img/tap.png), auto; }
 

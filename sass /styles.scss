@@ -51,6 +51,10 @@ MIXINS
 EXTEND
 **************************************************/
 
+.border-red {
+  border: 2px solid red;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -250,9 +254,10 @@ body {
   }
 
   #characters-bg{
-    background-image: url("../img/sdg_characters.png");
+    background-image: url("../img/choose-character.png");
 
   }
+
 
   /* .page-content class for all our Intro-world sections*/
   .page-content{
@@ -261,10 +266,10 @@ body {
     height: 100%; 
     margin: 0 auto;
     /*Border gives the effect of game*/
-    border: 20px solid $brand-white;
-    /*Rounded corner of sections*/
-    border-radius: 60px;
-    z-index: -2;
+/*    border: 20px solid $brand-white;
+*/    /*Rounded corner of sections*/
+/*    border-radius: 60px;
+*/    z-index: -2;
     /* Center and scale*/
     background-position: center center;
     background-repeat: no-repeat;
@@ -279,7 +284,9 @@ body {
     margin-left: 0;
   }
 
-
+.other {
+float: right;
+left: 40%;}
 /*************************************************
              Badges ELEMENTS
 **************************************************/
