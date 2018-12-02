@@ -52,7 +52,7 @@ function setName() {
 		}
 		// prompt for user name if not yet set
 		if (localStorage.getItem('userboy') === '') {
-			this.nameboy = "Walter";
+			this.nameboy = "Sam";
 			localStorage.setItem('userboy', this.nameboy);
 		}
 		// get player name from local storage

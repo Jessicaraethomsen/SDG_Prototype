@@ -397,10 +397,11 @@ section {
 
 .navbar-name {
   position: absolute;
-  top: 10%;
-  left: 15%;
+  top: 80%;
+  left: 8%;
+  font-size: 5em;
   z-index: 10;
-  cursor: url(../img/tap.png), auto; }
+  /*cursor: url(../img/tap.png), auto;*/ }
 
 /*************************************************
               WEB ANIMATIONS
