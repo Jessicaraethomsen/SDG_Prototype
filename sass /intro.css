@@ -654,5 +654,40 @@ button {
   100% {
     top: 200px;
     left: 0px; } }
+/*************************************************************
+              MEDIA QUERIES
+ HELP:https://gist.github.com/gokulkrishh/242e68d1ee94ad05f488           
+ ***************************************************************/
+@media (min-width: 501px) and (max-width: 1024px) {
+  #intro-img-sdg,
+  #intro-img-index,
+  #intro-bg {
+    background: transparent url("../img/sdg_flip.png") no-repeat;
+    z-index: 1000; }
+
+  .cloud1 {
+    display: none; }
+
+  .cloud2 {
+    display: none; } }
+/*if anything needs to change MOBILE*/
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+  body {
+    background-color: brand-blue; } }
+@media only screen and (max-width: 500px) {
+  body {
+    background-color: #478bca; }
+
+  #intro-img-sdg,
+  #intro-img-index,
+  #intro-bg {
+    background: transparent url("../img/sdg_sorry.png") no-repeat;
+    z-index: 1000; }
+
+  .cloud1 {
+    display: none; }
+
+  .cloud2 {
+    display: none; } }
 
 /*# sourceMappingURL=intro.css.map */

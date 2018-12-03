@@ -93,7 +93,7 @@ a{
 
 .section1{
  height: 100vh;
- cursor: url('../assets/fried-potatoes.png'), auto; 
+
 
 }
 
@@ -126,7 +126,7 @@ border: 2px solid white;
 .section-goal2-title{
   @extend .center-canvas;
   @extend .section1;
-
+  cursor: url('../assets/fried-potatoes.png'), auto; 
     /*responsive image*/
     background-image: url('../img/SDG-goal2-bg.png');
     z-index: -2;
@@ -171,7 +171,7 @@ border: 2px solid white;
 .section-goal2-define{
   @extend .center-canvas;
   @extend .section1;
-   
+  cursor: url('../img/ice-cream.png'), auto; 
 
   
     /*responsive image*/
@@ -194,6 +194,7 @@ border: 2px solid white;
 .section-help{
   @extend .center-canvas;
   @extend .section1;
+    cursor: url('../img/taco.png'), auto; 
 
 
   p{
@@ -216,6 +217,7 @@ border: 2px solid white;
 .section-game{
   @extend .section1;
   @extend .center-canvas;
+      cursor: url('../img/sushi.png'), auto; 
 
 }
 
@@ -237,6 +239,7 @@ border: 2px solid white;
 
 .section-cards{
 height: 150vh;
+cursor: url('../assets/fried-potatoes.png'), auto; 
 
 }
 
@@ -310,26 +313,7 @@ ul {
 ==========================================================*/
 .section-change{
 @extend .section1;
-
-  /*ul{
-
-    @extend .p-small;
-    color: $goal2-dark;
-    list-style-type: none;
-    margin: 0;
-    padding-top: 20px;
-    text-align: left;
-
-  }
-
-  
-
-  li{
-  margin-top: 5px; 
-  padding-left: 10%;
-
-
-  }*/
+ cursor: url('../img/pizza.png'), auto; 
 
 }
 
@@ -390,6 +374,7 @@ ul {
 ==========================================================*/
 .section-quiz{
 @extend .section1;
+ cursor: url('../img/ice-cream.png'), auto; 
 }
 
 

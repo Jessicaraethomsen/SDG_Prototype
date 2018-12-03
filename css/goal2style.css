@@ -617,8 +617,7 @@ a {
           STRUCTURE
 ==========================================================*/
 .section1, .section-goal2-title, .section-goal2-define, .section-help, .section-game, .section-change, .section-quiz {
-  height: 100vh;
-  cursor: url("../assets/fried-potatoes.png"), auto; }
+  height: 100vh; }
 
 .section2 {
   margin-top: 20%; }
@@ -636,6 +635,7 @@ a {
           SECTION: TITLE
 ==========================================================*/
 .section-goal2-title {
+  cursor: url("../assets/fried-potatoes.png"), auto;
   /*responsive image*/
   background-image: url("../img/SDG-goal2-bg.png");
   z-index: -2;
@@ -669,6 +669,7 @@ a {
   margin: 0 auto; }
 
 .section-goal2-define {
+  cursor: url("../img/ice-cream.png"), auto;
   /*responsive image*/
   background-image: url("../img/SDG-goal2-defination.png");
   z-index: -2;
@@ -680,9 +681,11 @@ a {
 /*========================================================
           SECTION: WHY HELP
 ==========================================================*/
-.section-help p, .section-help .p-small {
-  margin-top: 5%;
-  text-align: left; }
+.section-help {
+  cursor: url("../img/taco.png"), auto; }
+  .section-help p, .section-help .p-small {
+    margin-top: 5%;
+    text-align: left; }
 
 .margin-top10 {
   margin-top: 10%; }
@@ -690,6 +693,9 @@ a {
 /*========================================================
           SECTION: GAME
 ==========================================================*/
+.section-game {
+  cursor: url("../img/sushi.png"), auto; }
+
 .game-text {
   width: 100%;
   margin-top: 10%;
@@ -699,7 +705,8 @@ a {
           SECTION CARD
 ==========================================================*/
 .section-cards {
-  height: 150vh; }
+  height: 150vh;
+  cursor: url("../assets/fried-potatoes.png"), auto; }
 
 .wrap-text {
   margin: 10%; }
@@ -755,25 +762,7 @@ li {
           SECTION: MAKE A DIFFERENCE
 ==========================================================*/
 .section-change {
-  /*ul{
-
-    @extend .p-small;
-    color: $goal2-dark;
-    list-style-type: none;
-    margin: 0;
-    padding-top: 20px;
-    text-align: left;
-
-  }
-
-  
-
-  li{
-  margin-top: 5px; 
-  padding-left: 10%;
-
-
-  }*/ }
+  cursor: url("../img/pizza.png"), auto; }
 
 .wrapper-change {
   margin-top: 10%;
@@ -805,6 +794,9 @@ li {
 /*========================================================
           SECTION: QUIZ
 ==========================================================*/
+.section-quiz {
+  cursor: url("../img/ice-cream.png"), auto; }
+
 .quiz-wrapper {
   margin-top: 10%; }
 
