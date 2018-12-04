@@ -114,6 +114,40 @@ border: 2px solid white;
 	padding: 10%;
 }
 
+.margin-10{
+  margin-top: 10%;
+}
+
+
+/*************************************************
+                CSS ANIMATION NAMES 
+**************************************************/
+.soundvoice{
+  position: absolute;
+  border:none;
+  top: 2%;
+  left: 80%;
+  z-index: 10;
+
+}
+
+
+.audiobox{
+  position: absolute;
+  background-image: url("../img/play-button.png");
+  border:none;
+  top: -5.5%;
+  left: 95%;
+  z-index: 10;
+  height: 60px;
+  width: 60px;
+  background-position: center center;
+  background-repeat: no-repeat;
+  cursor: url(../img/tap.png), auto;
+  
+}
+
+
 
 /*************************************************
                 CSS ANIMATION NAMES 
