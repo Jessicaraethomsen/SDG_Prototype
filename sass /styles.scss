@@ -100,6 +100,8 @@ body {
   h6 {
     color: $brand-white;
     font-family: $font-headline;
+     letter-spacing: .7px;
+
   }
 
   h1 {
@@ -408,7 +410,7 @@ left: 40%;}
   top: 20%;
   left: 95%;
   z-index: 10;
-  border: 1px solid pink;
+/*  border: 1px solid pink;*/
   animation: sailleft 50s  linear infinite alternate;
 
 }
@@ -420,7 +422,7 @@ left: 40%;}
   top: 40%;
   left: 0%;
   z-index: 10;
-  border: 1px solid yellow;
+ /* border: 1px solid yellow;*/
   animation: sail 50s  linear infinite alternate;
 
 }

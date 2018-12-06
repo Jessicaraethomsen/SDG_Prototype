@@ -1,5 +1,23 @@
 @import 'styles';
 
+/*************************************************
+                  font
+**************************************************/
+
+ @font-face {
+                  font-family: Knicknack;
+                  src: url(../Webfonts/Knicknack-Regular.woff);
+                }
+
+                @font-face {
+                  font-family: Knicknack Medium;
+                  src: url(../Webfonts/Knicknack-Medium.woff);
+                }
+
+                @font-face {
+                  font-family: Knicknack Bold;
+                  src: url(../Webfonts/Knicknack-Bold.woff);
+                }
 
 body {
   margin: 0;
@@ -116,6 +134,9 @@ border: 2px solid white;
 
 }
 
+.padding-b20{
+ padding-bottom: 20px;
+}
 
 /*========================================================
           SECTION: TITLE

@@ -88,7 +88,8 @@ body {
 
 .navbar {
   z-index: 10;
-  cursor: pointer; }
+  cursor: pointer;
+  margin-top: -1%; }
 
 /*************************************************
                   Typography
@@ -100,7 +101,8 @@ h4,
 h5,
 h6 {
   color: #ffffff;
-  font-family: "Knicknack", sans-serif; }
+  font-family: "Knicknack", sans-serif;
+  letter-spacing: .7px; }
 
 h1 {
   font-size: 3.8em; }
@@ -143,6 +145,8 @@ button {
   width: 280px;
   cursor: pointer;
   margin-top: 60px; }
+  button:hover {
+    background-color: #0757a0; }
 
 .tooltip {
   position: relative;
@@ -183,13 +187,14 @@ button {
   position: absolute;
   background-image: url("../img/pause.png");
   border: none;
-  top: -2.8%;
-  left: 93%;
+  top: -5.5%;
+  left: 95%;
   z-index: 10;
-  height: 90px;
-  width: 90px;
+  height: 60px;
+  width: 60px;
   background-position: center center;
-  background-repeat: no-repeat; }
+  background-repeat: no-repeat;
+  cursor: url(../img/tap.png), auto; }
 
 /*************************************************
                   Page Struture
@@ -205,18 +210,19 @@ section {
 .margin-top-10 {
   margin-top: 10%; }
 
-.section-cover {
-  max-width: 100%; }
+.margin-bottom-10 {
+  margin-bottom: 10%; }
 
 #intro-bg {
   background-image: url("../img/sdg_introworld1.png"); }
 
 #home-bg {
   background-image: url("../img/sdg_homemap.png");
-  overflow-y: hidden; }
+  background-size: cover;
+  overflow: hidden; }
 
 #characters-bg {
-  background-image: url("../img/sdg_characters.png"); }
+  background-image: url("../img/choose-character.png"); }
 
 /* .page-content class for all our Intro-world sections*/
 .page-content {
@@ -224,10 +230,17 @@ section {
   /*responsive image*/
   height: 100%;
   margin: 0 auto;
-  /*Border gives the effect of game*/
-  border: 20px solid #ffffff;
-  /*Rounded corner of sections*/
-  border-radius: 60px;
+  z-index: -2;
+  /* Center and scale*/
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover; }
+
+.page-intro {
+  position: absolute;
+  /*responsive image*/
+  height: 100%;
+  margin: 0 auto;
   z-index: -2;
   /* Center and scale*/
   background-position: center center;
@@ -237,6 +250,10 @@ section {
 .no-gutters {
   margin-right: 0;
   margin-left: 0; }
+
+.other {
+  float: right;
+  left: 40%; }
 
 /*************************************************
              Badges ELEMENTS
@@ -298,10 +315,6 @@ section {
 /*************************************************
               HOME PAGE ELEMENTS
 **************************************************/
-.resize {
-  max-width: 100%;
-  height: auto; }
-
 .cloud1 {
   position: absolute;
   top: 50%;
@@ -323,19 +336,21 @@ section {
   z-index: 10;
   animation: drift 90s 20s linear infinite; }
 
-.boat1 {
-  position: absolute;
-  top: 80%;
-  left: 0%;
-  z-index: 10;
-  animation: sail 50s  linear infinite alternate; }
-
 .boat2 {
   position: absolute;
   top: 20%;
   left: 95%;
   z-index: 10;
+  /*  border: 1px solid pink;*/
   animation: sailleft 50s  linear infinite alternate; }
+
+.boat1 {
+  position: absolute;
+  top: 40%;
+  left: 0%;
+  z-index: 10;
+  /* border: 1px solid yellow;*/
+  animation: sail 50s  linear infinite alternate; }
 
 .goal2 {
   position: absolute;
@@ -347,11 +362,9 @@ section {
 .goal14 {
   position: absolute;
   top: 30%;
-  left: 82%;
+  left: 79%;
   z-index: 10;
-  cursor: url(../img/tap.png), auto;
-  width: 80px;
-  height: 80px; }
+  cursor: url(../img/tap.png), auto; }
 
 .navbar-badge {
   position: absolute;
@@ -386,12 +399,22 @@ section {
   z-index: 10;
   cursor: url(../img/tap.png), auto; }
 
+.navbar-title {
+  position: absolute;
+  text-align: center;
+  bottom: 5%;
+  left: 2%;
+  z-index: 10;
+  /*cursor: url(../img/tap.png), auto;*/ }
+
 .navbar-name {
   position: absolute;
-  top: 10%;
-  left: 15%;
+  bottom: 1%;
+  left: 2%;
   z-index: 10;
-  cursor: url(../img/tap.png), auto; }
+  width: 100%;
+  height: auto;
+  /*cursor: url(../img/tap.png), auto;*/ }
 
 /*************************************************
               WEB ANIMATIONS
@@ -428,20 +451,14 @@ section {
   #intro-bg {
     background-image: url("../img/sdg_flip.png"); }
 
-  .page-content {
-    position: block;
-    /*responsive image*/
-    height: 100%;
-    margin: 0 auto;
-    /*Border gives the effect of game*/
-    border: none;
-    /*Rounded corner of sections*/
-    border-radius: 0;
-    z-index: 3;
-    /* Center and scale*/
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover; }
+  .audiobox {
+    position: absolute;
+    background-image: url("../img/pause.png");
+    top: -2.5%;
+    left: 2%;
+    z-index: 10;
+    height: 60px;
+    width: 60px; }
 
   /*Hide our logo*/
   .navbar-brand {
@@ -485,17 +502,31 @@ section {
 
   .navbar-name {
     display: none; } }
-/*if anything needs to change*/
+/*if anything needs to change MOBILE*/
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+  body {
+    background-color: brand-blue; } }
 @media only screen and (max-width: 500px) {
   body {
     background-color: #478bca; }
 
   #home-bg,
   #intro-bg {
+    margin-top: 20px;
+    position: block;
     background-image: url("../img/sdg_sorry.png");
     width: 100%;
     height: 100%;
     margin: 0 auto; }
+
+  .audiobox {
+    position: absolute;
+    background-image: url("../img/pause.png");
+    top: -2.5%;
+    left: 40%;
+    z-index: 10;
+    height: 60px;
+    width: 60px; }
 
   .page-content {
     position: block;

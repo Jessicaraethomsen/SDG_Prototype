@@ -170,6 +170,36 @@ border: 2px solid white;
 
 }
 
+
+.cloud1{
+  position: absolute;
+  top: 9%;
+  left: -7%;
+  z-index: 10;
+  animation: drift 80s linear infinite;
+  
+  
+ 
+
+}
+
+.cloud2{
+  position: absolute;
+  top: 9%;
+  left: -7%;
+  z-index: 10;
+  animation: drift 80s 40s linear infinite;
+
+
+
+}
+
+@keyframes drift{
+  from{transform:translateX(-55px);}
+  to{transform:translateX(2000px);}
+}
+
+
 @keyframes down {
 	0% {
 		top: -400px;

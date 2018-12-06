@@ -55,7 +55,8 @@ h4,
 h5,
 h6 {
   color: #ffffff;
-  font-family: "Knicknack", sans-serif; }
+  font-family: "Knicknack", sans-serif;
+  letter-spacing: .7px; }
 
 h1 {
   font-size: 3.8em; }
@@ -294,7 +295,7 @@ section {
   top: 20%;
   left: 95%;
   z-index: 10;
-  border: 1px solid pink;
+  /*  border: 1px solid pink;*/
   animation: sailleft 50s  linear infinite alternate; }
 
 .boat1 {
@@ -302,7 +303,7 @@ section {
   top: 40%;
   left: 0%;
   z-index: 10;
-  border: 1px solid yellow;
+  /* border: 1px solid yellow;*/
   animation: sail 50s  linear infinite alternate; }
 
 .goal2 {
@@ -673,6 +674,25 @@ button {
   margin-right: 150px;
   animation-fill-mode: forwards; }
 
+.cloud1 {
+  position: absolute;
+  top: 9%;
+  left: -7%;
+  z-index: 10;
+  animation: drift 80s linear infinite; }
+
+.cloud2 {
+  position: absolute;
+  top: 9%;
+  left: -7%;
+  z-index: 10;
+  animation: drift 80s 40s linear infinite; }
+
+@keyframes drift {
+  from {
+    transform: translateX(-55px); }
+  to {
+    transform: translateX(2000px); } }
 @keyframes down {
   0% {
     top: -400px;

@@ -55,7 +55,8 @@ h4,
 h5,
 h6 {
   color: #ffffff;
-  font-family: "Knicknack", sans-serif; }
+  font-family: "Knicknack", sans-serif;
+  letter-spacing: .7px; }
 
 h1 {
   font-size: 3.8em; }
@@ -294,7 +295,7 @@ section {
   top: 20%;
   left: 95%;
   z-index: 10;
-  border: 1px solid pink;
+  /*  border: 1px solid pink;*/
   animation: sailleft 50s  linear infinite alternate; }
 
 .boat1 {
@@ -302,7 +303,7 @@ section {
   top: 40%;
   left: 0%;
   z-index: 10;
-  border: 1px solid yellow;
+  /* border: 1px solid yellow;*/
   animation: sail 50s  linear infinite alternate; }
 
 .goal2 {
