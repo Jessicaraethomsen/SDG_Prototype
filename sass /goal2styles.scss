@@ -22,7 +22,8 @@
 body {
   margin: 0;
   padding: 0; 
-  background-color: $goal2-dark
+  background-color: $goal2-dark;
+  cursor: url('../img/swimmer.png'), auto; 
   }
 
 section{
@@ -116,6 +117,7 @@ a{
 }
 
 .section2{
+
   margin-top: 20%;
 }
 

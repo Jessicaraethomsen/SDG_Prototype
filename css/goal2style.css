@@ -167,6 +167,12 @@ section {
 .margin-bottom-10 {
   margin-bottom: 10%; }
 
+.padding-30 {
+  padding: 30px; }
+
+.padding-5 {
+  padding: 5px; }
+
 #intro-bg {
   background-image: url("../img/sdg_introworld1.png"); }
 
@@ -565,7 +571,8 @@ section {
 body {
   margin: 0;
   padding: 0;
-  background-color: #d3a029; }
+  background-color: #d3a029;
+  cursor: url("../img/swimmer.png"), auto; }
 
 section {
   display: block; }

@@ -213,6 +213,12 @@ section {
 .margin-bottom-10 {
   margin-bottom: 10%; }
 
+.padding-30 {
+  padding: 30px; }
+
+.padding-5 {
+  padding: 5px; }
+
 #intro-bg {
   background-image: url("../img/sdg_introworld1.png"); }
 
@@ -625,7 +631,8 @@ body {
   /*	height: 6000px;*/
   line-height: 1.5;
   color: #000;
-  font-family: "Poppins", sans-serif, sans-serif; }
+  font-family: "Poppins", sans-serif, sans-serif;
+  cursor: url("../img/swimmer.png"), auto; }
 
 h1 {
   color: #0757a0; }
@@ -820,9 +827,9 @@ a.next:hover {
 
 #Earth {
   margin: 10px auto 0 auto;
-  width: 128px;
-  height: 128px;
-  background: transparent url("../img/earth.png") -1px 2px no-repeat; }
+  width: 228px;
+  height: 228px;
+  background: transparent url("../img/fish.png") -1px 2px no-repeat; }
 
 #icon-goal14 {
   margin: 10px auto 0 auto;
@@ -832,8 +839,8 @@ a.next:hover {
 
 #Bottle {
   margin: 10px auto 0 auto;
-  width: 128px;
-  height: 128px;
+  width: 808px;
+  height: 228px;
   background: transparent url("../img/bottle.png") -1px 2px no-repeat; }
 
 .big-text {

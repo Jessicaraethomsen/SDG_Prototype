@@ -167,6 +167,12 @@ section {
 .margin-bottom-10 {
   margin-bottom: 10%; }
 
+.padding-30 {
+  padding: 30px; }
+
+.padding-5 {
+  padding: 5px; }
+
 #intro-bg {
   background-image: url("../img/sdg_introworld1.png"); }
 

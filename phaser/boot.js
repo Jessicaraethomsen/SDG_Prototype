@@ -107,7 +107,7 @@ var boot = {
 		game.add.image(0, 0, 'bg-cover');
 		game.world.setBounds(0, 0, 1900, 1082);
 		
-		var button = game.add.button(game.world.centerX - 600, 280, 'button', this.actionOnClick, this, 2, 1, 0);
+		var button = game.add.button(game.world.centerX - 600, 380, 'button', this.actionOnClick, this, 2, 1, 0);
 
 		this.boat = game.add.sprite(game.height / 2, 400, 'boat');
 		this.boat.anchor.setTo(0.5, 0);
@@ -118,7 +118,7 @@ var boot = {
 		this.boat.body.bounce.set(1, 1);
 		this.boat.scale.x = -1;
 
-		var title = game.add.text(game.world.centerX - 700 , 60, 'Goal 2: Zero Hunger', {
+		var title = game.add.text(game.world.centerX - 690 , 60, '', {
 			font: "60px poppins",
 			fill: "#fff"
 		});

@@ -42,6 +42,7 @@ body {
 	line-height: 1.5;
 	color: #000;
 	font-family: $font-primary, sans-serif;
+	cursor: url('../img/swimmer.png'), auto; 
 }
 h1 {
 	color: $goal14-dark;
@@ -265,9 +266,9 @@ nav.next-prev {
 
 	#Earth {
 		margin: 10px auto 0 auto;
-		width:128px;
-		height: 128px;
-		background: transparent url('../img/earth.png') -1px 2px no-repeat;
+		width:228px;
+		height: 228px;
+		background: transparent url('../img/fish.png') -1px 2px no-repeat;
 	}
 
 	#icon-goal14 {
@@ -279,8 +280,8 @@ nav.next-prev {
 
 	#Bottle {
 		margin: 10px auto 0 auto;
-		width: 128px;
-		height: 128px;
+		width: 808px;
+		height: 228px;
 		background: transparent url('../img/bottle.png') -1px 2px no-repeat;
 	}
 

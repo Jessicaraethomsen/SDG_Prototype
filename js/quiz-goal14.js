@@ -2,49 +2,48 @@
 
   const myQuestions = [
   {
-    question: "The oceans cover ______ of the Earth's surface.",
+    question: "Hvor lang tid siden er det, siden der opstod liv i vandet?",
     answers: {
-      a: "70 percent",
-      b: "40 percent",
-      c: "20 percent"
+      a: "3.500.000.000",
+      b: "2.500.000.000",
+      c: "3.000.000.000"
     },
     correctAnswer: "a"
   },
   {
-    question: "What are the main categories of sea life?",
+    question: "Hvad hedder de to hovedgrupper af plankton?",
     answers: {
-      a: "swimmers and non-swimmers",
-      b: "swimmers, floaters and creatures on the sea floor",
-      c: "fish, mammals and microscopic creatures"
+      a: "Mikro- og Makroplankton",
+      b: "Dyre- og Planteplankton",
+      c: "Syre- og Baseplankton"
     },
     correctAnswer: "b"
   },
 
   {
-    question: "How many different identified spiecies live under water?",
+    question: "Kan plankton svømme mod strømmen?",
     answers: {
-      a: "200 000",
-      b: "1 000 000",
-      c: "500"
-    },
-    correctAnswer: "a"
-  },
-
-  {
-    question: "How many percent of Ocean is polluted",
-    answers: {
-      a: "10%",
-      b: "40%",
-      c: "80%"
+      a: "Ja - men kun hvis den er mild.",
+      b: "Nej, de er slet ikke stærke nok"
     },
     correctAnswer: "b"
   },
+
   {
-    question: "So, what can you do about ocean plastic pollution?",
+    question: "Hvad betyder plankton for menneskeliv?",
     answers: {
-      a: "Reduce Your Use of Single-Use Plastics.",
-      b: "Support Organizations Addressing Plastic Pollution",
-      c: "All of the above"
+      a: "De bidrager med halvdelen af jordens ilt.",
+      b: "Ingenting.",
+      c: "Plankton er udelukkende føde for dyr i havene."
+    },
+    correctAnswer: "a"
+  },
+  {
+    question: "Hvad er antifryseprotein?",
+    answers: {
+      a: "En mekanisme som havdyr bruger så de ikke sveder.",
+      b: "Et stof der gør at visse fisk kan nedkøle deres mad.",
+      c: "Et stof som betyder fisk ikke fryser og dør."
     },
     correctAnswer: "c"
   }
@@ -263,7 +262,8 @@ function showResults() {
         // if answer is wrong or blank
         // color the answers red
         answerContainers[questionNumber].style.color = "#eb1c2d";
-        answerContainers[questionNumber].style.border = "thick solid white";
+        answerContainers[questionNumber].style.border = "thick solid red";
+        answerContainers[questionNumber].style.padding = "20px 20px 20px 20px"; 
       }
     });
 
@@ -272,14 +272,14 @@ function showResults() {
      confettiEffect();
      play();
      resultsContainer.innerHTML = `${numCorrect} out of ${myQuestions.length}`;
-         feedbackContainer.innerHTML = 'GOOD JOB EXPLORER!';
+         feedbackContainer.innerHTML = 'TILLYKKE!';
 
 
 
    } else {
 
     resultsContainer.innerHTML = `${numCorrect} out of ${myQuestions.length}`;
-    feedbackContainer.innerHTML = 'TRY AGAIN and get 4/5 to see a SUPRISE';
+    feedbackContainer.innerHTML = 'Prøve Igen! Få 4 ud af 5 svar og se en overraskelse';
 
 
 

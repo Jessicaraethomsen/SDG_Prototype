@@ -49,10 +49,10 @@ var level1 = {
 		this.logo = game.add.sprite(0, 0,'logo');
 		this.logo.fixedToCamera = true;
 
-		//Japan Marker
-		this.japanMarker = game.add.sprite(1675, 330, 'marker');
+		//China Marker
+		this.japanMarker = game.add.sprite(1575, 330, 'marker');
 		game.physics.arcade.enable(this.japanMarker);
-		this.japanStar = game.add.sprite(1675, 330, 'star');
+		this.japanStar = game.add.sprite(1575, 330, 'star');
 		game.physics.arcade.enable(this.japanStar);
 		this.japanStar.visible = false;
 		this.japanPop = game.add.sprite(1275, 150, 'japanPop');
@@ -64,7 +64,7 @@ var level1 = {
 		this.italyStar = game.add.sprite(1060, 330, 'star');
 		game.physics.arcade.enable(this.italyStar);
 		this.italyStar.visible = false;
-		this.italyPop = game.add.sprite(1060, 230, 'italyPop');
+		this.italyPop = game.add.sprite(1060, 430, 'italyPop');
 		this.italyPop.visible = false;
 
 
@@ -88,22 +88,22 @@ var level1 = {
 		this.brazilPop.visible = false;
 
 
-		//morrocoMarker
-		this.morrocoMarker = game.add.sprite(925, 420, 'marker');
+		//DENMARKMarker
+		this.morrocoMarker = game.add.sprite(1090, 180, 'marker');
 		game.physics.arcade.enable(this.morrocoMarker);
-		this.morrocoStar = game.add.sprite(925, 420, 'star');
+		this.morrocoStar = game.add.sprite(1090, 180, 'star');
 		game.physics.arcade.enable(this.morrocoStar);
 		this.morrocoStar.visible = false;
-		this.moroccoPop = game.add.sprite(925, 520, 'moroccoPop');
+		this.moroccoPop = game.add.sprite(700, 160, 'moroccoPop');
 		this.moroccoPop.visible = false;
 
-		//austrailaMarker
-		this.austrailaMarker = game.add.sprite(1600, 830, 'marker');
+		//UGANDAMarker
+		this.austrailaMarker = game.add.sprite(1130, 600, 'marker');
 		game.physics.arcade.enable(this.austrailaMarker);
-		this.austrailaStar = game.add.sprite(1600, 830, 'star');
+		this.austrailaStar = game.add.sprite(1130, 600, 'star');
 		game.physics.arcade.enable(this.austrailaStar);
 		this.austrailaStar.visible = false;
-		this.aussiePop = game.add.sprite(1500, 650, 'aussiePop');
+		this.aussiePop = game.add.sprite(1200, 650, 'aussiePop');
 		this.aussiePop.visible = false;
 
 
@@ -114,7 +114,10 @@ var level1 = {
 		game.physics.arcade.enable(this.explorer);
 
 
-		
+
+
+	    //make keyboards
+		cursors = game.input.keyboard.createCursorKeys();
 
 		//POPUP
 		 this.popup = game.add.sprite(game.world.centerX, game.world.centerY, 'helpPop');
@@ -140,16 +143,9 @@ var level1 = {
 	    this.popup.scale.set(0.1);
 
 
-	    //FEEDBACK/ARE YOU FINISHED EXPLPORING
+	
 
-	    this.exploreTxt = this.add.text(10, 10, {
-	    	font: "10px Poppin",
-	    	fill: "#fff"});
-	    this.exploreTxt.fixedToCamera = true;
-	    this.exploreTxt.text = '';
-	    this.exploreTxt.addColor("#fff", 0); 
-
-	    cursors = game.input.keyboard.createCursorKeys(); 	  
+	  
 
 	},
 	
@@ -237,7 +233,6 @@ function italyPop(explorer,italyMarker) {
 	"use strict";
 
 	this.italyStar.visible = true;
-	score++;
 	console.log("clickclick");
 	//true
 	this.italyPop.visible = true;
@@ -247,6 +242,7 @@ function italyPop(explorer,italyMarker) {
 	this.aussiePop.visible = false;
 	this.brazilPop.visible = false;
 	this.mexicoPop.visible = false;
+	score++;
 };
 
 
@@ -266,6 +262,7 @@ function morrocoPop(explorer,morrocoMarker) {
 	this.italyPop.visible = false;
 	this.brazilPop.visible = false;
 	this.mexicoPop.visible = false;
+	score++;
 
 };
 
@@ -274,7 +271,6 @@ function mexicoPop(explorer,mexicoMarker) {
 	"use strict";
 
 	this.mexicoStar.visible = true;
-	score++;
 	console.log("clickclick");
 	//true
 	this.mexicoPop.visible = true;
@@ -284,6 +280,7 @@ function mexicoPop(explorer,mexicoMarker) {
 	this.aussiePop.visible = false;
 	this.italyPop.visible = false;
 	this.brazilPop.visible = false;
+	score++;
 
 };
 
@@ -292,7 +289,7 @@ function austrailaPop(explorer,austrailaMarker) {
 	"use strict";
 
 	this.austrailaStar.visible = true;
-	score++;
+    score++;
 	console.log("clickclick");
 	//true
 	this.aussiePop.visible = true;
@@ -312,7 +309,6 @@ function brazilPop(explorer,brazilMarker) {
 	"use strict";
 
 	this.brazilStar.visible = true;
-	score++;
 	console.log("clickclick");
 	//true
 	this.brazilPop.visible = true;
@@ -322,7 +318,7 @@ function brazilPop(explorer,brazilMarker) {
 	this.aussiePop.visible = false;
 	this.italyPop.visible = false;
 	this.mexicoPop.visible = false;
-
+	score++;
 
 };
 
@@ -337,7 +333,6 @@ function offVolume() {
 	this.intromusic.pause();
 	this.button.visible = false;
 	this.buttonOff.visible = true;
-
 	console.log("clickclick");
 
 };

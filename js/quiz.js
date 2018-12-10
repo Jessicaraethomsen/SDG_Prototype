@@ -2,56 +2,55 @@
 
   const myQuestions = [
   {
-    question: "What do they eat in Japan?",
+    question: "Hvad får de til frokost i Japan",
     answers: {
-      a: "Sushi",
-      b: "Burgers",
-      c: "Tacos"
+      a: "Mælk, ris, grøntsager og kød eller fisk",
+      b: "Burger med pomfritter",
+      c: "Taco"
     },
     correctAnswer: "a"
   },
   {
-    question: "What do they eat in Italy?",
+    question: "Hvor kommer avokado fra?",
     answers: {
-      a: "Tacos",
-      b: "Pasta",
-      c: "Hotdogs"
+      a: "Europa",
+      b: "Mexico",
+      c: "Grønland"
     },
     correctAnswer: "b"
   },
 
   {
-    question: "What do they eat in USA?",
+    question: "Hvor mange er underernærede i Afrika?",
     answers: {
-      a: "Tacos",
-      b: "Fish & Chips",
-      c: "Burger & Fries"
+      a: "6 ud af 9",
+      b: "2 ud af 5",
+      c: "1 ud af 5 "
     },
     correctAnswer: "c"
   },
 
   {
-    question: "Out of 10, how many don't eat dinner?",
+    question: "Hvad betyder det at være underernæret?",
     answers: {
-      a: "1",
-      b: "6",
-      c: "4"
+      a: "At man ikke er så høj",
+      b: "At man mangler tøj",
+      c: "At kroppen og hjernen ikke kan udvikle sig"
     },
-    correctAnswer: "a"
+    correctAnswer: "c"
   },
 
   {
-    question: "How can we make a difference with Hunger?",
+    question: "I hvilket land bruger de flest af deres penge på mad?",
     answers: {
-      a: "More education",
-      b: "Support smaller farmers",
-      c: "Protect animals and small farms",
-      d: "All of the above"
+      a: "USA",
+      b: "Kina",
+      c: "Indonesien",
+  
     },
-    correctAnswer: "d"
+    correctAnswer: "c"
   }
   ];
-
 
 
 
@@ -261,14 +260,12 @@ function showResults() {
         // color the answers green
         answerContainers[questionNumber].style.color = "#56c02a";
 
-
-
-
       } else {
         // if answer is wrong or blank
         // color the answers red
         answerContainers[questionNumber].style.color = "#eb1c2d";
-        answerContainers[questionNumber].style.border = "thick solid white";
+        answerContainers[questionNumber].style.border = "thick solid red";
+        answerContainers[questionNumber].style.padding = "20px 20px 20px 20px"; 
       }
     });
 
@@ -276,14 +273,14 @@ function showResults() {
     if (numCorrect >= 4) {
      confettiEffect();
      resultsContainer.innerHTML = `${numCorrect} out of ${myQuestions.length}`;
-         feedbackContainer.innerHTML = 'GOOD JOB EXPLORER!';
+         feedbackContainer.innerHTML = 'DU ER SEJT... SCOUT!';
 
 
 
    } else {
 
-    resultsContainer.innerHTML = `${numCorrect} out of ${myQuestions.length}`;
-    feedbackContainer.innerHTML = 'TRY AGAIN and get 4/5 to see a SUPRISE';
+    resultsContainer.innerHTML = `${numCorrect} uf af ${myQuestions.length}`;
+    feedbackContainer.innerHTML = 'Prøve Igen! Få 4 ud af 5 svar og se en overraskelse';
 
 
 
