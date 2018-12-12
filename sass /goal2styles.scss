@@ -571,46 +571,5 @@ color: $brand-white;
  HELP:https://gist.github.com/gokulkrishh/242e68d1ee94ad05f488           
  ***************************************************************/
 
-@media (min-width: 501px) and (max-width: 1024px) {
- body{
-
-    background-color: $brand-blue;
-   
-  }
-
-
-
-  section {
-    display: none;
-  }
-}
-
-
-/*if anything needs to change MOBILE*/
-@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
-
-
-section {
-    display: none;
-  }
-
-}
-
-
-
-@media only screen and (max-width: 500px){ //some value
-  body{
-
-    background-color: $brand-darkblue;
-   
-  }
-
-
-  /*Hide our logo*/
-  section {
-    display: none;
-  }  
-
-}
 
 

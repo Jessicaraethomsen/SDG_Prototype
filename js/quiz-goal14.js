@@ -1,5 +1,5 @@
 (function() {
-
+  "use strict"
   const myQuestions = [
   {
     question: "Hvor lang tid siden er det, siden der opstod liv i vandet?",

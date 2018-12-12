@@ -328,6 +328,7 @@ function showPreviousSlide() {
 
 function clearscore() {
   numCorrect = 0;
+
 }
 
 
@@ -349,8 +350,6 @@ const submitButton = document.getElementById("submit");
   let currentSlide = 0;
   showSlide(0);
 
-
-
   // on CLICK: show results
   submitButton.addEventListener("click", showResults);
   tryButton.addEventListener("click", clearscore );
@@ -360,6 +359,8 @@ const submitButton = document.getElementById("submit");
 
 
 })();
+
+
 
 
 

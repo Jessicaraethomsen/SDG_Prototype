@@ -647,12 +647,12 @@ button {
   position: absolute;
   border: none;
   top: 2%;
-  left: 80%;
+  left: 77%;
   z-index: 10; }
 
 .audiobox {
   position: absolute;
-  background-image: url("../img/play-button.png");
+  background-image: url(https://image.flaticon.com/icons/svg/189/189889.svg);
   border: none;
   top: -5.5%;
   left: 95%;
