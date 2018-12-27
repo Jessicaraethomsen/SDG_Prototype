@@ -1,5 +1,5 @@
-
 <!DOCTYPE html>
+<html lang="da">
 
 <head>
 	<meta charset="utf-8">
@@ -32,16 +32,16 @@
 	<button id="playpausebtn" class="audiobox" style="width: 70px; height: 70px;"></button>
 	</div>
 	
-	<div class="col-xs-12" id="intro-img-index" class="image-fluid">
+	<div class="col-xs-12 image-fluid" id="intro-img-index">
 		<br>
 		<br>
 		<div class="col-lg-12 "><h1 class="center text-center">MISSION SDG</h1></div>
-		<div  class="cloud1"><img src="img/cloud.png"></div>
-		<div  class="cloud2"><img src="img/cloud.png"></div>
+		<div  class="cloud1"><img src="img/cloud.png" alt="moving clouds over world map"></div>
+		<div  class="cloud2"><img src="img/cloud.png" alt="moving clouds over world map"></div>
 		<br>
 		<br>
 
-		<a href="intro.html"><button class="button button-top">SPIL NU!</button></a>
+		<button onclick="location.href='intro.html'" class="button button-top">SPIL NU!</button>
 	</div>
 
 
@@ -49,7 +49,7 @@
 		<script>
 
 
-function initAudioPlayer(){
+function AudioPlayer(){
 
 	var audio, playbtn, mutebtn, seek_bar;
 
@@ -91,13 +91,11 @@ function initAudioPlayer(){
 	    }
 	}
 }
-window.addEventListener("load", initAudioPlayer);
+window.addEventListener("load", AudioPlayer);
 
 
 
 </script>
-
-
 
 	</body>
 </html>

@@ -1,5 +1,6 @@
-
 <!DOCTYPE html>
+<html lang="da">
+
 
 <head>
 	<meta charset="utf-8">
@@ -10,16 +11,62 @@
 	<meta name="keywords" content="Susstainale Development Goals: Youth" />
 
 
-<!-- Google fonts  -->
-<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,300' rel='stylesheet' type='text/css'>
-<!--  Bootstrap  -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-<!--  Bootstrap  -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-<!-- Bootstrap & Styles  -->
-<link rel="stylesheet" href="css/bootstrap.css">
-<link rel="stylesheet" href="css/intro.css">
+	<!-- Google fonts  -->
+	<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,300' rel='stylesheet' type='text/css'>
+	<!--  Bootstrap  -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<!--  Bootstrap  -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+	<script>
+
+
+		function AudioPlayer(){
+
+			var audio, playbtn, mutebtn, seek_bar;
+			audio = new Audio();
+			audio.src = "audio/Verdensmål.mp3";
+			audio.loop = true;
+			audio.play();
+			// Set object references
+			playbtn = document.getElementById("playpausebtn");
+			mutebtn = document.getElementById("mutebtn");
+			// Add Event Handling
+			playbtn.addEventListener("click",playPause);
+			mutebtn.addEventListener("click", mute);
+			// Functions
+			function playPause(){
+				if(audio.paused){
+					audio.play();
+					playbtn.style.background = "url(https://image.flaticon.com/icons/svg/189/189889.svg) no-repeat";
+					playbtn.style.backgroundSize = "60px 80px";
+
+				} else {
+					audio.pause();
+					playbtn.style.background = "url(https://image.flaticon.com/icons/svg/148/148744.svg) no-repeat";
+					playbtn.style.backgroundSize = "60px 80px";
+				}
+			}
+			function mute(){
+				if(audio.muted){
+					audio.muted = false;
+					mutebtn.style.background = "url(https://image.flaticon.com/icons/svg/204/204287.svg) no-repeat";
+					mutebtn.style.backgroundSize = "60px 80px";
+				} else {
+					audio.muted = true;
+					mutebtn.style.background = "url(https://image.flaticon.com/icons/svg/148/148757.svg) no-repeat";
+					mutebtn.style.backgroundSize = "60px 80px";
+				}
+			}
+		}
+		window.addEventListener("load", AudioPlayer);
+
+	</script>
+	<!-- Bootstrap & Styles  -->
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<link rel="stylesheet" href="css/intro.css">
 </head>
+
 <body>
 	<nav class="navbar">
 		<a class="navbar-brand" href="home.html">
@@ -29,86 +76,37 @@
 	
 
 	<div>
-	<h2 class="soundvoice">HJÆLP: Lyt igen</h2>
-	<button id="playpausebtn" class="audiobox" style="width: 70px; height: 70px;"></button>
+		<h2 class="soundvoice">HJÆLP: Lyt igen</h2>
+		<button id="playpausebtn" class="audiobox" style="width: 70px; height: 70px;"></button>
 	</div>
 
 
 	<div>
-	<h2 id="girl-name">SALLY</h2>
+		<h2 id="girl-name">SALLY</h2>
 		<h2 id="boy-name">SAM</h2>
 
-	<div class="margin-top">
-	<div class="col-xs-12" id="intro-img-sdg">
-		<div class="col-lg-12 "><h1 class="center text-center">Verdensmål</h1> <br> 
-		<div class="col-lg-6 center"><p>Der er 17 mål i alt. Planen blev udtænkt i 2015 af De Forenede Nationer (FN), og handler om bæredygtig udvikling, bekæmpelse af klimaforandringer, ulighed og meget mere. At være bæredygtig handler om at behandle naturen og jorden så den ikke går i stykker, når vi bruger afjordens mange ressourcer, f.eks ved, at vi planter træer, når vi fælder træer. 
+		<div class="margin-top">
+			<div class="col-xs-12" id="intro-img-sdg">
+				<div class="col-lg-12 "><h1 class="center text-center">Verdensmål</h1> <br> 
+					<div class="col-lg-6 center"><p>Der er 17 mål i alt. Planen blev udtænkt i 2015 af De Forenede Nationer (FN), og handler om bæredygtig udvikling, bekæmpelse af klimaforandringer, ulighed og meget mere. At være bæredygtig handler om at behandle naturen og jorden så den ikke går i stykker, når vi bruger afjordens mange ressourcer, f.eks ved, at vi planter træer, når vi fælder træer. 
 
-<br><br>
-Du kan udforske målene med os ved at klikke videre! Hvem vil du gerne udforske dem med? </p>
+						<br><br>
+					Du kan udforske målene med os ved at klikke videre! Hvem vil du gerne udforske dem med? </p>
+				</div>
+				<br>
+				<button onclick="location.href='character.html'" class="button">VIDERE</button>
+			</div>
 		</div>
-<br>
-		<a href="character.html"><button class="button">Videre</button></a>
 	</div>
 </div>
 
+</body>
 
-
-	<!-- JAVASCRIPT FILES-->
-		<script>
-
-
-function initAudioPlayer(){
-	var audio, playbtn, mutebtn, seek_bar;
-	
-	audio = new Audio();
-	audio.src = "audio/verdensmål1.mp3";
-	audio.loop = true;
-	audio.play();
-	// Set object references
-	playbtn = document.getElementById("playpausebtn");
-	mutebtn = document.getElementById("mutebtn");
-	// Add Event Handling
-	playbtn.addEventListener("click",playPause);
-	mutebtn.addEventListener("click", mute);
-	// Functions
-	function playPause(){
-		if(audio.paused){
-		    audio.play();
-		    playbtn.style.background = "url(https://image.flaticon.com/icons/svg/189/189889.svg) no-repeat";
-		  	playbtn.style.backgroundSize = "60px 80px";
-		
-	    } else {
-		    audio.pause();
-		    playbtn.style.background = "url(https://image.flaticon.com/icons/svg/148/148744.svg) no-repeat";
-		    playbtn.style.backgroundSize = "60px 80px";
-
-	    }
-	}
-	function mute(){
-		if(audio.muted){
-		    audio.muted = false;
-		    mutebtn.style.background = "url(https://image.flaticon.com/icons/svg/204/204287.svg) no-repeat";
-		    	mutebtn.style.backgroundSize = "60px 80px";
-	    } else {
-		    audio.muted = true;
-		    mutebtn.style.background = "url(https://image.flaticon.com/icons/svg/148/148757.svg) no-repeat";
-		    mutebtn.style.backgroundSize = "60px 80px";
-	    }
-	}
-}
-window.addEventListener("load", initAudioPlayer);
-
-
-
-</script>
-
-
-	</body>
 </html>
 
 
 
- 
+
 
 
 

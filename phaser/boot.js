@@ -38,21 +38,11 @@ var boot = {
 		game.load.image('boat', 'assets/boat.png');
 	
 
-
-
-		//Splash1- GAME INSTRUCTIONS
-		//game.load.image('bg-level1', 'assets/bg-water.png');
-		
-
-
-		
 		//LEVEL1 BACKGROUND-ocean
 		game.load.image('bg-level1', 'assets/bg-water.png');
 		game.load.image('bg-land', 'assets/bg-land.png');
 		game.load.image('bg-cover', 'assets/bg-cover.png');
 	
-
-
 		//Elements
 		game.load.image('boat', 'assets/boat.png');
 		game.load.image('scooter', 'assets/scooter.png');
@@ -76,17 +66,10 @@ var boot = {
 		game.load.image('mexicoPop', 'assets/mexicoPop.png');
 		game.load.image('brazilPop', 'assets/brazilPop.png')
 
-
-
-
-		//LEVEL2 BACKGROUND-arcticsea
-
-
   
 		//AUDIO FILES
 		 game.load.audio('level1-audio', 'audio/Lovable_Clown_Sit_Com.mp3');
 		 game.load.audio('factbubble', 'audio/fact.wav');
-		
 		
 
 		game.scale.scaleMode = Phaser.ScaleManager.aspectRatio;
@@ -107,7 +90,7 @@ var boot = {
 		game.add.image(0, 0, 'bg-cover');
 		game.world.setBounds(0, 0, 1900, 1082);
 		
-		var button = game.add.button(game.world.centerX - 600, 380, 'button', this.actionOnClick, this, 2, 1, 0);
+		var button = game.add.button(game.world.centerX - 575, 380, 'button', this.actionOnClick, this, 2, 1, 0);
 
 		this.boat = game.add.sprite(game.height / 2, 400, 'boat');
 		this.boat.anchor.setTo(0.5, 0);

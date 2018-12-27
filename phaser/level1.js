@@ -1,5 +1,5 @@
 var cursors;
-var score = 0;
+var score;
 var popup;
 var scoreTxt;
 var tween = null;
@@ -49,6 +49,17 @@ var level1 = {
 		this.logo = game.add.sprite(0, 0,'logo');
 		this.logo.fixedToCamera = true;
 
+
+		//ItalyMarker
+		this.italyMarker = game.add.sprite(1060, 330, 'marker');
+		game.physics.arcade.enable(this.italyMarker);
+		this.italyStar = game.add.sprite(1060, 330, 'star');
+		game.physics.arcade.enable(this.italyStar);
+		this.italyStar.visible = false;
+		this.italyPop = game.add.sprite(690, 340, 'italyPop');
+		this.italyPop.visible = false;
+
+
 		//China Marker
 		this.japanMarker = game.add.sprite(1575, 330, 'marker');
 		game.physics.arcade.enable(this.japanMarker);
@@ -57,16 +68,6 @@ var level1 = {
 		this.japanStar.visible = false;
 		this.japanPop = game.add.sprite(1275, 150, 'japanPop');
 		this.japanPop.visible = false;
-
-		//ItalyMarker
-		this.italyMarker = game.add.sprite(1060, 330, 'marker');
-		game.physics.arcade.enable(this.italyMarker);
-		this.italyStar = game.add.sprite(1060, 330, 'star');
-		game.physics.arcade.enable(this.italyStar);
-		this.italyStar.visible = false;
-		this.italyPop = game.add.sprite(1060, 430, 'italyPop');
-		this.italyPop.visible = false;
-
 
 		//mexicoMarker
 		this.mexicoMarker = game.add.sprite(200, 450, 'marker');
@@ -106,15 +107,10 @@ var level1 = {
 		this.aussiePop = game.add.sprite(1200, 650, 'aussiePop');
 		this.aussiePop.visible = false;
 
-
-
 		//SCOOTER
 		this.explorer = game.add.sprite(game.world.width / 2, game.world.height/2, 'scooter');
 		game.camera.follow(this.explorer);
 		game.physics.arcade.enable(this.explorer);
-
-
-
 
 	    //make keyboards
 		cursors = game.input.keyboard.createCursorKeys();
@@ -140,12 +136,9 @@ var level1 = {
 	    //  Add the "close button" to the popup window image
 	    this.popup.addChild(closeButton);
 	    //  Hide it awaiting a click
-	    this.popup.scale.set(0.1);
+	    this.popup.scale.set(0.1);	 
 
 
-	
-
-	  
 
 	},
 	
@@ -157,8 +150,6 @@ var level1 = {
 
 		game.scale.setShowAll();
 		game.scale.refresh(); 
-
-
 		this.explorer.rotation = game.physics.arcade.angleToPointer(this.explorer);
 		game.physics.arcade.overlap(this.explorer, this.japanMarker, japanPop, null, this);
 		game.physics.arcade.overlap(this.explorer, this.italyMarker, italyPop, null, this);
@@ -166,9 +157,6 @@ var level1 = {
 		game.physics.arcade.overlap(this.explorer, this.mexicoMarker, mexicoPop, null, this);
 		game.physics.arcade.overlap(this.explorer, this.austrailaMarker, austrailaPop, null, this);
 		game.physics.arcade.overlap(this.explorer, this.brazilMarker, brazilPop, null, this);
-
-
-		
 
 
     	//  ONLY MOVE WHEN MOUSE ISDOWN
@@ -213,10 +201,9 @@ var level1 = {
 
 function japanPop(explorer,japanMarker) {
 	"use strict";
-
 	this.japanStar.visible = true;
-	score++;
-	console.log("clickclick");
+	console.log(score)
+	
 	//true
 	this.japanPop.visible = true;
 	//false
@@ -231,7 +218,6 @@ function japanPop(explorer,japanMarker) {
 
 function italyPop(explorer,italyMarker) {
 	"use strict";
-
 	this.italyStar.visible = true;
 	console.log("clickclick");
 	//true
@@ -242,27 +228,24 @@ function italyPop(explorer,italyMarker) {
 	this.aussiePop.visible = false;
 	this.brazilPop.visible = false;
 	this.mexicoPop.visible = false;
-	score++;
+
 };
 
 
 
 function morrocoPop(explorer,morrocoMarker) {
 	"use strict";
-
 	this.morrocoStar.visible = true;
-	score++;
 	console.log("clickclick");
 	//true
 	this.moroccoPop.visible = true;
-
 	//false
 	this.japanPop.visible = false;
 	this.aussiePop.visible = false;
 	this.italyPop.visible = false;
 	this.brazilPop.visible = false;
 	this.mexicoPop.visible = false;
-	score++;
+
 
 };
 
@@ -280,7 +263,7 @@ function mexicoPop(explorer,mexicoMarker) {
 	this.aussiePop.visible = false;
 	this.italyPop.visible = false;
 	this.brazilPop.visible = false;
-	score++;
+
 
 };
 
@@ -289,7 +272,6 @@ function austrailaPop(explorer,austrailaMarker) {
 	"use strict";
 
 	this.austrailaStar.visible = true;
-    score++;
 	console.log("clickclick");
 	//true
 	this.aussiePop.visible = true;
@@ -318,7 +300,7 @@ function brazilPop(explorer,brazilMarker) {
 	this.aussiePop.visible = false;
 	this.italyPop.visible = false;
 	this.mexicoPop.visible = false;
-	score++;
+
 
 };
 
@@ -376,8 +358,6 @@ function closeWindow() {
     this.popup.visible = false;
 }
 
-
-//JAPAN FUNCTIONS
 
 
 

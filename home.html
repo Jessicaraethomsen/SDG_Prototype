@@ -1,7 +1,7 @@
 <!DOCTYPE html>
+<html lang="da">
 
 <head>
-	<meta charset="utf-8">
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title>SDG &mdash;  Prototype Youth</title>
@@ -10,17 +10,17 @@
 	<meta name="keywords" content="SDG: Youth" />
 
 
-<!-- Google fonts  -->
-<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,300' rel='stylesheet' type='text/css'>
+	<!-- Google fonts  -->
+	<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,300' rel='stylesheet' type='text/css'>
 
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-<script src="js/storename.js"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+	<script src="js/storename.js"></script>
 
 
-<!-- Bootstrap & Styles  -->
-<link rel="stylesheet" href="css/bootstrap.css">
-<link rel="stylesheet" href="css/styles.css">
+	<!-- Bootstrap & Styles  -->
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<link rel="stylesheet" href="css/styles.css">
 
 
 </head>
@@ -31,7 +31,7 @@
 			<div class="container-fluid">
 				<div class="navbar-header">
 					<a class="navbar-brand" href="index.html">
-						<img class="logo" src="img/sdg-logo.png">
+						<img class="logo" src="img/sdg-logo.png" alt="SDG home logo">
 					</a>
 				</div>
 			</div>
@@ -48,34 +48,32 @@
 					<div>
 
 						<div id="home-bg" class="col-12 page-content">
-							<div class="boat1"><img style="max-width: 100%;" src="img/sdg_boat.png"></div>
-							<div class="boat2"><img style="max-width: 100%;" src="img/sdg_boat.png"></div>
-							<div  class="cloud1"><img style="max-width: 100%;" src="img/cloud.png" ></div>
-							<div  class="cloud2"><img style="max-width: 100%;" src="img/cloud.png" ></div>
-							<div  class="cloud3"><img style="max-width: 100%;" src="img/cloud.png"></div>
+							<div class="boat1"><img style="max-width: 100%;" src="img/sdg_boat.png"  alt="Animation Boat 1"></div>
+							<div class="boat2"><img style="max-width: 100%;" src="img/sdg_boat.png" alt="Animation Boat 2"></div>
+							<div  class="cloud1"><img style="max-width: 100%;" src="img/cloud.png" alt="Animation Cloud 1"></div>
+							<div  class="cloud2"><img style="max-width: 100%;" src="img/cloud.png" alt="Animation Cloud 2"></div>
+							<div  class="cloud3"><img style="max-width: 100%;" src="img/cloud.png" alt="Animation Cloud 3"></div>
 
 							<a class="navbar-badge" href="badges.html">
-								<img class="img-icon" src="img/sdg_badge.png">
+								<img class="img-icon" src="img/sdg_badge.png" alt="SDG Badges">
 							</a>
 
 							<a class="navbar-help" href="intro-how-to-play.html">
-								<img class="img-icon" src="img/sdg_help.png" style="max-width: 60px;">
+								<img class="img-icon" src="img/sdg_help.png" style="max-width: 60px;" alt="Help how to play info">
 							</a>
 
 							<a class="navbar-langauge" href="home.html">
-								<img class="img-icon" src="img/sdg_language.png" style="max-width:60px;" >
+								<img class="img-icon" src="img/sdg_language.png" style="max-width:60px;" alt="pick a language">
 							</a>
 
 							<a href="goal2.html">
-								<div class="goal2"><img class="img-icon"src="img/sdg_goal2.png"></div>
-							</div></a>
-
-
-							<a href="goal14.html">
-								<div class="goal14"><img class="img-icon"src="img/goal14.png"> </div>
-							</div></a> 
-
+								<div class="goal2"><img class="img-icon" src="img/sdg_goal2.png" alt="Goal 2 Zero Hunger"></div>
+							</a>
 						</div>
+
+						<a href="goal14.html">
+							<div class="goal14"><img class="img-icon" src="img/goal14.png"  alt="Goal 14 Under the Sea"> </div>
+						</a>
 					</div>
 				</div>
 			</div>
@@ -83,58 +81,53 @@
 	</section>	
 
 
-
-
 	<!-- JAVASCRIPT FILES-->
 	<script>
 
-var audio, playbtn, mutebtn, seek_bar;
-function initAudioPlayer(){
-	audio = new Audio();
-	audio.src = "audio/Island_Coconuts.mp3";
-	audio.loop = true;
-	audio.play();
-	// Set object references
-	playbtn = document.getElementById("playpausebtn");
-	mutebtn = document.getElementById("mutebtn");
-	// Add Event Handling
-	playbtn.addEventListener("click",playPause);
-	mutebtn.addEventListener("click", mute);
-	// Functions
-	function playPause(){
-		if(audio.paused){
-		    audio.play();
-		    playbtn.style.background = "url(https://image.flaticon.com/icons/svg/189/189889.svg) no-repeat";
-		  	playbtn.style.backgroundSize = "60px 80px";
-		
-	    } else {
-		    audio.pause();
-		    playbtn.style.background = "url(https://image.flaticon.com/icons/svg/148/148744.svg) no-repeat";
-		    playbtn.style.backgroundSize = "60px 80px";
+		function AudioPlayer(){
 
-	    }
-	}
-	function mute(){
-		if(audio.muted){
-		    audio.muted = false;
-		    mutebtn.style.background = "url(https://image.flaticon.com/icons/svg/204/204287.svg) no-repeat";
-		    	mutebtn.style.backgroundSize = "60px 80px";
-	    } else {
-		    audio.muted = true;
-		    mutebtn.style.background = "url(https://image.flaticon.com/icons/svg/148/148757.svg) no-repeat";
-		    mutebtn.style.backgroundSize = "60px 80px";
-	    }
-	}
-}
-window.addEventListener("load", initAudioPlayer);
+			var audio, playbtn, mutebtn, seek_bar;
+			audio = new Audio();
+			audio.src = "audio/Island_Coconuts.mp3";
+			audio.loop = true;
+			audio.play();
+			// Set object references
+			playbtn = document.getElementById("playpausebtn");
+			mutebtn = document.getElementById("mutebtn");
+			// Add Event Handling
+			playbtn.addEventListener("click",playPause);
+			mutebtn.addEventListener("click", mute);
+			
+			// Functions
+			function playPause(){
+				if(audio.paused){
+					audio.play();
+					playbtn.style.background = "url(https://image.flaticon.com/icons/svg/189/189889.svg) no-repeat";
+					playbtn.style.backgroundSize = "60px 80px";
 
+				} else {
+					audio.pause();
+					playbtn.style.background = "url(https://image.flaticon.com/icons/svg/148/148744.svg) no-repeat";
+					playbtn.style.backgroundSize = "60px 80px";
+				}
+			}
 
+			function mute(){
+				if(audio.muted){
+					audio.muted = false;
+					mutebtn.style.background = "url(https://image.flaticon.com/icons/svg/204/204287.svg) no-repeat";
+					mutebtn.style.backgroundSize = "60px 80px";
+				} else {
+					audio.muted = true;
+					mutebtn.style.background = "url(https://image.flaticon.com/icons/svg/148/148757.svg) no-repeat";
+					mutebtn.style.backgroundSize = "60px 80px";
+				}
+			}
+		}
+		window.addEventListener("load", AudioPlayer);
 
-</script>
+	</script>
 
-	<script language="text/javascript">
-    var playpause = true;
-</script>
-
-	</body>
+	
+</body>
 </html>

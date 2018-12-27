@@ -1,5 +1,6 @@
-
 <!DOCTYPE html>
+<html lang="da">
+
 
 <head>
 	<meta charset="utf-8">
@@ -20,9 +21,11 @@
 	<script>
 
 
-	//module design pattern
-    var initAudioPlayer = (function (){
 	
+function AudioPlayer(){
+
+	var audio, playbtn, mutebtn, seek_bar;
+
 	audio = new Audio();
 	audio.src = "audio/intro.mp3";
 	audio.loop = true;
@@ -33,9 +36,10 @@
 	// Add Event Handling
 	playbtn.addEventListener("click",playPause);
 	mutebtn.addEventListener("click", mute);
-	var audio, playbtn, mutebtn, seek_bar;
+	
 
- 	playPause = function(){
+	// Functions
+	function playPause(){
 		if(audio.paused){
 		    audio.play();
 		    playbtn.style.background = "url(https://image.flaticon.com/icons/svg/189/189889.svg) no-repeat";
@@ -47,10 +51,8 @@
 		    playbtn.style.backgroundSize = "60px 80px";
 
 	    }
-	};
-
-
-	mute = function(){
+	}
+	function mute(){
 		if(audio.muted){
 		    audio.muted = false;
 		    mutebtn.style.background = "url(https://image.flaticon.com/icons/svg/204/204287.svg) no-repeat";
@@ -62,8 +64,7 @@
 	    }
 	}
 }
-
-window.addEventListener("load", initAudioPlayer);
+window.addEventListener("load", AudioPlayer);
 
 
 
@@ -102,7 +103,7 @@ window.addEventListener("load", initAudioPlayer);
 			<br>
 			<br>
 
-			<a href="intro2.html"><button class="button">Videre</button></a>
+			<button onclick="location.href='intro2.html'" class="button">VIDERE</button>
 		<!-- </div> -->
 	</div>	
 

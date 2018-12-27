@@ -102,6 +102,9 @@ button {
   button:hover {
     background-color: #0757a0; }
 
+button-wrapper {
+  border: 2px solid white; }
+
 .tooltip {
   position: relative;
   display: inline-block;
@@ -611,6 +614,10 @@ p, .p-small {
 .p-small {
   font-size: 1.125em;
   color: #d3a029; }
+
+.bigtext {
+  font-family: "Knicknack", sans-serif;
+  font-size: 30px; }
 
 /*************************************************
                   Links & Buttons

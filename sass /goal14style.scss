@@ -4,27 +4,19 @@
 */
 /* SUSTAINABLE DEVELOPMENT GOALS - LIFE BELOW WATER  - GOAL 14 
 *****************************************************************/
-
-
-
-
 /*************************************************
                NAV BAR
 **************************************************/
 
-
 .navbar-header{
 border: 2px solid white;
-  
 }
-
 
 .navbar{
   position: absolute;
    z-index: 99999;
    cursor: pointer;
    top: -150px;
-
 }
 
 
@@ -269,6 +261,13 @@ nav.next-prev {
 		width:228px;
 		height: 228px;
 		background: transparent url('../img/fish.png') -1px 2px no-repeat;
+		animation: swim 10s infinite alternate;
+
+	}
+
+	@keyframes swim{
+  	from{transform:translateX(-85px);}
+  	to{transform:translateX(85px);}
 	}
 
 	#icon-goal14 {
@@ -278,13 +277,35 @@ nav.next-prev {
 		background: transparent url('../img/icon-goal14.png') -1px 2px no-repeat;
 	}
 
+	#bacteria{
+		margin: 10px auto 0 auto;
+		width: 266px;
+		height: 270px;
+		background: transparent url('../img/bacteria.png') -1px 2px no-repeat;
+		animation: float 8s linear infinite alternate;
+	}
+
+	#plankton{
+		margin: 10px auto 0 auto;
+		width: 266px;
+		height: 270px;
+		background: transparent url('../img/plankton.png') -1px 2px no-repeat;
+		animation: float 8s linear infinite alternate;
+	}
+
 	#Bottle {
 		margin: 10px auto 0 auto;
 		width: 808px;
 		height: 228px;
 		background: transparent url('../img/bottle.png') -1px 2px no-repeat;
+		animation: float 8s linear infinite alternate;
+
 	}
 
+@keyframes float{
+  	from{transform:translateY(-25px);}
+  	to{transform:translateY(25px);}
+	}
 
 	.big-text {
 		font-size: 4em;
