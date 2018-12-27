@@ -17,6 +17,58 @@
 <!--  Bootstrap  -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
+	<script>
+
+
+	//module design pattern
+    var initAudioPlayer = (function (){
+	
+	audio = new Audio();
+	audio.src = "audio/intro.mp3";
+	audio.loop = true;
+	audio.play();
+	// Set object references
+	playbtn = document.getElementById("playpausebtn");
+	mutebtn = document.getElementById("mutebtn");
+	// Add Event Handling
+	playbtn.addEventListener("click",playPause);
+	mutebtn.addEventListener("click", mute);
+	var audio, playbtn, mutebtn, seek_bar;
+
+ 	playPause = function(){
+		if(audio.paused){
+		    audio.play();
+		    playbtn.style.background = "url(https://image.flaticon.com/icons/svg/189/189889.svg) no-repeat";
+		  	playbtn.style.backgroundSize = "60px 80px";
+		
+	    } else {
+		    audio.pause();
+		    playbtn.style.background = "url(https://image.flaticon.com/icons/svg/148/148744.svg) no-repeat";
+		    playbtn.style.backgroundSize = "60px 80px";
+
+	    }
+	};
+
+
+	mute = function(){
+		if(audio.muted){
+		    audio.muted = false;
+		    mutebtn.style.background = "url(https://image.flaticon.com/icons/svg/204/204287.svg) no-repeat";
+		    	mutebtn.style.backgroundSize = "60px 80px";
+	    } else {
+		    audio.muted = true;
+		    mutebtn.style.background = "url(https://image.flaticon.com/icons/svg/148/148757.svg) no-repeat";
+		    mutebtn.style.backgroundSize = "60px 80px";
+	    }
+	}
+}
+
+window.addEventListener("load", initAudioPlayer);
+
+
+
+
+	</script>
 
 <!-- Bootstrap & Styles  -->
 <link rel="stylesheet" href="css/bootstrap.css">
@@ -55,64 +107,8 @@
 	</div>	
 
 	</div>
-	
 	<!-- JAVASCRIPT FILES-->
-		<script>
-
-
-function initAudioPlayer(){
-	var audio, playbtn, mutebtn, seek_bar;
-	audio = new Audio();
-	audio.src = "audio/intro.mp3";
-	audio.loop = true;
-	audio.play();
-	// Set object references
-	mutebtn = document.getElementById("mutebtn");
-	playbtn = document.getElementById("playpausebtn");
-	
-	// Add Event Handling
-	playbtn.addEventListener("click",playPause);
-	mutebtn.addEventListener("click", mute);
-	// Functions
-
-
-	
-	function mute(){
-		if(audio.muted){
-		    audio.muted = false;
-		    mutebtn.style.background = "url(https://image.flaticon.com/icons/svg/204/204287.svg) no-repeat";
-		    	mutebtn.style.backgroundSize = "60px 80px";
-	    } else {
-		    audio.muted = true;
-		    mutebtn.style.background = "url(https://image.flaticon.com/icons/svg/148/148757.svg) no-repeat";
-		    mutebtn.style.backgroundSize = "60px 80px";
-	    }
-	}
-
-
-
-	function playPause(){
-		if(audio.paused){
-		    audio.play();
-		    playbtn.style.background = "url(https://image.flaticon.com/icons/svg/189/189889.svg) no-repeat";
-		  	playbtn.style.backgroundSize = "60px 80px";
-		
-	    } else {
-		    audio.pause();
-		    playbtn.style.background = "url(https://image.flaticon.com/icons/svg/148/148744.svg) no-repeat";
-		    playbtn.style.backgroundSize = "60px 80px";
-
-	    }
-	}
-
-
-	
-}
-window.addEventListener("load", initAudioPlayer);
-
-
-
-</script>
+	<!-- JAVASCRIPT FILES-->
 
 	</body>
 </html>

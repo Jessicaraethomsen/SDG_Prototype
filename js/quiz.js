@@ -1,4 +1,4 @@
-(function() {
+var myQuiz = (function() {
 
   const myQuestions = [
   {
@@ -330,8 +330,6 @@ function clearscore() {
   numCorrect = 0;
 
 }
-
-
 
 const quizContainer = document.getElementById("quiz");
 const resultsContainer = document.getElementById("results");
